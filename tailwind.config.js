@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#04283A',
-        wordpress: '#4A50AE'
+        wordpress: '#4A50AE',
+        blue: '#37395B'
       },
       backgroundColor: {
         orange: '#FF6043',
