@@ -20,8 +20,8 @@ export default function Footer({className, style}) {
         visible={faqVisible}
         onClick={() => setFaqVisible(!faqVisible)}
       >
-        {faq.map(item => (
-          <Expand title={item.title}>
+        {faq.map((item, i) => (
+          <Expand key={item.key} title={item.title} expanded={i == 0}>
             {item.desc}
           </Expand>
         ))}
@@ -30,13 +30,13 @@ export default function Footer({className, style}) {
       <div className="bg-blue h-40 w-full z-20"/>
 
       <motion.img
+        onClick={() => faqVisible && setFaqVisible(false)}
         className="absolute z-0"
-        animate={{
-          y: faqVisible ? -400 : -180
-        }}
+        initial={{y: -190}}
+        animate={{y: faqVisible ? -480 : -190}}
         transition={{
           type: 'spring',
-          duration: 0.9,
+          mass: 0.1
         }}
         src={wavesImage}
       />

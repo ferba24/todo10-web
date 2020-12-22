@@ -8,10 +8,10 @@ export const Content = ({icon, title, desc}) => (
   </div>
 )
 
-export default function Card({children, className, shadow, shadowOnHover, ...props}) {
+export default function Card({children, className, shadow, shadowOnHover, bordered = true, ...props}) {
   return (
     <div
-      className={`relative rounded-xl transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} p-8 border border-gray-200 ${className}`}
+      className={`relative bg-white rounded-xl transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} p-8 ${bordered ? 'border' : ''} border-gray-200 ${className}`}
       {...props}
     >
       {children}

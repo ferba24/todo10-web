@@ -1,30 +1,26 @@
 import { useState } from 'react'
+import RadioContext from './context'
 
-export default function RadioGroup({children, className, onChange = () => {}}) {
+export default function RadioGroup({children, initialValue, className, onChange = () => {}}) {
 
-  const [value, setValue] = useState(undefined)
-
-  const childClicked = value => {
-    setValue(value)
-    onChange({detail: { value }})
-  }
-
-  if(!children) return null
-  const isArray = Array.isArray(children)
-  const childrenArr = isArray ? children : [children]
-
-  const newChildren = childrenArr.map(child => {
-    const newChild = { ...child }
-    const newProps = { ...newChild.props }
-    newProps.onClick = () => childClicked(child.props.value)
-    newProps.checked = child.props.value == value
-    newChild.props = newProps
-    return newChild
+  const [state, setState] = useState({
+    value: initialValue,
+    setValue
   })
+
+  function setValue(value) {
+    setState({
+      ...state,
+      value
+    })
+    onChange({detail: {value}})
+  }
 
   return (
     <div className={className}>
-      {newChildren}
+      <RadioContext.Provider value={state}>
+        {children}
+      </RadioContext.Provider>
     </div>
   )
 }

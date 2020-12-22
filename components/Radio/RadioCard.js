@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import RadioContext from './context'
 import Card from '../Card'
 import { motion } from 'framer-motion'
 
@@ -9,19 +11,19 @@ const RadioCircle = ({checked, className, ...props}) => (
     <motion.div
       className={`w-3 h-3 ${checked ? 'bg-white' : 'bg-gray-300'} rounded-full`}
       initial={{ scale: 0 }}
-      animate={{
-        scale: checked ? 1 : 0
-      }}
+      animate={{ scale: checked ? 1 : 0}}
     />
   </div>
 )
 
-export default function RadioCard({children, value, checked, className, ...props}) {
+export default function RadioCard({children, value, className, ...props}) {
+
+  const { value: contextValue, setValue } = useContext(RadioContext)
+  const checked = value == contextValue
+
   return (
     <motion.div
-      animate={{
-        scale: checked ? 1.06 : 1,
-      }}
+      animate={{ scale: checked ? 1.05 : 1 }}
       transition={{
         type: 'tween',
         ease: [.07,.79,.45,1],
@@ -30,20 +32,18 @@ export default function RadioCard({children, value, checked, className, ...props
       className={className}
     >
       <Card
-        className={`cursor-pointer overflow-hidden ${checked ? 'bg-orange' : 'bg-white'}`}
+        className={`cursor-pointer ${checked ? 'bg-orange text-white' : 'bg-white'}`}
         shadowOnHover
+        onClick={() => setValue(value)}
         {...props}
       >
         <RadioCircle
           className="absolute right-3 top-3 z-10"
           checked={checked}
         />
-        <motion.div
-          className="relative z-10"
-          animate={{color: checked ? 'white' : 'inherit'}}
-        >
+        <div>
           {children}
-        </motion.div>
+        </div>
       </Card>
     </motion.div>
   )

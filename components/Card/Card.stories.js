@@ -4,14 +4,15 @@ export default {
   title: 'Example/Card',
   component: Card,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    // backgroundColor: { control: 'color' },
   },
 };
 
-const Template = (args) => <Card {...args}>{args.label}</Card>;
+const Template = (args) => <Card {...args}>{args.content}</Card>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'a',
+  shadow: false,
+  bordered: true,
+  content: 'Contenido',
 };

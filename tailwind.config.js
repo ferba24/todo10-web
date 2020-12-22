@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#04283A'
+        primary: '#04283A',
+        wordpress: '#4A50AE'
       },
       backgroundColor: {
         orange: '#FF6043',

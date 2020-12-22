@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import arrowIcon from './arrow-right.svg'
+import PropTypes from 'prop-types';
 
 const defaultSize = 24
 
@@ -47,4 +48,18 @@ export default function Arrow({size = 'middle', direction = 'right'}) {
       />
     </motion.div>
   )
+}
+
+export const directions = ['right', 'down', 'left', 'up']
+export const sizes = ['small', 'middle', 'large']
+
+Arrow.propTypes = {
+  /**
+   * Size of the arrow
+   */
+  size: PropTypes.oneOf(sizes),
+  /**
+   * Direction
+   */
+  direction: PropTypes.oneOf(directions)
 }
