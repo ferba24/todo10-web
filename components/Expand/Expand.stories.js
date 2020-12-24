@@ -3,9 +3,6 @@ import Expand from './Expand';
 export default {
   title: 'Example/Expand',
   component: Expand,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-  },
 };
 
 const Template = (args) => <Expand {...args}>{args.desc}</Expand>;

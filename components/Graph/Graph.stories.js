@@ -3,8 +3,6 @@ import Graph from './Graph';
 export default {
   title: 'Example/Graph',
   component: Graph,
-  argTypes: {
-  },
 };
 
 const Template = (args) => <Graph {...args}/>;

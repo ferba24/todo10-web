@@ -3,16 +3,14 @@ import Card from './Card';
 export default {
   title: 'Example/Card',
   component: Card,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-  },
 };
 
-const Template = (args) => <Card {...args}>{args.content}</Card>;
+const Template = (args) => <Card {...args}/>;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   shadow: false,
+  shadowOnHover: false,
   bordered: true,
-  content: 'Contenido',
+  children: 'Contenido',
 };

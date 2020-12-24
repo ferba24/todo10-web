@@ -1,14 +1,49 @@
+import PropTypes from 'prop-types'
 
-export default function Button({type = 'primary', children, onClick}) {
- const bgClass = type == 'primary' ? 'bg-orange': 'bg-white'
- const textColorClass = type == 'primary' ? 'text-white': 'text-primary'
- const borderClass = type == 'outline' ? 'border-2 border-blue'  : ''
- return (
+const typeClasses = {
+  primary: 'bg-orange text-white',
+  blue: 'bg-blue text-white',
+  default: 'bg-white text-primary',
+  text: 'text-primary',
+  outline: 'border-2 border-blue text-primary'
+}
+const defaultType = 'primary'
+
+const sizeClasses = {
+  small: 'py-1 px-2 text-sm',
+  middle: 'py-1 px-3',
+  large: 'py-1 px-4 text-2xl'
+}
+const defaultSize = 'middle'
+
+export default function Button({
+  type = defaultType,
+  children,
+  onClick,
+  className,
+  htmlType,
+  size = defaultSize,
+  ...props
+}) {
+
+  const typeClass = typeClasses[type] || defaultType
+  const sizeClass = sizeClasses[size] || defaultSize
+
+  return (
     <button 
-      className={`py-1 px-3  rounded-md ${bgClass} ${borderClass} ${textColorClass}`} 
+      className={`${sizeClass} hover:bg-opacity-80 focus:outline-none rounded-md ${typeClass} ${className}`}
       onClick={onClick}
+      type={htmlType}
+      {...props}
     >
       {children}
     </button>
   );
+}
+
+Button.propTypes = {
+  type: PropTypes.oneOf(Object.keys(typeClasses)),
+  size: PropTypes.oneOf(Object.keys(sizeClasses)),
+  htmlType: PropTypes.string,
+  onClick: PropTypes.func
 }

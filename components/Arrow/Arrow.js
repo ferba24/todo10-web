@@ -4,38 +4,27 @@ import PropTypes from 'prop-types';
 
 const defaultSize = 24
 
-const getFinalSize = size => {
-  if(!isNaN(size)) return size
-  switch (size) {
-    case 'small':
-      return 14
-    case 'middle':
-      return defaultSize
-    case 'large':
-      return 34
-    default:
-      return defaultSize
-  }
+const sizesNames = {
+  small: 14,
+  middle: defaultSize,
+  large: 34
 }
 
-const getRotation = direction => {
-  switch (direction) {
-    case 'up':
-      return -90
-    case 'rigth':
-      return 0
-    case 'down':
-      return 90
-    case 'left':
-      return 180
-    default:
-      return 0
-  }
+const getFinalSize = size => {
+  if(!isNaN(size)) return size
+  return sizesNames[size] || defaultSize
+}
+
+const rotations = {
+  up: -90,
+  right: 0,
+  down: 90,
+  left: 180
 }
 
 export default function Arrow({size = 'middle', direction = 'right'}) {
   const finalSize = getFinalSize(size)
-  const rotate = getRotation(direction)
+  const rotate = rotations[direction] || 0
 
   return (
     <motion.div
@@ -51,15 +40,9 @@ export default function Arrow({size = 'middle', direction = 'right'}) {
 }
 
 export const directions = ['right', 'down', 'left', 'up']
-export const sizes = ['small', 'middle', 'large']
+export const sizes = Object.keys(sizesNames)
 
 Arrow.propTypes = {
-  /**
-   * Size of the arrow
-   */
   size: PropTypes.oneOf(sizes),
-  /**
-   * Direction
-   */
   direction: PropTypes.oneOf(directions)
 }
