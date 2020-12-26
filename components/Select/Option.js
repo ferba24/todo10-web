@@ -8,7 +8,7 @@ export default function Option({children, value: optionValue, ...rest}) {
   useEffect(() => addToValues(optionValue), [])
 
   if(typeof children != 'function') {
-    console.error('The child of `<Option>` must be a function')
+    console.error('The child of `<Option>` must be a function', children)
     return null
   }
 

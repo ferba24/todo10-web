@@ -1,34 +1,41 @@
 import { useState, useEffect } from 'react'
 import Select from '../Select'
 import { motion } from 'framer-motion'
+import Chip from './Chip'
+import MiniContent from './MiniContent'
 
 export default function ChipSelector({
   defaultValue,
   children,
-  onChange
+  onChange,
+  className,
+  ...rest
 }) {
 
   const [value, setValue] = useState(defaultValue)
   const [values, setValues] = useState([])
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(-1.1)
 
   useEffect(() => {
-    const index = values.indexOf(value)
-    const newSelectedIndex = index != -1 ? index : 0
-    setSelectedIndex(newSelectedIndex)
+    let index = values.indexOf(value)
+    if(index == -1) index = -1.1
+    setSelectedIndex(index)
   }, [values, value]);
 
   const handleChange = e => {
-    const { value } = e.detail
+    const { value } = e.target
     setValue(value)
-    onChange && onChange({detail: {value}})
+    onChange && onChange(e)
   }
 
   const x = selectedIndex * 100 + '%'
   const width = 100 / values.length + '%'
 
   return (
-    <div className="p-2 bg-gray-200 rounded-lg overflow-hidden">
+    <div
+      className={`p-2 bg-gray-200 rounded-lg overflow-hidden ${className}`}
+      {...rest}
+    >
       <div className="relative flex">
         <Select
           defaultValue={defaultValue}
@@ -47,12 +54,6 @@ export default function ChipSelector({
   )
 }
 
-export const Chip = ({children, checked, ...props}) => (
-  <div
-    className={`flex-1 relative z-10`}
-    style={{filter: `grayscale(${checked ? 0 : 60}%)`}}
-    {...props}
-  >
-    {children}
-  </div>
-)
+ChipSelector.Chip = Chip
+ChipSelector.MiniContent = MiniContent
+ChipSelector.Option = Select.Option

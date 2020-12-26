@@ -2,7 +2,7 @@ import Card from '../Card'
 import { motion } from 'framer-motion'
 import RadioCircle from '../RadioCircle'
 
-export default function RadioCard({children, checked, className, ...props}) {
+export default function RadioCard({children, checked, ribbon, ...props}) {
 
   return (
     <motion.div
@@ -18,6 +18,7 @@ export default function RadioCard({children, checked, className, ...props}) {
         className={`cursor-pointer ${checked ? 'bg-orange text-white' : 'bg-white'}`}
         bordered={!checked}
         shadowOnHover
+        ribbon={ribbon}
       >
         <RadioCircle
           className="absolute right-3 top-3 z-10"
@@ -29,3 +30,5 @@ export default function RadioCard({children, checked, className, ...props}) {
     </motion.div>
   )
 }
+
+RadioCard.Content = Card.Content

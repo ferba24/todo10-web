@@ -25,7 +25,7 @@ export default function Select({
 
   function setValue(value, rest) {
     setState({ ...state, value })
-    onChange && onChange({detail: {value, ...rest}})
+    onChange && onChange({target: {value, ...rest}})
   }
 
   return (

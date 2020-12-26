@@ -1,7 +1,6 @@
 import Select from './Select';
 import RadioCard from '../RadioCard'
 import RadioCircle from '../RadioCircle'
-import Card from '../Card'
 import windowIcon from '../../public/icons/window.svg'
 import notebook from '../../public/icons/notebook.svg'
 
@@ -39,7 +38,7 @@ const TemplateCards = (args) => (
       <Select.Option value="a">
         {props => (
           <RadioCard className="w-6/12" {...props}>
-            <Card.Content
+            <RadioCard.Content
               icon={notebook}
               title="Maintenance plans"
               desc="An intelligent option for your services."
@@ -50,7 +49,7 @@ const TemplateCards = (args) => (
       <Select.Option value="b">
         {props => (
           <RadioCard className="w-6/12" {...props}>
-            <Card.Content
+            <RadioCard.Content
               icon={windowIcon}
               title="Hosting plans 🔥"
               desc="High-performance web hosting plans."
@@ -96,4 +95,3 @@ const TemplateRadio = (args) => (
 export const Radio = TemplateRadio.bind({});
 Radio.args = {
 };
-

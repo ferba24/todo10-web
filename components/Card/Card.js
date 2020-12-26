@@ -1,4 +1,5 @@
 import Ribbon from './Ribbon'
+import Content from './Content'
 import PropTypes from 'prop-types'
 
 export default function Card({
@@ -12,6 +13,9 @@ export default function Card({
   style = {},
   ...props
 }) {
+
+  const ribbonOffset = typeof style.borderWidth != 'undefined' ? -style.borderWidth : bordered ? -1 : 0
+
   return (
     <div
       className={`relative bg-white rounded-xl duration-300 transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} p-8 ${bordered ? 'border' : ''} border-gray-300 ${className}`}
@@ -21,7 +25,7 @@ export default function Card({
       {ribbon && (
         <Ribbon
           text={ribbon}
-          offset={-style.borderWidth || bordered ? -1 : 0}
+          offset={ribbonOffset}
           style={ribbonStyle}
         />
       )}
@@ -39,13 +43,5 @@ Card.propTypes = {
   ribbonStyle: PropTypes.object,
   style: PropTypes.object
 }
-
-const Content = ({icon, title, desc}) => (
-  <div className="text-center">
-    <img className="mx-auto w-20" src={icon} />
-    <div className="font-medium mt-4 mb-1">{title}</div>
-    <div className="opacity-70">{desc}</div>
-  </div>
-)
 
 Card.Content = Content

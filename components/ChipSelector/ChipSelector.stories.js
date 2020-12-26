@@ -1,5 +1,4 @@
-import ChipSelector, { Chip } from './ChipSelector';
-import Select from '../Select'
+import ChipSelector from './ChipSelector';
 import wordpress from '../../public/icons/wordpress.svg'
 import xenforo from '../../public/icons/xenforo.svg'
 
@@ -11,29 +10,22 @@ export default {
   }
 };
 
-const MiniContent = ({image, name}) => (
-  <div className="flex items-center justify-center p-3 cursor-pointer text-wordpress">
-    <img src={image} className="mr-3"/>
-    <div className="font-bold text-lg">{name}</div>
-  </div>
-)
-
 const Template = (args) => (
   <ChipSelector {...args}>
-    <Select.Option value="wordpress">
+    <ChipSelector.Option value="wordpress">
       {props => (
-        <Chip {...props}>
-          <MiniContent image={wordpress} name="Wordpress"/>
-        </Chip>
+        <ChipSelector.Chip {...props}>
+          <ChipSelector.MiniContent image={wordpress} title="Wordpress"/>
+        </ChipSelector.Chip>
       )}
-    </Select.Option>
-    <Select.Option value="xenforo">
+    </ChipSelector.Option>
+    <ChipSelector.Option value="xenforo">
       {props => (
-        <Chip {...props}>
-          <MiniContent image={xenforo} name="XenForo"/>
-        </Chip>
+        <ChipSelector.Chip {...props}>
+          <ChipSelector.MiniContent image={xenforo} title="XenForo"/>
+        </ChipSelector.Chip>
       )}
-    </Select.Option>
+    </ChipSelector.Option>
   </ChipSelector>
 )
 
