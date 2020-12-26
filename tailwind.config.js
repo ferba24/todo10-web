@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#04283A',
-        wordpress: '#4A50AE',
-        blue: '#37395B'
+        primary: 'var(--color-primary)',
+        wordpress: 'var(--color-wordpress)',
+        blue: 'var(--color-blue)',
       },
       backgroundColor: {
-        orange: '#FF6043',
-        blue: '#37395B'
+        orange: 'var(--color-orange)',
+        blue: 'var(--color-blue)',
       },
       boxShadow: {
         xl: '0 0px 25px 0px rgba(0, 0, 0, 0.1), 0 0px 10px 0px rgba(0, 0, 0, 0.04)'

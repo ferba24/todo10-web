@@ -1,11 +1,14 @@
 import ChipSelector, { Chip } from './ChipSelector';
-import { Option } from '../Select'
+import Select from '../Select'
 import wordpress from '../../public/icons/wordpress.svg'
 import xenforo from '../../public/icons/xenforo.svg'
 
 export default {
   title: 'Example/ChipSelector',
   component: ChipSelector,
+  argTypes: {
+    onChange: { action: 'Value change' },
+  }
 };
 
 const MiniContent = ({image, name}) => (
@@ -17,25 +20,24 @@ const MiniContent = ({image, name}) => (
 
 const Template = (args) => (
   <ChipSelector {...args}>
-    <Option value="wordpress" index={0}>
+    <Select.Option value="wordpress">
       {props => (
         <Chip {...props}>
           <MiniContent image={wordpress} name="Wordpress"/>
         </Chip>
       )}
-    </Option>
-    <Option value="xenforo" index={1}>
+    </Select.Option>
+    <Select.Option value="xenforo">
       {props => (
         <Chip {...props}>
           <MiniContent image={xenforo} name="XenForo"/>
         </Chip>
       )}
-    </Option>
+    </Select.Option>
   </ChipSelector>
 )
 
 export const Default = Template.bind({});
 Default.args = {
   defaultValue: "xenforo",
-  defaultSelectedIndex: 1
 };

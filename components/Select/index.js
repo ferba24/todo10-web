@@ -1,4 +1,2 @@
-import SelectComponent from './Select'
-import OptionComponent from './Option'
-export const Select = SelectComponent
-export const Option = OptionComponent
+import Select from './Select'
+export default Select

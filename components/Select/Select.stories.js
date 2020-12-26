@@ -1,7 +1,7 @@
-import { Select, Option } from './index';
+import Select from './Select';
 import RadioCard from '../RadioCard'
 import RadioCircle from '../RadioCircle'
-import { Content } from '../Card'
+import Card from '../Card'
 import windowIcon from '../../public/icons/window.svg'
 import notebook from '../../public/icons/notebook.svg'
 
@@ -12,20 +12,20 @@ export default {
 
 const Template = (args) => (
   <Select {...args}>
-    <Option value="a">
+    <Select.Option value="a">
       {props => (
         <div {...props}>
           Selected? {props.checked.toString()}
         </div>
       )}
-    </Option>
-    <Option value="b">
+    </Select.Option>
+    <Select.Option value="b">
       {props => (
         <div {...props}>
           Selected? {props.checked.toString()}
         </div>
       )}
-    </Option>
+    </Select.Option>
   </Select>
 )
 
@@ -36,61 +36,60 @@ Default.args = {
 const TemplateCards = (args) => (
   <div className="flex space-x-6 mt-8 mx-auto max-w-xl">
     <Select {...args}>
-      <Option value="a">
+      <Select.Option value="a">
         {props => (
           <RadioCard className="w-6/12" {...props}>
-            <Content
+            <Card.Content
               icon={notebook}
               title="Maintenance plans"
               desc="An intelligent option for your services."
             />
           </RadioCard>
         )}
-      </Option>
-      <Option value="b">
+      </Select.Option>
+      <Select.Option value="b">
         {props => (
           <RadioCard className="w-6/12" {...props}>
-            <Content
+            <Card.Content
               icon={windowIcon}
               title="Hosting plans 🔥"
               desc="High-performance web hosting plans."
             />
           </RadioCard>
         )}
-      </Option>
+      </Select.Option>
     </Select>
   </div>
 )
 
 export const Cards = TemplateCards.bind({});
 Cards.args = {
-  
 };
 
 const TemplateRadio = (args) => (
   <Select {...args}>
-    <Option value="a">
+    <Select.Option value="a">
       {props => (
         <div
           {...props}
           className="flex items-center cursor-pointer text-primary my-2"
         >
           <RadioCircle checked={props.checked} className="mr-2"/>
-          Option 1
+          Select.Option 1
         </div>
       )}
-    </Option>
-    <Option value="b">
+    </Select.Option>
+    <Select.Option value="b">
       {props => (
         <div
           {...props}
           className="flex items-center cursor-pointer text-primary my-2"
         >
           <RadioCircle checked={props.checked} className="mr-2"/>
-          Option 1
+          Select.Option 1
         </div>
       )}
-    </Option>
+    </Select.Option>
   </Select>
 )
 

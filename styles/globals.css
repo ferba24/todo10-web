@@ -1,3 +1,12 @@
+:root {
+  --color-primary:#04283A;
+  --color-wordpress: #4A50AE;
+  --color-blue: #37395B;
+  --color-orange: #FF6043;
+  /* ... */
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,4 +26,32 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+@layer utilities {
+  .placeholder-shine {
+    overflow: hidden;
+  }
+
+  .placeholder-shine::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    left: 50;
+    top: -10px;
+    bottom: -10px;
+    background-color: white;
+    opacity: 0.3;
+    transform: rotate(20deg);
+    animation-name: placeholderShine;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes placeholderShine {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100% }
+  }
 }

@@ -1,22 +1,31 @@
-import { useState } from 'react'
-import { Select } from '../Select'
+import { useState, useEffect } from 'react'
+import Select from '../Select'
 import { motion } from 'framer-motion'
 
 export default function ChipSelector({
   defaultValue,
-  defaultSelectedIndex = 0,
-  children
+  children,
+  onChange
 }) {
 
-  const [selectedIndex, setSelectedIndex] = useState(defaultSelectedIndex)
+  const [value, setValue] = useState(defaultValue)
+  const [values, setValues] = useState([])
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  useEffect(() => {
+    const index = values.indexOf(value)
+    const newSelectedIndex = index != -1 ? index : 0
+    setSelectedIndex(newSelectedIndex)
+  }, [values, value]);
 
   const handleChange = e => {
-    const { index } = e.detail
-    setSelectedIndex(index)
+    const { value } = e.detail
+    setValue(value)
+    onChange && onChange({detail: {value}})
   }
 
   const x = selectedIndex * 100 + '%'
-  const width = 100 / children.length + '%'
+  const width = 100 / values.length + '%'
 
   return (
     <div className="p-2 bg-gray-200 rounded-lg overflow-hidden">
@@ -24,6 +33,7 @@ export default function ChipSelector({
         <Select
           defaultValue={defaultValue}
           onChange={handleChange}
+          onValuesChange={setValues}
         >
           {children}
         </Select>
