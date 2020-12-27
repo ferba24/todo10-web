@@ -15,7 +15,7 @@ export default function RadioCard({children, checked, ribbon, ...props}) {
       {...props}
     >
       <Card
-        className={`cursor-pointer ${checked ? 'bg-orange text-white' : 'bg-white'}`}
+        className={`cursor-pointer h-full ${checked ? 'bg-orange text-white' : 'bg-white'}`}
         bordered={!checked}
         shadowOnHover
         ribbon={ribbon}

@@ -18,7 +18,7 @@ export default function Card({
 
   return (
     <div
-      className={`relative bg-white rounded-xl duration-300 transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} p-8 ${bordered ? 'border' : ''} border-gray-300 ${className}`}
+      className={`relative p-3 sm:p-5 md:p-8 bg-white rounded-xl duration-300 transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} ${bordered ? 'border' : ''} border-gray-300 ${className}`}
       style={style}
       {...props}
     >

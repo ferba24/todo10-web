@@ -21,7 +21,7 @@ const getOptionChild = (type, option) => {
     case 'radioCard':
       return props => (
         <RadioCard
-          className="flex-1 min-w-min"
+          className="w-6/12 md:w-3/12 p-2 tap-highlight-transparent"
           ribbon={option.ribbon}
           {...props}
         >
@@ -42,9 +42,6 @@ const variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 }
-
-
-
 
 export default function Step({
   name,
@@ -93,7 +90,7 @@ export default function Step({
       </h3>
 
       {options && (
-        <div className="flex flex-wrap space-x-6 justify-center items-center">
+        <div className="flex flex-wrap justify-center items-stretch">
           <Selector
             onChange={handleChange}
             multiple={multiple}
