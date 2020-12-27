@@ -1,44 +1,68 @@
 import SelectContext from './context'
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import Option from './Option'
 
 export default function Select({
-  defaultValue,
-  onChange,
   children,
-  onValuesChange
+  onChange = () => {},
+  onOptionsChange = () => {},
+  onSelectedIndexChange = () => {},
+  multiple,
+  defaultValue,
 }) {
 
-  const valuesRef = useRef([])
+  const initialValue = defaultValue || multiple ? [] : undefined
+  const optionsRef = useRef([])
+  const valueRef = useRef(initialValue)
 
-  const [state, setState] = useState({
-    value: defaultValue,
-    setValue,
-    addToValues
-  })
-
-  function addToValues(value) {
-    valuesRef.current.push(value)
-    onValuesChange && onValuesChange(valuesRef.current)
+  function addToOptions(value) {
+    optionsRef.current.push(value)
+    onOptionsChange(optionsRef.current)
   }
 
+  const [, updateState] = useState()
+  const forceUpdate = useCallback(() => updateState({}), [])
+
   function setValue(value, rest) {
-    setState({ ...state, value })
-    onChange && onChange({target: {value, ...rest}})
+    if(multiple) {
+      const index = valueRef.current.indexOf(value)
+      if(index != -1) {
+        valueRef.current.splice(index, 1)
+      } else {
+        valueRef.current.push(value)
+      }
+    } else {
+      valueRef.current = value
+    }
+    forceUpdate()
+    onChange({target: {value: valueRef.current, ...rest}})
+    !multiple && onSelectedIndexChange(optionsRef.current.indexOf(value))
+  }
+
+  const contextValue = {
+    multiple,
+    setValue,
+    addToOptions,
+    value: valueRef.current
   }
 
   return (
-    <SelectContext.Provider value={state}>
+    <SelectContext.Provider value={contextValue}>
       {children}
     </SelectContext.Provider>
   )
 }
 
 Select.propTypes = {
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ]),
   onChange: PropTypes.func,
-  onValuesChange: PropTypes.func
+  onOptionsChange: PropTypes.func,
+  onSelectedIndexChange: PropTypes.func,
+  multiple: PropTypes.bool
 }
 
 Select.Option = Option

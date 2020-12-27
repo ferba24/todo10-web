@@ -18,4 +18,5 @@ const Template = (args) =>(
 
 export const Default = Template.bind({});
 Default.args = {
+  className: 'w-52'
 };

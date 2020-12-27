@@ -30,8 +30,8 @@ export default function Button({
   const sizeClass = sizeClasses[size] || defaultSize
 
   return (
-    <button 
-      className={`${sizeClass} hover:bg-opacity-80 focus:outline-none rounded-md ${typeClass} ${className}`}
+    <button
+      className={`${sizeClass} font-semibold hover:bg-opacity-60 focus:outline-none rounded-md ${typeClass} ${className}`}
       onClick={onClick}
       type={htmlType}
       {...props}

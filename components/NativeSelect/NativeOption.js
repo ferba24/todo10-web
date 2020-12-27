@@ -1,8 +1,11 @@
 function NativeOption({children, value}) {
   return (
-    <option value={value}>
+    <div
+      className="hover:bg-gray-200 px-20 py-1 cursor-pointer"
+      value={value}
+    >
       {children}
-    </option>
+    </div>
   )
 }
 export default NativeOption

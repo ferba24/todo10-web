@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const defaultSize = 24
 
 const sizesNames = {
-  small: 14,
+  small: 16,
   middle: defaultSize,
   large: 34
 }
@@ -22,7 +22,7 @@ const rotations = {
   left: 180
 }
 
-export default function Arrow({size = 'middle', direction = 'right'}) {
+export default function Arrow({size = 'middle', direction = 'right', ...rest}) {
   const finalSize = getFinalSize(size)
   const rotate = rotations[direction] || 0
 
@@ -30,6 +30,7 @@ export default function Arrow({size = 'middle', direction = 'right'}) {
     <motion.div
       animate={{rotate}}
       style={{height: finalSize, width: finalSize}}
+      {...rest}
     >
       <img
         className="h-full mx-auto"

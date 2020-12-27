@@ -11,21 +11,20 @@ export default function Form({
   ...rest
 }) {
 
+  const valuesRef = useRef({})
   const itemsRef = useRef([])
 
   const inputProps = { size }
 
   const [state, setState] = useState({
-    values: {},
     updateValues,
     addItem: item => itemsRef.current.push(item),
     inputProps
   })
 
   function updateValues(key, value) {
-    const values = { ...state.values, [key]: value }
-    setState({ ...state, values })
-    onValuesChange(values)
+    valuesRef.current[key] = value
+    onValuesChange(valuesRef.current)
   }
 
   const handleSubmit = e => {

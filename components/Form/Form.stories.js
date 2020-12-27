@@ -1,5 +1,6 @@
 import Form from './Form';
 import Button from '../Button'
+import NativeSelect from '../NativeSelect'
 
 export default {
   title: 'Example/Form',
@@ -13,10 +14,20 @@ export default {
 const Template = (args) => (
   <Form {...args}>
     <Form.Item name="email" required>
-      <input invalid={true}/>
+      <input/>
     </Form.Item>
-    <Form.Item>
-      <Button htmlType="submit">
+    <Form.Item label="Space" name="space" required>
+      <NativeSelect>
+        <NativeSelect.Option value="12">
+          12 GB
+        </NativeSelect.Option>
+        <NativeSelect.Option value="24">
+          24 GB
+        </NativeSelect.Option>
+      </NativeSelect>
+    </Form.Item>
+    <Form.Item className="text-center">
+      <Button htmlType="submit" type="blue">
         Enviar
       </Button>
     </Form.Item>
@@ -25,5 +36,6 @@ const Template = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  className: 'max-w-xs mx-auto',
   size: 'middle'
 };

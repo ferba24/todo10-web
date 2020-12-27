@@ -77,34 +77,32 @@ const personalizedOptions = {
   type: 'radioCard',
   selector: Select,
   option: Select.Option,
+  multiple: true,
+  nextStep: finalForm,
   options: [
     {
       value: 'seo',
       icon: seoIcon,
       title: 'SEO',
       desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in. ',
-      nextStep: finalForm
     },
     {
       value: 'webDesign',
       icon: designIcon,
       title: 'Web Design',
       desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
-      nextStep: finalForm
     },
     {
       value: 'dedicatedServices',
       icon: computerIcon,
       title: 'Dedicated Services',
       desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
-      nextStep: finalForm
     },
     {
       value: 'somethingElse',
       icon: pencilIcon,
       title: 'Something Else',
       desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
-      nextStep: finalForm
     }
   ]
 }

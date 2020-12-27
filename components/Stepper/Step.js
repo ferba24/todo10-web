@@ -21,7 +21,7 @@ const getOptionChild = (type, option) => {
     case 'radioCard':
       return props => (
         <RadioCard
-          className="max-w-xs flex-1 h-full"
+          className="flex-1 min-w-min"
           ribbon={option.ribbon}
           {...props}
         >
@@ -30,7 +30,7 @@ const getOptionChild = (type, option) => {
       )
     case 'card':
       return (
-        <Card className="max-w-xs flex-1 h-full" ribbon={option.ribbon}>
+        <Card className="max-w-xs flex-1" ribbon={option.ribbon}>
           <div>{option.title}</div>
           <div>{option.price}</div>
         </Card>
@@ -43,6 +43,9 @@ const variants = {
   visible: { opacity: 1, y: 0 }
 }
 
+
+
+
 export default function Step({
   name,
   title,
@@ -51,15 +54,25 @@ export default function Step({
   currentStep = 1,
   selector: Selector = Fragment,
   option: Option = Fragment,
-  onChange = () => {}
+  onChange = () => {},
+  multiple,
+  nextStep: uniqueNextStep
 }) {
 
   const [nextStep, setNextStep] = useState(null)
   const [currentValue, setCurrentValue] = useState(undefined)
 
+  const findSelectedOption = value => {
+    for(const option of options) {
+      if(option.value == value) return option
+    }
+  }
+
   const handleChange = e => {
-    const { value, selectedIndex } = e.target
-    setNextStep(options[selectedIndex].nextStep)
+    const { value } = e.target
+    const option = findSelectedOption(value)
+    const nextStep = multiple ? !!value.length && uniqueNextStep : option.nextStep
+    setNextStep(nextStep)
     setCurrentValue(value)
     onChange({[name]: value})
   }
@@ -73,20 +86,22 @@ export default function Step({
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="my-10 max-w-4xl mx-auto"
+      className="my-10 max-w-5xl mx-auto"
     >
       <h3 className="text-center mb-4 text-xl">
         {title}
       </h3>
 
       {options && (
-        <div className="flex space-x-6 justify-center">
-          <Selector onChange={handleChange}>
-            {options.map((option, i) => (
+        <div className="flex flex-wrap space-x-6 justify-center items-center">
+          <Selector
+            onChange={handleChange}
+            multiple={multiple}
+          >
+            {options.map(option => (
               <Option
                 key={option.value}
                 value={option.value}
-                selectedIndex={i}
               >
                 {getOptionChild(type, option)}
               </Option>

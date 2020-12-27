@@ -1,8 +1,9 @@
 import { createContext } from 'react'
 
 const SelectContext = createContext({
-  value: undefined,
+  multiple: false,
+  value: [],
   setValue: () => {},
-  addToValues: () => {}
+  addToOptions: () => {}
 })
 export default SelectContext

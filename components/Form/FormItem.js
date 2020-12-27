@@ -8,7 +8,7 @@ import {
 import validateChildren from './validateChildren'
 import PropTypes from 'prop-types'
 
-export default function FormItem({children, name, label, required }) {
+export default function FormItem({children, name, label, required, className, style }) {
   const [invalid, setInvalid] = useState(false)
   const { updateValues, addItem, inputProps } = useContext(FormContext)
   
@@ -29,7 +29,17 @@ export default function FormItem({children, name, label, required }) {
     }
   }
 
-  return cloneElement(children, { onChange, invalid, label, ...inputProps })
+  const newInput = cloneElement(children, { onChange, invalid, label, ...inputProps })
+
+  return (
+    <div
+      className={`my-4 ${className}`}
+      style={style}
+    >
+      <div className="mb-1 text-primary font-normal ml-3">{label}</div>
+      {newInput}
+    </div>
+  )
 }
 
 FormItem.propTypes = {

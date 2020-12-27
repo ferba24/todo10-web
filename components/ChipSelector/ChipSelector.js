@@ -7,29 +7,22 @@ import MiniContent from './MiniContent'
 export default function ChipSelector({
   defaultValue,
   children,
-  onChange,
+  onChange = () => {},
+  onSelectedIndexChange = () => {},
   className,
   ...rest
 }) {
 
-  const [value, setValue] = useState(defaultValue)
-  const [values, setValues] = useState([])
+  const [options, setOptions] = useState([])
   const [selectedIndex, setSelectedIndex] = useState(-1.1)
 
-  useEffect(() => {
-    let index = values.indexOf(value)
-    if(index == -1) index = -1.1
+  const handleSelectedIndexChange = index =>{
+    onSelectedIndexChange(index)
     setSelectedIndex(index)
-  }, [values, value]);
-
-  const handleChange = e => {
-    const { value } = e.target
-    setValue(value)
-    onChange && onChange(e)
   }
 
   const x = selectedIndex * 100 + '%'
-  const width = 100 / values.length + '%'
+  const width = 100 / options.length + '%'
 
   return (
     <div
@@ -39,14 +32,16 @@ export default function ChipSelector({
       <div className="relative flex">
         <Select
           defaultValue={defaultValue}
-          onChange={handleChange}
-          onValuesChange={setValues}
+          onChange={onChange}
+          onSelectedIndexChange={handleSelectedIndexChange}
+          onOptionsChange={setOptions}
         >
           {children}
         </Select>
         <motion.div
           className="absolute h-full bg-white rounded-lg"
           style={{ width }}
+          initial={{ x: '-110%' }}
           animate={{ x }}
         />
       </div>
