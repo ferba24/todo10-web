@@ -15,16 +15,11 @@ import designIcon from '../../public/icons/design.svg'
 import computerIcon from '../../public/icons/computer.svg'
 import pencilIcon from '../../public/icons/pencil.svg'
 
-const result = {
-  type: 'result'
-}
-
 const getPlansStep = diskSpace => ({
   name: 'plansStep',
   title: 'Select the best plan for you',
   type: 'card',
   options: getPlans(diskSpace),
-  nextStep: result
 })
 
 
@@ -32,8 +27,8 @@ const finalForm = {
   name: 'finalForm',
   title: 'Tell us what you need',
   desc: 'We will send you a personalized quote really fast!',
-  type: 'contactForm ',
-  nextStep: result
+  type: 'contactForm',
+  final: true
 }
 
 const diskSpaceOptions = {

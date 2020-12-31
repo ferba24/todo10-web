@@ -20,7 +20,7 @@ const getDefaultPlans = (annuallyPrice, quarterlyPrice) => [
     price: annuallyPrice,
     desc: 'per month',
     list: annuallyList,
-    highlighted: true,
+    primary: true,
     ribbon: 'Save 20%'
   },
   {

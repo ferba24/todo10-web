@@ -7,7 +7,7 @@ export default {
 
 const Template = (args) => (
   <Dropdown {...args}>
-    trigger
+    Hover me
   </Dropdown>
 )
 

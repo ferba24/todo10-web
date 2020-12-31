@@ -1,30 +1,12 @@
-import { motion } from 'framer-motion'
 import PropTypes from 'prop-types';
-
-const Line = ({color, size, ...props }) => (
-  <motion.div {...props}>
-    <svg
-      width={size}
-      height={size / 8}
-      viewBox="0 0 32 4"
-      fill="none"
-    >
-      <rect
-        width="32"
-        height="4"
-        rx="2"
-        fill={color}
-      />
-    </svg>
-  </motion.div>
-)
+import Line from './Line'
 
 const defaultSize = 24
 
 const sizesNames = {
   small: 14,
   middle: defaultSize,
-  large: 34
+  large: 30
 }
 
 const getFinalSize = size => {
@@ -32,14 +14,21 @@ const getFinalSize = size => {
   return sizesNames[size] || defaultSize
 }
 
-export default function MenuIcon({ open, size = 'middle', color = '#37395B' }) {
+export default function MenuIcon({
+  open,
+  size = 'large',
+  color = '#37395B',
+  className,
+  ...props
+}) {
 
   const finalSize = getFinalSize(size)
 
   return (
     <div
-      className="flex flex-wrap content-between"
+      className={`flex flex-wrap content-between cursor-pointer tap-highlight-transparent ${className}`}
       style={{width: finalSize, height: finalSize}}
+      {...props}
     >
       <Line
         size={finalSize}

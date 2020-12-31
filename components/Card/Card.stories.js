@@ -1,4 +1,5 @@
 import Card from './Card';
+import getPlans from '../../data/pricing/getPlans'
 
 export default {
   title: 'Example/Card',
@@ -35,4 +36,12 @@ Customized.args = {
   style: { borderWidth: 3, borderColor: 'var(--color-blue)' },
   ribbon: 'Most Sold!',
   ribbonStyle: { backgroundColor: '#3B3' }
+};
+
+const plan = getPlans(12)[0]
+export const Plan = Template.bind({});
+Plan.args = {
+  children: <Card.Plan {...plan}/>,
+  className: 'w-full max-w-sm',
+  ribbon: plan.ribbon,
 };

@@ -8,9 +8,9 @@ import {
 import validateChildren from './validateChildren'
 import PropTypes from 'prop-types'
 
-export default function FormItem({children, name, label, required, className, style }) {
+export default function FormItem({children, name, label, required, className = '', style }) {
   const [invalid, setInvalid] = useState(false)
-  const { updateValues, addItem, inputProps } = useContext(FormContext)
+  const { updateValues, addItem } = useContext(FormContext)
   
   // Add the validator for this item to FormContext
   useEffect(() => addItem({validator, name}), [])
@@ -29,14 +29,18 @@ export default function FormItem({children, name, label, required, className, st
     }
   }
 
-  const newInput = cloneElement(children, { onChange, invalid, label, ...inputProps })
+  const newInput = cloneElement(children, { onChange, invalid, label })
 
   return (
     <div
       className={`my-4 ${className}`}
       style={style}
     >
-      <div className="mb-1 text-primary font-normal ml-3">{label}</div>
+      {label && (
+        <div className="mb-1 text-primary font-normal ml-3">
+          {label}
+        </div>
+      )}
       {newInput}
     </div>
   )

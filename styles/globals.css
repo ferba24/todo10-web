@@ -10,6 +10,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .button-base {
+    @apply font-semibold focus:outline-none rounded-md;
+  }
+
+  .button-base:hover {
+    filter: brightness(120%);
+  }
+
+  .form-control {
+    @apply py-2 px-3 bg-white rounded-lg border-2 border-blue w-full focus:outline-none;
+  }
+
+  .list-custom li {
+    @apply flex items-center my-2 text-primary text-lg;
+  }
+  
+  .list-custom li::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    margin-right: 10px;
+  }
+
+  .list-custom.primary li::before {
+    background-color: var(--color-orange);
+  }
+}
+
 @layer utilities {
   .tap-highlight-transparent {
     -webkit-tap-highlight-color: transparent;

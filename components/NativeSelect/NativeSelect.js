@@ -39,7 +39,7 @@ export default function NativeSelect({
   }
 
   const trigger = (
-    <div className="flex cursor-pointer border-2 border-blue px-3 py-2 rounded-lg items-center justify-between">
+    <div className="form-control flex cursor-pointer items-center justify-between">
       {currentLabel || currentValue ||  placeholder}
       <Arrow size="small" className="ml-2" direction={arrowDirection} />
     </div>

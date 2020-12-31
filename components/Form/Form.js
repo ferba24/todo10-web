@@ -1,26 +1,22 @@
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 import FormContext from './context'
 import PropTypes from 'prop-types'
 import FormItem from './FormItem'
 
 export default function Form({
   children,
-  onValuesChange,
-  onFinish,
-  size = 'middle',
+  onValuesChange = () => {},
+  onFinish = () => {},
   ...rest
 }) {
 
   const valuesRef = useRef({})
   const itemsRef = useRef([])
 
-  const inputProps = { size }
-
-  const [state, setState] = useState({
+  const currentContext = {
     updateValues,
     addItem: item => itemsRef.current.push(item),
-    inputProps
-  })
+  }
 
   function updateValues(key, value) {
     valuesRef.current[key] = value
@@ -31,7 +27,7 @@ export default function Form({
     e.preventDefault()
     try {
       validate()
-      onFinish(state.values)
+      onFinish(valuesRef.current)
     } catch(err) {
       console.error('Error en el formulario', err)
     }
@@ -40,12 +36,12 @@ export default function Form({
   function validate() {
     for(const item of itemsRef.current) {
       const {validator, name} = item
-      validator(state.values[name])
+      validator(valuesRef.current[name])
     }
   }
 
   return (
-    <FormContext.Provider value={state}>
+    <FormContext.Provider value={currentContext}>
       <form onSubmit={handleSubmit} {...rest}>
         {children}
       </form>
@@ -55,7 +51,7 @@ export default function Form({
 
 Form.propTypes = {
   onValuesChange: PropTypes.func,
-  onFinish: PropTypes.func
+  onFinish: PropTypes.func,
 }
 
 Form.Item = FormItem

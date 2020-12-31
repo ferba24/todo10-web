@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Arrow from '../Arrow'
+import PropTypes from 'prop-types'
 
 const getVariant = expanded => (
   {
@@ -9,7 +10,13 @@ const getVariant = expanded => (
   }
 )
 
-export default function Expand({expanded: initialExpanded, title, children, ...props}) {
+export default function Expand({
+  expanded: initialExpanded,
+  title,
+  children,
+  arrowPosition = 'left',
+  ...props
+}) {
   const [expanded, setExpanded] = useState(initialExpanded)
 
   const initial = getVariant(false)
@@ -25,10 +32,20 @@ export default function Expand({expanded: initialExpanded, title, children, ...p
     <motion.div
       initial={initial}
       animate={animate}
-      className="overflow-hidden text-opacity-50 font-extralight p-2 text-sm mx-3.5"
+      className="overflow-hidden"
     >
       {children}
     </motion.div>
+  )
+
+  const arrowClassName = arrowPosition == 'left' ? 'mr-2' : 'ml-2'
+
+  const arrow = (
+    <Arrow
+      size="small"
+      direction={expanded ? 'down' : 'right'}
+      className={arrowClassName}
+    />
   )
 
   return (
@@ -37,12 +54,20 @@ export default function Expand({expanded: initialExpanded, title, children, ...p
         className="flex items-center cursor-pointer select-none"
         onClick={() => setExpanded(!expanded)}
       >
-        <Arrow size="small" direction={expanded ? 'down' : 'right'}/>
-        <div className="ml-2 text-primary font-bold">
-          {title}
-        </div>
+        {arrowPosition == 'left' && arrow}
+        {title}
+        {arrowPosition == 'right' && arrow}
       </div>
       {content}
     </div>
   )
+}
+
+Arrow.propTypes = {
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
+  expanded: PropTypes.bool,
+  arrowPosition: PropTypes.oneOf(['left', 'right'])
 }

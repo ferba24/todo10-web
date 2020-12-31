@@ -31,7 +31,7 @@ export default function Button({
 
   return (
     <button
-      className={`${sizeClass} font-semibold hover:bg-opacity-60 focus:outline-none rounded-md ${typeClass} ${className}`}
+      className={`button-base ${sizeClass} ${typeClass} ${className}`}
       onClick={onClick}
       type={htmlType}
       {...props}

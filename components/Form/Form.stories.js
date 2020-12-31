@@ -1,6 +1,7 @@
 import Form from './Form';
 import Button from '../Button'
 import NativeSelect from '../NativeSelect'
+import Input from '../Input'
 
 export default {
   title: 'Example/Form',
@@ -13,8 +14,11 @@ export default {
 
 const Template = (args) => (
   <Form {...args}>
-    <Form.Item name="email" required>
-      <input/>
+    <Form.Item label="Email" name="email" required>
+      <Input/>
+    </Form.Item>
+    <Form.Item label="Mensaje" name="message" required>
+      <Input.Textarea/>
     </Form.Item>
     <Form.Item label="Space" name="space" required>
       <NativeSelect>
@@ -37,5 +41,4 @@ const Template = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   className: 'max-w-xs mx-auto',
-  size: 'middle'
 };

@@ -1,8 +1,11 @@
 const Content = ({icon, title, desc}) => (
   <div className="text-center">
-    <img className="mx-auto w-20" src={icon} />
+    <img
+      className="mx-auto w-14 md:w-20"
+      src={icon}
+    />
     <div
-      className="font-medium mt-4 mb-1"
+      className="font-medium mt-2 md:mt-4 mb-1"
     >
       {title}
     </div>

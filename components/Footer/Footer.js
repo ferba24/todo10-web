@@ -22,7 +22,9 @@ export default function Footer({className, style}) {
       >
         {faq.map((item, i) => (
           <Expand key={item.key} title={item.title} expanded={i == 0}>
-            {item.desc}
+            <div className="text-opacity-50 font-extralight text-sm mx-3.5">
+              {item.desc}
+            </div>
           </Expand>
         ))}
       </BottomDrawer>

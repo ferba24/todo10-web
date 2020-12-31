@@ -1,42 +1,9 @@
 import { useState } from 'react'
-import RadioCard from '../RadioCard'
-import ChipSelector from '../ChipSelector'
-import Card from '../../components/Card'
 import { motion } from 'framer-motion'
 import Fragment from '../../components/Fragment'
-
-const getOptionChild = (type, option) => {
-  switch(type) {
-    case 'select':
-      return option.label
-    case 'chip':
-      return props => (
-        <ChipSelector.Chip
-          className="w-60"
-          {...props}
-        >
-          <ChipSelector.MiniContent {...option}/>
-        </ChipSelector.Chip>
-      )
-    case 'radioCard':
-      return props => (
-        <RadioCard
-          className="w-6/12 md:w-3/12 p-2 tap-highlight-transparent"
-          ribbon={option.ribbon}
-          {...props}
-        >
-          <RadioCard.Content {...option}/>
-        </RadioCard>
-      )
-    case 'card':
-      return (
-        <Card className="max-w-xs flex-1" ribbon={option.ribbon}>
-          <div>{option.title}</div>
-          <div>{option.price}</div>
-        </Card>
-      )
-  }
-}
+import getOptionChild from './getOptionChild'
+import StepIndicator from './StepIndicator'
+import ContactForm from '../../containers/ContactForm'
 
 const variants = {
   hidden: { opacity: 0, y: 20 },
@@ -46,6 +13,7 @@ const variants = {
 export default function Step({
   name,
   title,
+  desc,
   options,
   type,
   currentStep = 1,
@@ -53,7 +21,9 @@ export default function Step({
   option: Option = Fragment,
   onChange = () => {},
   multiple,
-  nextStep: uniqueNextStep
+  nextStep: uniqueNextStep,
+  final,
+  onFinish = () => {}
 }) {
 
   const [nextStep, setNextStep] = useState(null)
@@ -65,17 +35,31 @@ export default function Step({
     }
   }
 
+  const goToNextStep = (nextStep, value) => {
+    nextStep && setNextStep(nextStep)
+    setCurrentValue(value)
+    onChange({[name]: value})
+    if(final) onFinish()
+  }
+
   const handleChange = e => {
     const { value } = e.target
     const option = findSelectedOption(value)
     const nextStep = multiple ? !!value.length && uniqueNextStep : option.nextStep
-    setNextStep(nextStep)
-    setCurrentValue(value)
-    onChange({[name]: value})
+    goToNextStep(nextStep, value)
   }
 
   const handleChildChange = childValueObj => {
     onChange({[name]: currentValue, ...childValueObj})
+  }
+
+  const handleFormFinish = values => {
+    goToNextStep(uniqueNextStep, values)
+  }
+
+  const handleFormChange = values => {
+    setCurrentValue(values)
+    onChange({[name]: values})
   }
 
   return (
@@ -83,11 +67,15 @@ export default function Step({
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="my-10 max-w-5xl mx-auto"
+      className="my-16 max-w-5xl mx-auto"
     >
-      <h3 className="text-center mb-4 text-xl">
-        {title}
-      </h3>
+      <div className="text-center mb-6">
+        <StepIndicator
+          number={currentStep}
+          title={title}
+          desc={desc}
+        />
+      </div>
 
       {options && (
         <div className="flex flex-wrap justify-center items-stretch">
@@ -107,12 +95,20 @@ export default function Step({
         </div>
       )}
 
+      {type == 'contactForm' && (
+        <ContactForm
+          onFinish={handleFormFinish}
+          onValuesChange={handleFormChange}
+        />
+      )}
+
       {nextStep && (
         <Step
           {...nextStep}
           currentStep={currentStep + 1}
           key={nextStep.name}
           onChange={handleChildChange}
+          onFinish={onFinish}
         />
       )}
     </motion.div>
