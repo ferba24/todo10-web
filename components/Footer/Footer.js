@@ -2,7 +2,6 @@ import { useState } from 'react'
 import BottomDrawer from '../BottomDrawer'
 import faq from '../../data/faq'
 import Expand from '../Expand'
-import wavesImage from './waves.svg'
 import { motion } from 'framer-motion'
 
 export default function Footer({className, style}) {
@@ -40,7 +39,7 @@ export default function Footer({className, style}) {
           type: 'spring',
           mass: 0.1
         }}
-        src={wavesImage}
+        src="/images/waves-footer.svg"
       />
     </div>
   )

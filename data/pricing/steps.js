@@ -3,17 +3,17 @@ import ChipSelector from '../../components/ChipSelector'
 import Select from '../../components/Select'
 import NativeSelect from '../../components/NativeSelect'
 
-import wordpress from '../../public/icons/wordpress.svg'
-import xenforo from '../../public/icons/xenforo.svg'
-import windowIcon from '../../public/icons/window.svg'
-import notebook from '../../public/icons/notebook.svg'
-import servicesIcon from '../../public/icons/services.svg'
-import personalizedIcon from '../../public/icons/personalized.svg'
+const wordpress = '/icons/wordpress.svg'
+const xenforo = '/icons/xenforo.svg'
+const windowIcon = '/icons/window.svg'
+const notebook = '/icons/notebook.svg'
+const servicesIcon = '/icons/services.svg'
+const personalizedIcon = '/icons/personalized.svg'
 
-import seoIcon from '../../public/icons/seo.svg'
-import designIcon from '../../public/icons/design.svg'
-import computerIcon from '../../public/icons/computer.svg'
-import pencilIcon from '../../public/icons/pencil.svg'
+const seoIcon = '/icons/seo.svg'
+const designIcon = '/icons/design.svg'
+const computerIcon = '/icons/computer.svg'
+const pencilIcon = '/icons/pencil.svg'
 
 const getPlansStep = diskSpace => ({
   name: 'plansStep',

@@ -1,7 +1,6 @@
 import Form from './Form';
 import Button from '../Button'
 import NativeSelect from '../NativeSelect'
-import Input from '../Input'
 
 export default {
   title: 'Example/Form',
@@ -15,10 +14,10 @@ export default {
 const Template = (args) => (
   <Form {...args}>
     <Form.Item label="Email" name="email" required>
-      <Input/>
+      <input className="form-control"/>
     </Form.Item>
     <Form.Item label="Mensaje" name="message" required>
-      <Input.Textarea/>
+      <textarea className="form-control"/>
     </Form.Item>
     <Form.Item label="Space" name="space" required>
       <NativeSelect>

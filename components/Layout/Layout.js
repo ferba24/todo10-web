@@ -5,6 +5,7 @@ import MenuIcon from '../MenuIcon'
 import Navbar from '../Navbar'
 import Drawer from '../Drawer'
 import DrawerMenu from './DrawerMenu'
+import Footer from '../Footer'
 
 export default function Layout({children}) {
 
@@ -19,13 +20,14 @@ export default function Layout({children}) {
   )
 
   return (
-    <div>
+    <div className="overflow-hidden">
       {menuIcon}
       <Navbar routes={[...routes, cto]}/>
       <Drawer visible={drawerV}>
         <DrawerMenu routes={routes} cto={cto}/>
       </Drawer>
       {children}
+      <Footer/>
     </div>
   )
 }

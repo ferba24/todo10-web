@@ -36,7 +36,7 @@ export default function Step({
   }
 
   const goToNextStep = (nextStep, value) => {
-    nextStep && setNextStep(nextStep)
+    setNextStep(nextStep)
     setCurrentValue(value)
     onChange({[name]: value})
     if(final) onFinish()
@@ -46,6 +46,7 @@ export default function Step({
     const { value } = e.target
     const option = findSelectedOption(value)
     const nextStep = multiple ? !!value.length && uniqueNextStep : option.nextStep
+    console.log(nextStep)
     goToNextStep(nextStep, value)
   }
 

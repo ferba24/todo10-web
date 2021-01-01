@@ -17,13 +17,11 @@ export default function Stepper({initialStep}) {
   if(!initialStep) return null
 
   return (
-    <div>
-      <Step
-        {...initialStep}
-        key={initialStep.name}
-        onChange={handleChange}
-        onFinish={handleFinish}
-      />
-    </div>
+    <Step
+      {...initialStep}
+      key={initialStep.name}
+      onChange={handleChange}
+      onFinish={handleFinish}
+    />
   )
 }

@@ -3,7 +3,6 @@ import NativeOption from './NativeOption'
 import Dropdown from '../Dropdown'
 import Arrow from '../Arrow'
 import Select from '../Select'
-import './NativeSelect.css'
 import { motion } from 'framer-motion'
 
 const variants = {

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import arrowIcon from './arrow-right.svg'
 import PropTypes from 'prop-types';
 
 const defaultSize = 24
@@ -34,7 +33,7 @@ export default function Arrow({size = 'middle', direction = 'right', ...rest}) {
     >
       <img
         className="h-full mx-auto"
-        src={arrowIcon}
+        src="/icons/arrow-right.svg"
       />
     </motion.div>
   )

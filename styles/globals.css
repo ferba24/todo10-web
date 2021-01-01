@@ -42,6 +42,11 @@
 }
 
 @layer utilities {
+
+  .section {
+    @apply my-20
+  }
+
   .tap-highlight-transparent {
     -webkit-tap-highlight-color: transparent;
   }
