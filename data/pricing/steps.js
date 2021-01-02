@@ -20,6 +20,7 @@ const getPlansStep = diskSpace => ({
   title: 'Select the best plan for you',
   type: 'card',
   options: getPlans(diskSpace),
+  className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
 })
 
 

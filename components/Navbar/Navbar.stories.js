@@ -1,20 +1,26 @@
 import Navbar from './Navbar';
+import useScrollQuery from '../../lib/useScrollQuery'
 
 export default {
   title: 'Example/Navbar',
   component: Navbar,
 };
 
-const Template = (args) => (
-  <div>
-    <Navbar {...args}/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-  </div>
-);
+const Template = (args) => {
+
+  const scrolled = useScrollQuery(50)
+
+  return(
+    <div>
+      <Navbar {...args} scrolled={scrolled}/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      text<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+  )
+}
 
 export const Default = Template.bind({});
 Default.args = {

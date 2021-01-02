@@ -4,7 +4,7 @@ import faq from '../../data/faq'
 import Expand from '../Expand'
 import { motion } from 'framer-motion'
 
-export default function Footer({className, style}) {
+export default function Footer({className = '', style}) {
 
   const [faqVisible, setFaqVisible] = useState(false)
 
@@ -14,7 +14,7 @@ export default function Footer({className, style}) {
       style={style}
     >
       <BottomDrawer
-        className="w-6/12 mx-auto z-10"
+        className="mx-auto z-10 w-11/12 max-w-xl"
         headerTitle="Frequently Asked Questions"
         visible={faqVisible}
         onClick={() => setFaqVisible(!faqVisible)}

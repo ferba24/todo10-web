@@ -15,7 +15,7 @@ export default function TestPage() {
           Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus.
         </div>
       </div>
-      <div className="section">
+      <div className="section container">
         <Stepper initialStep={initialStep}/>
       </div>
       <div className="my-60"/>

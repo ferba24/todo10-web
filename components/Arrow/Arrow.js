@@ -32,7 +32,7 @@ export default function Arrow({size = 'middle', direction = 'right', ...rest}) {
       {...rest}
     >
       <img
-        className="h-full mx-auto"
+        className="h-full mx-auto select-none"
         src="/icons/arrow-right.svg"
       />
     </motion.div>

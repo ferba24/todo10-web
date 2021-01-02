@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Expand from '../Expand'
 
 export default function DrawerMenu({routes, cto}) {
-  console.log(routes)
 
   const DrawerLink = ({path, label, className, icon}) => (
     <div className="my-3">
@@ -37,7 +36,7 @@ export default function DrawerMenu({routes, cto}) {
   )
 
   return (
-    <div className="p-10 h-full flex flex-col justify-between">
+    <div className="p-10 h-full flex flex-col justify-between overflow-y-auto">
       <div>
         {routes.map(mapRoute)}
       </div>

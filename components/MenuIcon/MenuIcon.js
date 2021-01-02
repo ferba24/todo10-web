@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import Line from './Line'
 
-const defaultSize = 24
+const defaultSize = 28
 
 const sizesNames = {
   small: 14,
   middle: defaultSize,
-  large: 30
+  large: 35
 }
 
 const getFinalSize = size => {
@@ -16,7 +16,7 @@ const getFinalSize = size => {
 
 export default function MenuIcon({
   open,
-  size = 'large',
+  size = 'middle',
   color = '#37395B',
   className,
   ...props

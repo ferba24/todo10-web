@@ -6,12 +6,18 @@ export default {
 };
 
 const Template = (args) => (
-  <Dropdown {...args}>
-    Hover me
-  </Dropdown>
+  <Dropdown {...args}/>
 )
 
 export const Default = Template.bind({});
 Default.args = {
-  overlay: "Menu"
+  overlay: "Menu",
+  children: 'Click me'
+};
+
+export const OpenOnHover = Template.bind({});
+OpenOnHover.args = {
+  overlay: "Menu",
+  children: 'Hover me',
+  openOnHover: true
 };

@@ -1,9 +1,10 @@
 import Button from '../components/Button'
-import devices from '../public/icons/devices.svg'
-import settings from '../public/icons/settings.svg'
-import windows from '../public/icons/windows.svg'
-import wordpress from '../public/icons/wordpress-small.svg'
-import xenforo from '../public/icons/xenforo-small.svg'
+
+const devices = '/icons/devices.svg'
+const settings = '/icons/settings.svg'
+const windows = '/icons/windows.svg'
+const wordpress = '/icons/wordpress-small.svg'
+const xenforo = '/icons/xenforo-small.svg'
 
 const routes = [
   {

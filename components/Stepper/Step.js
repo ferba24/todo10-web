@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Fragment from '../../components/Fragment'
 import getOptionChild from './getOptionChild'
@@ -23,11 +23,21 @@ export default function Step({
   multiple,
   nextStep: uniqueNextStep,
   final,
-  onFinish = () => {}
+  onFinish = () => {},
+  className = 'flex flex-wrap justify-center items-stretch'
 }) {
 
   const [nextStep, setNextStep] = useState(null)
   const [currentValue, setCurrentValue] = useState(undefined)
+  const indicatorRef = useRef(null)
+
+  useEffect(() => {
+    if(currentStep == 1 || document.body.offsetWidth > 767) return
+    const { top } = indicatorRef.current.getBoundingClientRect()
+    setTimeout(() => {
+      window.scrollTo({top: window.scrollY + top - 150 , behavior: 'smooth'})
+    }, 300)
+  }, [indicatorRef])
 
   const findSelectedOption = value => {
     for(const option of options) {
@@ -46,7 +56,6 @@ export default function Step({
     const { value } = e.target
     const option = findSelectedOption(value)
     const nextStep = multiple ? !!value.length && uniqueNextStep : option.nextStep
-    console.log(nextStep)
     goToNextStep(nextStep, value)
   }
 
@@ -63,23 +72,30 @@ export default function Step({
     onChange({[name]: values})
   }
 
+  const indicator = (
+    <div
+      className="text-center mb-6"
+      ref={indicatorRef}
+    >
+      <StepIndicator
+        number={currentStep}
+        title={title}
+        desc={desc}
+      />
+    </div>
+  )
+
   return (
     <motion.div
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="my-16 max-w-5xl mx-auto"
+      className="my-16"
     >
-      <div className="text-center mb-6">
-        <StepIndicator
-          number={currentStep}
-          title={title}
-          desc={desc}
-        />
-      </div>
+      {indicator}
 
       {options && (
-        <div className="flex flex-wrap justify-center items-stretch">
+        <div className={className}>
           <Selector
             onChange={handleChange}
             multiple={multiple}

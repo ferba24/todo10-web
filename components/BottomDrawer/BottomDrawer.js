@@ -5,7 +5,7 @@ export default function BottomDrawer({headerTitle, visible, onClick, className, 
 
   const header = (
     <div
-      className="flex items-center mb-7 select-none"
+      className="flex items-center select-none p-4 sm:p-7 cursor-pointer tap-highlight-transparent"
       onClick={onClick}
     >
       <div className="mr-3 text-xl text-primary">
@@ -17,7 +17,7 @@ export default function BottomDrawer({headerTitle, visible, onClick, className, 
 
   return (
     <motion.div
-      className={`cursor-pointer bg-white absolute -top-16 rounded-3xl shadow-xl p-7 pb-10 ${className}`}
+      className={`bg-white absolute -top-12 sm:-top-16 rounded-2xl sm:rounded-3xl shadow-xl pb-10 ${className}`}
       initial={{ y: -12 }}
       animate={{
         y: visible ? 'calc(-100% + 90px)' : -12
@@ -28,7 +28,9 @@ export default function BottomDrawer({headerTitle, visible, onClick, className, 
       }}
     >
       {header}
-      {children}
+      <div className="p-4 sm:p-7 pt-0">
+        {children}
+      </div>
     </motion.div>
   )
 }

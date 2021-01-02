@@ -8,7 +8,15 @@ import {
 import validateChildren from './validateChildren'
 import PropTypes from 'prop-types'
 
-export default function FormItem({children, name, label, required, className = '', style }) {
+export default function FormItem({
+  children,
+  name,
+  label,
+  required,
+  className = '',
+  style,
+  errorMessage = 'Campo requerido'
+}) {
   const [invalid, setInvalid] = useState(false)
   const { updateValues, addItem } = useContext(FormContext)
   
@@ -19,6 +27,7 @@ export default function FormItem({children, name, label, required, className = '
 
   // listen onChange from children
   const onChange = e => {
+    setInvalid(false)
     updateValues(name, e.target.value)
   }
 
@@ -29,7 +38,13 @@ export default function FormItem({children, name, label, required, className = '
     }
   }
 
-  const newInput = cloneElement(children, { onChange, invalid, label })
+  const newInput = cloneElement(children, { onChange })
+
+  const renderedErrorMessage = (
+    <div className="text-red-800 ml-3 mt-1">
+      {errorMessage}
+    </div>
+  )
 
   return (
     <div
@@ -42,6 +57,7 @@ export default function FormItem({children, name, label, required, className = '
         </div>
       )}
       {newInput}
+      {invalid && renderedErrorMessage}
     </div>
   )
 }

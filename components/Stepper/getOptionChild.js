@@ -29,7 +29,7 @@ const getOptionChild = (type, option) => {
     case 'card':
       return (
         <Card
-          className="max-w-xs flex-1 mx-3"
+          className="max-w-xs flex-shrink-0 mx-3"
           ribbon={option.ribbon}
           style={{height: 'fit-content'}}
         >

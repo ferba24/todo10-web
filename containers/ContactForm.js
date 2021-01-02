@@ -10,10 +10,10 @@ export default function ContactForm({extended, onFinish, onValuesChange}) {
         onFinish={onFinish}
         onValuesChange={onValuesChange}
       >
-        <Form.Item name="name" label="Name">
+        <Form.Item name="name" label="Name" required>
           <input className="form-control" placeholder="Oscar Wilde"/>
         </Form.Item>
-        <Form.Item name="email" label="Email">
+        <Form.Item name="email" label="Email" required>
           <input className="form-control" placeholder="Oscar@gmail.com"/>
         </Form.Item>
         {extended && (

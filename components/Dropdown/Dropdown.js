@@ -7,6 +7,7 @@ export default function Dropdown({
   onOpenChange = () => {},
   open: initialOpen = false,
   className,
+  openOnHover
 }) {
 
   const [open, setOpen] = useState(initialOpen)
@@ -20,6 +21,7 @@ export default function Dropdown({
 
   const handleMouseEnter = e => {
     clearTimeout(mouseoutTimeout.current) // prevent closing
+    if(!openOnHover) return
     setOpen(true)
     onOpenChange(true)
   }
@@ -30,6 +32,12 @@ export default function Dropdown({
       setOpen(false)
       onOpenChange(false)
     }, 150)
+  }
+
+  const handleClick = e => {
+    if(openOnHover) return
+    setOpen(!open)
+    onOpenChange(!open)
   }
 
   useEffect(() => {
@@ -49,7 +57,9 @@ export default function Dropdown({
       className={`relative ${className}`}
       ref={dropdownRef}
     >
-      {trigger}
+      <span onClick={handleClick}>
+        {trigger}
+      </span>
       {open && (
         <div
           className="absolute z-20"

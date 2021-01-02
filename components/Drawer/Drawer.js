@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import vhCheck from 'vh-check'
 
 const backdropVariants = {
   hidden: { opacity: 0, },
@@ -15,6 +17,9 @@ export default function Drawer({
   onClose,
   children
 }) {
+
+  const vhCheckOptions = { updateOnTouch: true }
+  useEffect(() => vhCheck(vhCheckOptions), []);
   
   const backdrop = (
     <motion.div
@@ -30,14 +35,14 @@ export default function Drawer({
   return(
     <AnimatePresence>
       {visible && (
-        <div className="fixed flex justify-end top-0 left-0 w-full z-40">
+        <div className="fixed flex justify-end top-0 left-0 w-full z-40 h-screen">
           <motion.div
             initial="hidden"
             animate="visible"
             exit="hidden"
             variants={drawerVariants}
             transition={{type: 'tween', ease: 'easeInOut'}}
-            className="relative right-0 w-full md:w-4/12 min-h-screen bg-white z-10 border-4 border-blue rounded-lg"
+            className="relative h-full right-0 w-full sm:w-6/12 bg-white z-10 border-4 border-blue rounded-lg"
           >
             {children}
           </motion.div>
