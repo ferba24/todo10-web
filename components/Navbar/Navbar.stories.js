@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import useScrollQuery from '../../lib/useScrollQuery'
+import routes, {cto} from '../../data/routes'
 
 export default {
   title: 'Example/Navbar',
@@ -24,4 +25,5 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
+  routes: [...routes, cto]
 };

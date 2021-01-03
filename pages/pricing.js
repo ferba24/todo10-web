@@ -1,8 +1,8 @@
 import Layout from '../components/Layout'
 import Stepper from '../components/Stepper';
-import initialStep from '../data/pricing/steps'
+import initialStep from '../data/steps'
 
-export default function TestPage() {
+export default function Pricing() {
 
   return (
     <Layout>

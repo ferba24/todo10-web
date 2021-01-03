@@ -1,5 +1,5 @@
 import Card from './Card';
-import getPlans from '../../data/pricing/getPlans'
+import getPlans from '../../data/steps/getPlans'
 
 export default {
   title: 'Example/Card',

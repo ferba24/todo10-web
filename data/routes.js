@@ -13,28 +13,33 @@ const routes = [
     subItems: [
       {
         label: 'Hosting plans 🔥',
-        path: '/hosting-plans',
-        icon: devices
+        path: '/hosting',
+        icon: devices,
+        desc: 'High-performance web hosting plans.'
       },
       {
         label: 'Maintenance plans',
-        path: '/maintenance-plans',
-        icon: windows
+        path: '/maintenance',
+        icon: windows,
+        desc: 'Lorem ipsum dolor sit amet, consectetur.'
       },
       {
         label: 'Wordpress services',
-        path: '/wordpress-services',
-        icon: wordpress
+        path: '/wordpress',
+        icon: wordpress,
+        desc: 'Themes, plugins, hosting, we do it all!'
       },
       {
         label: 'Xenforo services',
-        path: '/xenforo-services',
-        icon: xenforo
+        path: '/xenforo',
+        icon: xenforo,
+        desc: 'Migration, tunning, addons, styles and more.'
       },
       {
         label: 'Personalized Services',
-        path: '/personalized-services',
-        icon: settings
+        path: '/personalized',
+        icon: settings,
+        desc: 'SEO, Web Design, Dedicated services, everything you need.'
       }
     ]
   },

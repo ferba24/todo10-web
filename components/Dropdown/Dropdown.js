@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function Dropdown({
   overlay,
-  children: trigger,
+  children,
   placement = 'left',
   onOpenChange = () => {},
   open: initialOpen = false,
@@ -52,13 +52,25 @@ export default function Dropdown({
     }
   }, [])
 
+  const toggle = () => {
+    setOpen(!open)
+  }
+
+  if(typeof children == 'function') {
+    return (
+      <div ref={dropdownRef}>
+        {children(open, toggle)}
+      </div>
+    )
+  }
+
   return (
     <div
       className={`relative ${className}`}
       ref={dropdownRef}
     >
       <span onClick={handleClick}>
-        {trigger}
+        {children}
       </span>
       {open && (
         <div

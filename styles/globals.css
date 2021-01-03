@@ -47,6 +47,10 @@
     height: calc(100vh - var(--vh-offset, 0px));
   }
 
+  .border-3 {
+    border-width: 3px;
+  }
+
   .section {
     @apply my-20;
   }

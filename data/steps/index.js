@@ -45,7 +45,7 @@ const diskSpaceOptions = {
   ]
 }
 
-const hostingOptions = {
+export const hostingOptions = {
   name: 'platform',
   title: 'Choose your platform',
   type: 'chip',

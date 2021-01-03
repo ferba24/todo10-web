@@ -1,5 +1,5 @@
 import Stepper from './Stepper';
-import initialStep from '../../data/pricing/steps'
+import initialStep from '../../data/steps'
 
 export default {
   title: 'Example/Stepper',

@@ -21,3 +21,13 @@ OpenOnHover.args = {
   children: 'Hover me',
   openOnHover: true
 };
+
+export const RenderProps = Template.bind({});
+RenderProps.args = {
+  children: (open, toggle) => (
+    <>
+      <div onClick={toggle}>Click me</div>
+      {open ? 'Menu' : null}
+    </>
+  ),
+};
