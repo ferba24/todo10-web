@@ -49,7 +49,7 @@ export default function BenefitsSection({benefits = []}) {
   const items = expanded ? benefits : benefits.slice(0, itemsToShow)
 
   const bottom = (
-    <div className="bg-gray-200 text-center rounded-xl py-4">
+    <div className="bg-gray-200 text-center lg:rounded-xl py-10 lg:py-4">
       <Button
         type="blue"
         className="px-16"
@@ -61,8 +61,8 @@ export default function BenefitsSection({benefits = []}) {
   )
 
   return (
-    <div className="bg-gray-100 rounded-xl">
-      <div className="flex flex-wrap p-1 sm:p-2 md:p-3 overflow-hidden">
+    <div className="bg-gray-100 lg:rounded-xl">
+      <div className="flex flex-wrap p-2 md:p-3 overflow-hidden w-full max-w-4xl mx-auto">
         <AnimatePresence initial={false}>
           {items.map(itemMap)}
         </AnimatePresence>

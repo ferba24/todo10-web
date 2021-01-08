@@ -60,6 +60,10 @@
     @apply max-w-5xl mx-auto;
   }
 
+  .container-full {
+    @apply max-w-5xl mx-auto;
+  }
+
   .tap-highlight-transparent {
     -webkit-tap-highlight-color: transparent;
   }

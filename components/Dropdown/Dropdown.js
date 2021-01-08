@@ -5,9 +5,9 @@ export default function Dropdown({
   children,
   placement = 'left',
   onOpenChange = () => {},
-  open: initialOpen = false,
   className,
-  openOnHover
+  openOnHover,
+  open: initialOpen = false
 }) {
 
   const [open, setOpen] = useState(initialOpen)
@@ -16,45 +16,45 @@ export default function Dropdown({
   // set a reference to the dropdown so we can attach listeners to it
   const dropdownRef = useRef(null)
   
-  // set a timer that persist between renders
+  // set timers that persist between renders
   const mouseoutTimeout = useRef()
+  const eventTimeout = useRef(null)
+
+  const updateOpen = (value = false) => {
+    if(eventTimeout.current) return
+    setOpen(value)
+    onOpenChange(value)
+  }
 
   const handleMouseEnter = e => {
     clearTimeout(mouseoutTimeout.current) // prevent closing
-    if(!openOnHover) return
-    setOpen(true)
-    onOpenChange(true)
+    openOnHover && updateOpen(true)
   }
   
-  const handleMouseOut = e => {
+  const handleMouseLeave = e => {
     // close only if the user has left the dropdown for 150ms
-    mouseoutTimeout.current = setTimeout(() => {
-      setOpen(false)
-      onOpenChange(false)
-    }, 150)
+    mouseoutTimeout.current = setTimeout(updateOpen, 150)
   }
 
-  const handleClick = e => {
-    if(openOnHover) return
-    setOpen(!open)
-    onOpenChange(!open)
+  const setListeners = (target, action) => {
+    target[action]('mouseenter', handleMouseEnter)
+    target[action]('mouseleave', handleMouseLeave)
   }
 
   useEffect(() => {
     const dropdownEl = dropdownRef.current
-    dropdownEl.addEventListener('mouseenter', handleMouseEnter)
-    dropdownEl.addEventListener('mouseleave', handleMouseOut)
-    
-    // cleanup
-    return () => {
-      dropdownEl.removeEventListener('mouseenter', handleMouseEnter)
-      dropdownEl.removeEventListener('mouseleave', handleMouseOut)
-    }
+    setListeners(dropdownEl, 'addEventListener')
+    return () => setListeners(dropdownEl, 'removeEventListener')
   }, [])
 
-  const toggle = () => {
-    setOpen(!open)
-  }
+  useEffect(() => {
+    eventTimeout.current = setTimeout(() => {
+      clearTimeout(eventTimeout.current)
+      eventTimeout.current = null
+    }, 150)
+  }, [open]);
+
+  const toggle = () => updateOpen(!open)
 
   if(typeof children == 'function') {
     return (
@@ -69,7 +69,7 @@ export default function Dropdown({
       className={`relative ${className}`}
       ref={dropdownRef}
     >
-      <span onClick={handleClick}>
+      <span onClick={toggle}>
         {children}
       </span>
       {open && (

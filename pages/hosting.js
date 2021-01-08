@@ -1,6 +1,8 @@
 import Layout from '../components/Layout'
+import BenefitsSection from '../components/BenefitsSection'
 import Stepper from '../components/Stepper';
 import { hostingOptions } from '../data/steps'
+import benefits from '../data/hosting/benefits'
 
 export default function Hosting() {
 
@@ -14,6 +16,9 @@ export default function Hosting() {
         <div className="text-center text-primary">
           Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus.
         </div>
+      </div>
+      <div className="section container-full">
+        <BenefitsSection benefits={benefits}/>
       </div>
       <div className="section container">
         <Stepper initialStep={hostingOptions}/>

@@ -1,7 +1,6 @@
 import RadioCard from '../RadioCard'
 import ChipSelector from '../ChipSelector'
 import Card from '../../components/Card'
-import List from '../../components/List'
 
 const getOptionChild = (type, option) => {
   switch(type) {

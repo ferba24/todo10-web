@@ -5,10 +5,13 @@ import Link from 'next/link'
 
 const triggerOpened = 'bg-white border-blue z-40'
 
-const Trigger = (open, label) => (
+const Trigger = (open, toggleOpen, label) => (
   <div
     className={`flex cursor-pointer border-3 border-transparent p-3 rounded-lg items-center ${open ? triggerOpened : ''}`}
-    style={{borderBottom: 'none', borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}  
+    style={{borderBottom: 'none', borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
+    onClick={() => {
+      toggleOpen()
+    }}
   >
     {label}
     <Arrow
@@ -55,9 +58,9 @@ const NavbarMenu = ({routes = [], scrolled}) => (
     {routes.map(route => (
       route.subItems ? (
         <Dropdown key={route.path} openOnHover>
-          {open => (
+          {(open, toggleOpen) => (
             <div className="flex justify-center">
-              {Trigger(open, route.label)}
+              {Trigger(open, toggleOpen, route.label)}
               {open && (
                 <SubItems
                   items={route.subItems}
