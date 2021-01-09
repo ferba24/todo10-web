@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState } from 'react'
 import routes, {cto} from '../../data/routes'
 import useScrollQuery from '../../lib/useScrollQuery'
@@ -22,7 +23,10 @@ export default function Layout({children}) {
   )
 
   return (
-    <div className="overflow-hidden min-h-screen">
+    <div className="overflow-hidden min-h-screen text-primary">
+      <Head>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       {menuIcon}
       <Navbar routes={[...routes, cto]} scrolled={scrolled}/>
       <Drawer visible={drawerV}>

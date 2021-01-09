@@ -6,38 +6,50 @@ const windows = '/icons/windows.svg'
 const wordpress = '/icons/wordpress-small.svg'
 const xenforo = '/icons/xenforo-small.svg'
 
+export const paths = {
+  SERVICES: '/services',
+  HOSTING: '/hosting',
+  MAINTENANCE: '/maintenance',
+  WORDPRESS: '/wordpress',
+  XENFORO: '/xenforo',
+  PERSONALIZED: '/personalized',
+  PRICING: '/pricing',
+  ABOUT_US: '/about-us',
+  GET_A_QUOTE: '/get-a-quote',
+}
+
 const routes = [
   {
     label: 'Services',
-    path: '/services',
+    path: paths.SERVICES,
     subItems: [
       {
         label: 'Hosting plans 🔥',
-        path: '/hosting',
+        path: paths.HOSTING,
         icon: devices,
         desc: 'High-performance web hosting plans.'
       },
       {
         label: 'Maintenance plans',
-        path: '/maintenance',
+        path: paths.MAINTENANCE,
         icon: windows,
         desc: 'Lorem ipsum dolor sit amet, consectetur.'
       },
       {
         label: 'Wordpress services',
-        path: '/wordpress',
+        path: paths.WORDPRESS,
         icon: wordpress,
         desc: 'Themes, plugins, hosting, we do it all!'
       },
       {
         label: 'Xenforo services',
-        path: '/xenforo',
+        path: paths.XENFORO,
         icon: xenforo,
         desc: 'Migration, tunning, addons, styles and more.'
       },
       {
         label: 'Personalized Services',
-        path: '/personalized',
+        path: paths.PERSONALIZED,
         icon: settings,
         desc: 'SEO, Web Design, Dedicated services, everything you need.'
       }
@@ -45,11 +57,11 @@ const routes = [
   },
   {
     label: 'Pricing',
-    path: '/pricing'
+    path: paths.PRICING,
   },
   {
     label: 'About us',
-    path: '/about-us'
+    path: paths.ABOUT_US,
   },
 ]
 
@@ -57,5 +69,5 @@ export default routes
 
 export const cto = {
   label: <Button>Get a Quote</Button>,
-  path: '/get-a-quote',
+  path: paths.GET_A_QUOTE,
 }

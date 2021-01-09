@@ -7,6 +7,7 @@ module.exports = {
         primary: 'var(--color-primary)',
         wordpress: 'var(--color-wordpress)',
         blue: 'var(--color-blue)',
+        orange: 'var(--color-orange)'
       },
       backgroundColor: {
         orange: 'var(--color-orange)',
