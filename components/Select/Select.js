@@ -1,5 +1,5 @@
 import SelectContext from './context'
-import { useState, useRef, useCallback } from 'react'
+import { useState, useCallback, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Option from './Option'
 
@@ -12,43 +12,48 @@ export default function Select({
   defaultValue,
 }) {
 
-  const initialValue = defaultValue || multiple ? [] : undefined
-  const optionsRef = useRef([])
-  const valueRef = useRef(initialValue)
+  const initialValue = defaultValue ? defaultValue : multiple ? [] : undefined
 
-  function addToOptions(value) {
-    optionsRef.current.push(value)
-    onOptionsChange(optionsRef.current)
-  }
+  const [options, setOptions] = useState([])
+  const [value, setValue] = useState(initialValue)
 
-  const [, updateState] = useState()
-  const forceUpdate = useCallback(() => updateState({}), [])
+  const addToOptions = useCallback(option => {
+    setOptions(prevOptions => {
+      const newOptions = [...prevOptions, option] 
+      onOptionsChange(newOptions)
+      return newOptions
+    })
+  }, [])
 
-  function setValue(value, rest) {
-    if(multiple) {
-      const index = valueRef.current.indexOf(value)
-      if(index != -1) {
-        valueRef.current.splice(index, 1)
+  const updateValue = useCallback(payloadValue => {
+    setValue(prevValue => {
+      let newValue = multiple ? [...prevValue] : {...prevValue}
+      if(multiple) {
+        const index = prevValue.indexOf(payloadValue)
+        if(index != -1) {
+          newValue.splice(index, 1)
+        } else {
+          newValue.push(payloadValue)
+        }
       } else {
-        valueRef.current.push(value)
+        newValue = payloadValue
       }
-    } else {
-      valueRef.current = value
-    }
-    forceUpdate()
-    onChange({target: {value: valueRef.current, ...rest}})
-    !multiple && onSelectedIndexChange(optionsRef.current.indexOf(value))
-  }
+      onChange({ target: { value: newValue }})
+      return newValue
+    })
+  }, [])
 
-  const contextValue = {
-    multiple,
-    setValue,
-    addToOptions,
-    value: valueRef.current
-  }
+  useEffect(() => {
+    if(multiple || !value) return
+    onSelectedIndexChange(options.indexOf(value))
+  }, [value, options])
+
+  const api = useMemo(() => (
+    { updateValue, addToOptions, value }
+  ), [value])
 
   return (
-    <SelectContext.Provider value={contextValue}>
+    <SelectContext.Provider value={api}>
       {children}
     </SelectContext.Provider>
   )

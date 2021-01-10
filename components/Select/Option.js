@@ -1,14 +1,17 @@
 import { useContext, useEffect } from 'react'
 import SelectContext from './context'
 
-export default function Option({children, value: optionValue, ...rest}) {
+function getChecked(optionValue, contextValue, multiple) {
+  if(multiple) {
+    return contextValue.includes(optionValue)
+  } else {
+    return optionValue == contextValue
+  }
+}
 
-  const {
-    value: contextValue,
-    setValue,
-    addToOptions,
-    multiple
-  } = useContext(SelectContext)
+export default function Option({children, value: optionValue}) {
+
+  const { addToOptions, updateValue, value } = useContext(SelectContext)
 
   useEffect(() => addToOptions(optionValue), [])
 
@@ -17,20 +20,10 @@ export default function Option({children, value: optionValue, ...rest}) {
     return null
   }
 
-  const checked = getChecked(optionValue, contextValue, multiple)
-
   const props = {
-    onClick: () => setValue(optionValue, rest),
-    checked
+    onClick: () => updateValue(optionValue),
+    checked: getChecked(optionValue, value, Array.isArray(value))
   }
 
   return children(props)
-}
-
-function getChecked(optionValue, contextValue, multiple) {
-  if(multiple) {
-    return contextValue.includes(optionValue)
-  } else {
-    return optionValue == contextValue
-  }
 }

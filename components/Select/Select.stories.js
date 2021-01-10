@@ -6,7 +6,12 @@ import notebook from '../../public/icons/notebook.svg'
 
 export default {
   title: 'Example/Select',
-  component: Select
+  component: Select,
+  argTypes: {
+    onChange: { action: 'Value changed' },
+    onOptionsChange: { action: 'Options changed' },
+    onSelectedIndexChange: { action: 'Index changed' }
+  }
 };
 
 const Template = (args) => (
@@ -110,4 +115,9 @@ Radio.args = {
 export const multiple = TemplateRadio.bind({});
 multiple.args = {
   multiple: true
+};
+
+export const DefaultValue = TemplateRadio.bind({});
+DefaultValue.args = {
+  defaultValue: 'c'
 };

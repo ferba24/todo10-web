@@ -18,10 +18,17 @@ export default function FormItem({
   errorMessage = 'Campo requerido'
 }) {
   const [invalid, setInvalid] = useState(false)
-  const { updateValues, addItem } = useContext(FormContext)
-  
+  const { updateValues, addValidator } = useContext(FormContext)
+
+  function validator(value) {
+    if(required && !value) {
+      setInvalid(true)
+      throw new Error('INVALID')
+    }
+  }
+
   // Add the validator for this item to FormContext
-  useEffect(() => addItem({validator, name}), [])
+  useEffect(() => addValidator({ validator, name }), [])
   
   if(!validateChildren(children)) return null
 
@@ -29,13 +36,6 @@ export default function FormItem({
   const onChange = e => {
     setInvalid(false)
     updateValues(name, e.target.value)
-  }
-
-  function validator(value) {
-    if(required && !value) {
-      setInvalid(true)
-      throw new Error('INVALID')
-    }
   }
 
   const newInput = cloneElement(children, { onChange })

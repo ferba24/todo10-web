@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Select from '../Select'
 import { motion } from 'framer-motion'
 import Chip from './Chip'

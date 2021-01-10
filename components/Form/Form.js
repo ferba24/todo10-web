@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useCallback, useState, useMemo } from 'react'
 import FormContext from './context'
 import PropTypes from 'prop-types'
 import FormItem from './FormItem'
@@ -10,38 +10,45 @@ export default function Form({
   ...rest
 }) {
 
-  const valuesRef = useRef({})
-  const itemsRef = useRef([])
+  const [values, setValues] = useState({})
+  const [validators, setValidators] = useState([])
 
-  const currentContext = {
-    updateValues,
-    addItem: item => itemsRef.current.push(item),
-  }
+  const updateValues = useCallback((key, value) => {
+    setValues(prevValues => {
+      const newValues = {...prevValues, [key]: value}
+      onValuesChange(newValues)
+      return newValues
+    })
+  }, [])
 
-  function updateValues(key, value) {
-    valuesRef.current[key] = value
-    onValuesChange(valuesRef.current)
-  }
+  const addValidator = useCallback(validator => {
+    setValidators(prevValidators => [...prevValidators, validator])
+  }, [])
 
   const handleSubmit = e => {
     e.preventDefault()
     try {
       validate()
-      onFinish(valuesRef.current)
+      onFinish(values)
     } catch(err) {
       console.error('Error en el formulario', err)
     }
   }
 
   function validate() {
-    for(const item of itemsRef.current) {
-      const {validator, name} = item
-      validator(valuesRef.current[name])
+    for(const item of validators) {
+      const { validator, name } = item
+      validator(values[name])
     }
   }
 
+  const api = useMemo(() => ({
+    updateValues,
+    addValidator
+  }), [])
+
   return (
-    <FormContext.Provider value={currentContext}>
+    <FormContext.Provider value={api}>
       <form onSubmit={handleSubmit} {...rest}>
         {children}
       </form>

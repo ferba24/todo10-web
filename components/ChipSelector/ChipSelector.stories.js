@@ -11,22 +11,24 @@ export default {
 };
 
 const Template = (args) => (
-  <ChipSelector {...args}>
-    <ChipSelector.Option value="wordpress">
-      {props => (
-        <ChipSelector.Chip {...props}>
-          <ChipSelector.MiniContent image={wordpress} title="Wordpress"/>
-        </ChipSelector.Chip>
-      )}
-    </ChipSelector.Option>
-    <ChipSelector.Option value="xenforo">
-      {props => (
-        <ChipSelector.Chip {...props}>
-          <ChipSelector.MiniContent image={xenforo} title="XenForo"/>
-        </ChipSelector.Chip>
-      )}
-    </ChipSelector.Option>
-  </ChipSelector>
+  <div className="max-w-lg">
+    <ChipSelector {...args}>
+      <ChipSelector.Option value="wordpress">
+        {props => (
+          <ChipSelector.Chip {...props}>
+            <ChipSelector.MiniContent image={wordpress} title="Wordpress"/>
+          </ChipSelector.Chip>
+        )}
+      </ChipSelector.Option>
+      <ChipSelector.Option value="xenforo">
+        {props => (
+          <ChipSelector.Chip {...props}>
+            <ChipSelector.MiniContent image={xenforo} title="XenForo"/>
+          </ChipSelector.Chip>
+        )}
+      </ChipSelector.Option>
+    </ChipSelector>
+  </div>
 )
 
 export const Default = Template.bind({});
