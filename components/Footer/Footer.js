@@ -3,6 +3,37 @@ import BottomDrawer from '../BottomDrawer'
 import faq from '../../data/faq'
 import Expand from '../Expand'
 import { motion } from 'framer-motion'
+import { topItems } from '../../data/footer'
+import FooterItem from '../FooterItem/FooterItem'
+import { services } from '../../data/routes'
+import Link from 'next/link'
+
+const TopItems = () => (
+  <div className="container flex flex-wrap">
+      {topItems.map(item => (
+        <div key={item} className="px-10 py-4 w-full md:w-4/12">
+          <FooterItem {...item}/>
+        </div> 
+      ))}
+  </div>
+)
+
+const BottomItems = () => (
+  <div className="container flex flex-wrap">
+    <div className="w-full md:w-4/12">
+      <div className="font-semibold">
+        Services
+      </div>
+      {services.map(({label, path}) => (
+        <div key={path}>
+          <Link href={path}>
+            <a>{label}</a>
+          </Link>
+        </div>
+      ))}
+    </div>
+  </div>
+)
 
 export default function Footer({className = '', style}) {
 
@@ -28,7 +59,10 @@ export default function Footer({className = '', style}) {
         ))}
       </BottomDrawer>
       
-      <div className="bg-blue h-40 w-full z-20"/>
+      <div className="bg-blue w-full z-20 text-white">
+        <TopItems/>
+        <BottomItems/>
+      </div>
 
       <motion.img
         onClick={() => faqVisible && setFaqVisible(false)}

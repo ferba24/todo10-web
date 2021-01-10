@@ -67,7 +67,7 @@ export const hostingOptions = {
   ]
 }
 
-const personalizedOptions = {
+export const personalizedStep = {
   name: 'personalizedOption',
   title: 'Choose one or more',
   type: 'radioCard',
@@ -115,7 +115,7 @@ const initialStep = {
       icon: notebook,
       title: 'Maintenance plans',
       desc: 'An intelligent option for your services.',
-      nextStep: finalForm
+      nextStep: hostingOptions
     },
     {
       value: 'hostingPlans',
@@ -137,7 +137,7 @@ const initialStep = {
       icon: personalizedIcon,
       title: 'Personalized Services',
       desc: 'SEO, Web Design, Dedicated services, everything you need.',
-      nextStep: personalizedOptions
+      nextStep: personalizedStep
     }
   ]
 }

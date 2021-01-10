@@ -15,7 +15,8 @@ export default function NativeSelect({
   onSelectedIndexChange = () => {},
   children,
   placeholder = 'Select an option',
-  className
+  className = 'w-full max-w-xs',
+  showValue
 }) {
 
   const [currentValue, setCurrentValue] = useState(undefined)
@@ -39,7 +40,7 @@ export default function NativeSelect({
 
   const trigger = (
     <div className="form-control flex cursor-pointer items-center justify-between">
-      {currentLabel || currentValue ||  placeholder}
+      { showValue ? currentValue : currentLabel || currentValue ||  placeholder }
       <Arrow size="small" className="ml-2" direction={arrowDirection} />
     </div>
   )
@@ -77,7 +78,7 @@ export default function NativeSelect({
       onOpenChange={setOpen}
       overlay={overlay}
       placement="right"
-      className={`w-full max-w-xs ${className}`}
+      className={className}
     >
       {trigger}
     </Dropdown>

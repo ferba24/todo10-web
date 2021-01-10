@@ -1,6 +1,7 @@
 import Button from '../components/Button'
 import Form from '../components/Form'
 import NativeSelect from '../components/NativeSelect'
+import { services } from '../data/routes'
 
 export default function ContactForm({extended, onFinish, onValuesChange}) {
 
@@ -18,7 +19,22 @@ export default function ContactForm({extended, onFinish, onValuesChange}) {
         </Form.Item>
         {extended && (
           <Form.Item name="option" label="I'm looking for...">
-            <NativeSelect/>
+            <NativeSelect className="w-full">
+              {services.map(service => (
+                <NativeSelect.Option
+                  key={service.path}
+                  value={service.label}
+                >
+                  <div className="flex items-center">
+                    <img
+                      className="w-5 mr-3"
+                      src={service.icon}
+                    />
+                    {service.label}
+                  </div>
+                </NativeSelect.Option>
+              ))}
+            </NativeSelect>
           </Form.Item>
         )}
         <Form.Item name="message" label="What do you need?">

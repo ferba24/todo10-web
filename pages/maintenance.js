@@ -3,20 +3,27 @@ import BenefitsSection from '../components/BenefitsSection'
 import Stepper from '../components/Stepper';
 import { hostingOptions } from '../data/steps'
 import benefits from '../data/maintenance/benefits'
+import FeatureHighlight from '../components/FeatureHighlight'
+import { paths } from '../data/routes';
 
-export default function Hosting() {
+const FirstSection = () => (
+  <div className="section container">
+    <FeatureHighlight
+      image="/icons/laptop.svg"
+      title={<>What <span className="text-orange">maintenance plan</span> means?</>}
+      desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa."
+      link={paths.MAINTENANCE}
+      linkLabel="Get mine"
+    />
+  </div>
+)
+
+export default function Maintenance() {
 
   return (
     <Layout>
       <div className="my-40"/>
-      <div className="section max-w-lg mx-auto">
-        <div className="text-primary text-center font-bold text-2xl">
-        maintenance
-        </div>
-        <div className="text-center text-primary">
-          Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus.
-        </div>
-      </div>
+      <FirstSection/>
       <div className="section container-full">
         <BenefitsSection benefits={benefits}/>
       </div>

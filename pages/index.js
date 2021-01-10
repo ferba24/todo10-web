@@ -7,6 +7,9 @@ import responseTimes from '../data/hosting/responseTimes';
 import Link from 'next/link';
 import Button from '../components/Button';
 import { paths } from '../data/routes'
+import ClientsSlider from '../containers/ClientsSlider'
+import { motion } from 'framer-motion';
+import { variants } from '../data/animations';
 
 const FeatureDesc = ({title, desc, items, link, linkLabel}) => (
   <div className="z-20 relative">
@@ -91,7 +94,7 @@ const FifthSection = () => (
     </h3>
     <div>
       {somethingElseItems.map(({icon, label}) => (
-        <div className="flex items-center my-5">
+        <div key={icon} className="flex items-center my-5">
           <img className="mr-5 w-8" src={icon}/>
           <div>{label}</div>
         </div>
@@ -108,27 +111,71 @@ const FifthSection = () => (
   </div>
 )
 
-const SixthSection = () => (
-  <div className="section bg-gray-200 py-24">
-    <div className="container">
-    </div>
+const BenefitCard = ({icon, title, desc}) => (
+  <Card
+    className="flex-shrink-0 max-w-xs mx-4 sm:flex-1 p-6 py-10"
+    bordered={false}
+    shadow
+    style={{maxWidth: 250}}
+  >
+    <Card.Content
+      icon={icon}
+      title={title}
+      desc={desc}
+    />
+  </Card>
+)
 
+const SixthSection = () => (
+  <div className="section bg-gray-200 py-24 px-6 overflow-auto">
+    <div className="flex sm:justify-center">
+      <BenefitCard
+        icon="/icons/timer.svg"
+        title="Large experience"
+        desc="More than a decade of experience, you can be rest assured we will be around for the long-haul."
+      />
+      <BenefitCard
+        icon="/icons/sand-clock.svg"
+        title="Your time"
+        desc="It doesn’t matter how is your schedule or in what time zone are you, our team can match your needs."
+      />
+      <BenefitCard
+        icon="/icons/messages.svg"
+        title="Constant support"
+        desc="24 hours a day, 7 days a week, 356 days a year, the fastest and most efficient help. "
+      />
+    </div>
   </div>
 )
 
-export default function Hosting() {
+const SeventhSection = () => (
+  <>
+    <ClientsSlider/>
+  </>
+)
+
+export default function Home() {
 
   const firstSection = (
     <div className="section container flex justify-around">
 
-      <div className="mt-16">
-        <div className="text-4xl font-bold">
+      <div className="mt-16 relative flex justify-center content-start flex-wrap">
+        <div className="text-4xl font-bold w-full mb-3">
           You are <span className="text-orange">unique</span>,<br/>
           so we are.
         </div>
-        <div>
+        <div className="w-full">
           Finally, the trustworthy team your web business deserves.
         </div>
+
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={variants.DOWN}
+          transition={{delay: 1}}
+          className="absolute bottom-0"
+          src="/icons/arrow-down.svg"
+        />
       </div>
 
       <div className="hidden md:block">
@@ -213,6 +260,7 @@ export default function Hosting() {
       <FourthSection/>
       <FifthSection/>
       <SixthSection/>
+      <SeventhSection/>
       <div className="my-60"/>
     </Layout>
   )

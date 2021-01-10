@@ -11,13 +11,13 @@ const Content = ({icon, title, desc}) => (
     </div>
     <div
       className="opacity-70 text-sm"
-      style={{
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        display: '-webkit-box',
-        WebkitLineClamp: 2,
-        WebkitBoxOrient: 'vertical'
-      }}
+      // style={{
+      //   overflow: 'hidden',
+      //   textOverflow: 'ellipsis',
+      //   display: '-webkit-box',
+      //   WebkitLineClamp: 2,
+      //   WebkitBoxOrient: 'vertical'
+      // }}
     >
       {desc}
     </div>

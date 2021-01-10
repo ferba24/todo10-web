@@ -24,7 +24,7 @@
   }
 
   .list-custom li {
-    @apply flex items-center my-2 text-primary text-lg;
+    @apply flex items-center my-2 text-lg;
   }
   
   .list-custom li::before {
