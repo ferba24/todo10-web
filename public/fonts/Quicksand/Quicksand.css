@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-display: auto;
+  src: url(./Quicksand-Bold.ttf) format("woff");
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-display: auto;
+  src: url(./Quicksand-SemiBold.ttf) format("woff");
+}

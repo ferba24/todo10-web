@@ -3,19 +3,21 @@ import BenefitsSection from '../components/BenefitsSection'
 import Stepper from '../components/Stepper';
 import { hostingOptions } from '../data/steps'
 import benefits from '../data/hosting/benefits'
+import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
 
 export default function Hosting() {
 
   return (
     <Layout>
       <div className="my-40"/>
-      <div className="section max-w-lg mx-auto">
-        <div className="text-primary text-center font-bold text-2xl">
-          hosting
-        </div>
-        <div className="text-center text-primary">
-          Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus.
-        </div>
+      <div className="section container">
+        <FeatureHighlight
+          image="/icons/server.svg"
+          title={<>Outstanding <span className="text-orange">Web Hosting Plans</span></>}
+          desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped."
+          link='/'
+          linkLabel="Get mine"
+        />
       </div>
       <div className="section container-full">
         <BenefitsSection benefits={benefits}/>

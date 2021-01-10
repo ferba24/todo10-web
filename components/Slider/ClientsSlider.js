@@ -1,5 +1,5 @@
-import Slider from '../components/Slider';
-import ClientCard from '../components/ClientCard'
+import Slider from '.';
+import ClientCard from '../ClientCard'
 
 const slideOptions = {
   autoplay: true,

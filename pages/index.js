@@ -7,15 +7,16 @@ import responseTimes from '../data/hosting/responseTimes';
 import Link from 'next/link';
 import Button from '../components/Button';
 import { paths } from '../data/routes'
-import ClientsSlider from '../containers/ClientsSlider'
+import ClientsSlider from '../components/Slider/ClientsSlider'
 import { motion } from 'framer-motion';
 import { variants } from '../data/animations';
+import { useState } from 'react';
 
 const FeatureDesc = ({title, desc, items, link, linkLabel}) => (
   <div className="z-20 relative">
-    <h3 className="text-xl font-semibold mb-1">
+    <h4 className="text-xl font-bold mb-1">
       {title}
-    </h3>
+    </h4>
     <div className="mb-5">
       {desc}
     </div>
@@ -40,9 +41,9 @@ const CrmItem = ({icon, title, desc, link}) => (
     <div className="h-10 flex items-center mb-2">
       <img className="" src={icon}/>
     </div>
-    <h3 className="text-xl font-bold mb-1">
+    <h4 className="text-xl font-bold mb-1">
       {title}
-    </h3>
+    </h4>
     <div>
       {desc}
     </div>
@@ -65,7 +66,7 @@ const FirstSection = () => (
   <div className="section container flex justify-around">
 
     <div className="mt-16 relative flex justify-center content-start flex-wrap">
-      <div className="text-4xl font-bold w-full mb-3">
+      <div className="text-5xl font-bold w-full mb-5 font-quicksand">
         You are <span className="text-orange">unique</span>,<br/>
         so we are.
       </div>
@@ -98,32 +99,39 @@ const hostingItems = [
   'Fast and optimum performance!'
 ]
 
-const SecondSection = () => (
-  <div className="section container">
-    <Card
-      style={{ borderWidth: 3, borderColor: 'var(--color-blue)' }}
-      ribbon='Most Sold!'
-    >
-      <div className="md:flex justify-around items-center p-3">
-        <div className="flex-1 mt-4 ml-4 md:mt-0">
-          <FeatureDesc
-            title="Know our hosting plans"
-            desc="We offer a high-performance web hosting."
-            items={hostingItems}
-            link={paths.HOSTING}
-            linkLabel="Hosting plans"
-          />
-        </div>
-        <div className="flex-1 m-4 mt-10 md:m-0">
-          <div className="text-orange font-semibold">
-            Response time <span className="font-light">(in seconds)</span>
+const SecondSection = () => {
+  
+  const [ renderGraph, setRenderGraph ] = useState(true)
+
+  
+
+  return (
+    <div className="section container">
+      <Card
+        style={{ borderWidth: 3, borderColor: 'var(--color-blue)' }}
+        ribbon='Most Sold!'
+      >
+        <div className="md:flex justify-around items-center p-3">
+          <div className="flex-1 mt-4 ml-4 md:mt-0">
+            <FeatureDesc
+              title="Know our hosting plans"
+              desc="We offer a high-performance web hosting."
+              items={hostingItems}
+              link={paths.HOSTING}
+              linkLabel="Hosting plans"
+            />
           </div>
-          <Graph data={responseTimes} />
+          <div className="flex-1 m-4 mt-10 md:m-0">
+            <div className="text-orange font-semibold">
+              Response time <span className="font-light">(in seconds)</span>
+            </div>
+            {renderGraph && <Graph data={responseTimes} />}
+          </div>
         </div>
-      </div>
-    </Card>
-  </div>
-)
+      </Card>
+    </div>
+  )
+}
 
 const ThirdSection = () => (
   <div className="relative pb-28">
@@ -144,8 +152,8 @@ const ThirdSection = () => (
           alt="Todo10"
         />
         <img
-          className="absolute -bottom-52 max-w-none"
-          style={{width: '140%', zIndex: -1}}
+          className="absolute -bottom-40 -left-56 max-w-none"
+          style={{width: '160%', zIndex: -1}}
           src="/images/cloud.svg"
         />
       </div>

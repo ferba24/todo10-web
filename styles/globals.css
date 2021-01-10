@@ -1,3 +1,6 @@
+@import '../public/fonts/Quicksand/Quicksand.css';
+@import '../public/fonts/Montserrat/Montserrat.css';
+
 :root {
   --color-primary:#04283A;
   --color-wordpress: #4A50AE;
@@ -9,6 +12,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply text-3xl font-quicksand font-bold;
+  }
+}
 
 @layer components {
   .button-base {

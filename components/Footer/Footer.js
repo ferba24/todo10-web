@@ -11,7 +11,7 @@ import Link from 'next/link'
 const TopItems = () => (
   <div className="container flex flex-wrap">
       {topItems.map(item => (
-        <div key={item} className="px-10 py-4 w-full md:w-4/12">
+        <div key={item.key} className="px-10 py-4 w-full md:w-4/12">
           <FooterItem {...item}/>
         </div> 
       ))}

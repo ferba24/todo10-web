@@ -76,7 +76,7 @@ const TemplateRadio = (args) => (
       {props => (
         <div
           {...props}
-          className="flex items-center cursor-pointer text-primary my-2"
+          className="flex items-center cursor-pointer my-2"
         >
           <RadioCircle checked={props.checked} className="mr-2"/>
           Select.Option 1
@@ -87,7 +87,7 @@ const TemplateRadio = (args) => (
       {props => (
         <div
           {...props}
-          className="flex items-center cursor-pointer text-primary my-2"
+          className="flex items-center cursor-pointer my-2"
         >
           <RadioCircle checked={props.checked} className="mr-2"/>
           Select.Option 2
@@ -98,7 +98,7 @@ const TemplateRadio = (args) => (
       {props => (
         <div
           {...props}
-          className="flex items-center cursor-pointer text-primary my-2"
+          className="flex items-center cursor-pointer my-2"
         >
           <RadioCircle checked={props.checked} className="mr-2"/>
           Select.Option 3

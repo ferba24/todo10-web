@@ -15,6 +15,10 @@ module.exports = {
       },
       boxShadow: {
         xl: '0 0px 25px 0px rgba(0, 0, 0, 0.1), 0 0px 10px 0px rgba(0, 0, 0, 0.06)'
+      },
+      fontFamily: {
+        'quicksand': ['Quicksand', 'system-ui'],
+        'montserrat': ['Montserrat', 'arial']
       }
     }
   },

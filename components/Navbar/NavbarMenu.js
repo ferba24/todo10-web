@@ -40,10 +40,10 @@ const SubItems = ({items, className = ''}) => (
         <a className="flex p-5 w-6/12 group">
           <img src={route.icon} className="w-10 h-10 flex-0 mr-4 duration-100 transform group-hover:scale-110"/>
           <div>
-            <div className="text-primary group-hover:underline">
+            <div className="group-hover:underline">
               {route.label}
             </div>
-            <div className="text-primary text-sm font-light">
+            <div className="text-sm font-light">
               {route.desc}
             </div>
           </div>

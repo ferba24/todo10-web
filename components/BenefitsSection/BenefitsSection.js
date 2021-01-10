@@ -62,7 +62,7 @@ export default function BenefitsSection({benefits = []}) {
 
   return (
     <div className="bg-gray-100 lg:rounded-xl">
-      <h3 className="text-3xl font-medium pt-10 mb-5 text-center">
+      <h3 className="pt-10 mb-5 text-center">
         Benefits you'll get
       </h3>
       <div className="flex flex-wrap p-2 md:p-3 overflow-hidden w-full max-w-4xl mx-auto">

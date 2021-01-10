@@ -1,15 +1,25 @@
 import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight'
 import Layout from '../components/Layout'
+import PageHeader from '../components/PageHeader/PageHeader'
 import { paths } from '../data/routes'
+import ContactForm from '../components/ContactForm'
 
 const FirstSection = () => (
-  <div className="section container">
-    <FeatureHighlight
-      image="/icons/wordpress-screen.svg"
-      title={<span className="text-orange">Why choose wordpress?</span>}
-      desc={<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa. Nunc volutpat sit amet nunc vitae ultrices. Etiam et tellus at nulla congue gravida at vitae libero.<br/><br/>In pellentesque arcu et tortor blandit mattis. Praesent molestie eleifend mauris, non facilisis orci consectetur in. Aliquam mollis volutpat ipsum, eu porttitor orci mollis quis.</div>}
-    />
-  </div>
+  <>
+    <div className="section">
+      <PageHeader
+        title="Wordpress services"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
+      />
+    </div>
+    <div className="section container">
+      <FeatureHighlight
+        image="/icons/wordpress-screen.svg"
+        title={<span className="text-orange">Why choose wordpress?</span>}
+        desc={<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa. Nunc volutpat sit amet nunc vitae ultrices. Etiam et tellus at nulla congue gravida at vitae libero.<br/><br/>In pellentesque arcu et tortor blandit mattis. Praesent molestie eleifend mauris, non facilisis orci consectetur in. Aliquam mollis volutpat ipsum, eu porttitor orci mollis quis.</div>}
+      />
+    </div>
+  </>
 )
 
 const SecondSection = () => (
@@ -39,6 +49,18 @@ const ThirdSection = () => (
   </div>
 )
 
+const FourthSection = () => (
+  <div className="section py-14">
+    <h3 className="text-orange text-center mb-10">
+      Or contact us!
+    </h3>
+    <ContactForm
+      buttonRight
+      buttonPrimary
+    />
+  </div>
+)
+
 export default function Pricing() {
 
   return (
@@ -47,6 +69,7 @@ export default function Pricing() {
         <FirstSection/>
         <SecondSection/>
         <ThirdSection/>
+        <FourthSection/>
       <div className="my-60"/>
     </Layout>
   )

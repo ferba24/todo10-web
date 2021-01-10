@@ -8,7 +8,7 @@ export default function BottomDrawer({headerTitle, visible, onClick, className, 
       className="flex items-center select-none p-4 sm:p-7 cursor-pointer tap-highlight-transparent"
       onClick={onClick}
     >
-      <div className="mr-3 text-xl text-primary">
+      <div className="mr-3 text-xl">
         {headerTitle}
       </div>
       <Arrow size="small" direction={visible ? 'down' : 'right'} />

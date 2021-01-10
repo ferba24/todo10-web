@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import PageHeader from '../components/PageHeader/PageHeader';
 import Stepper from '../components/Stepper';
 import initialStep from '../data/steps'
 
@@ -7,13 +8,11 @@ export default function Pricing() {
   return (
     <Layout>
       <div className="my-40"/>
-      <div className="section max-w-lg mx-auto">
-        <div className="text-primary text-center font-bold text-2xl">
-          Pricing
-        </div>
-        <div className="text-center text-primary">
-          Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus.
-        </div>
+      <div className="section">
+        <PageHeader
+          title="Pricing"
+          desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus."
+        />
       </div>
       <div className="section container">
         <Stepper initialStep={initialStep}/>

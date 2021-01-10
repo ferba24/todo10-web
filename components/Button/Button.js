@@ -4,8 +4,8 @@ const typeClasses = {
   primary: 'bg-orange text-white',
   blue: 'bg-blue text-white',
   default: 'bg-white text-primary',
-  text: 'text-primary',
-  outline: 'border-2 border-blue text-primary'
+  text: '',
+  outline: 'border-2 border-blue'
 }
 const defaultType = 'primary'
 

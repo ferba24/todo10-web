@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Fragment from '../../components/Fragment'
 import getOptionChild from './getOptionChild'
 import StepIndicator from './StepIndicator'
-import ContactForm from '../../containers/ContactForm'
+import ContactForm from '../../components/ContactForm'
 
 const variants = {
   hidden: { opacity: 0, y: 20 },

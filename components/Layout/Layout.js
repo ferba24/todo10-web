@@ -9,6 +9,14 @@ import Drawer from '../Drawer'
 import DrawerMenu from '../Drawer/DrawerMenu'
 import Footer from '../Footer'
 
+const Waves = () => (
+  <img
+    className="absolute -top-10 w-full"
+    style={{minHeight: 190, zIndex: -1}}
+    src="/images/waves.svg"
+  />
+)
+
 export default function Layout({children}) {
 
   const [drawerV, setDrawerV] = useState(false)
@@ -23,7 +31,8 @@ export default function Layout({children}) {
   )
 
   return (
-    <div className="overflow-hidden min-h-screen text-primary">
+    <div className="overflow-hidden min-h-screen text-primary font-montserrat">
+      <Waves/>
       <Head>
         <link rel="icon" href="/favicon.png" />
       </Head>

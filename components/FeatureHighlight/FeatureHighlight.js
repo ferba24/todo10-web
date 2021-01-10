@@ -19,7 +19,7 @@ export default function FeatureHighlight({
         />
       </div>
       <div className="w-full md:w-8/12">
-        <h3 className="text-3xl font-medium">
+        <h3>
           {title}
         </h3>
         <div className="my-5">

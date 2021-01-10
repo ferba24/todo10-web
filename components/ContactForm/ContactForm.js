@@ -1,9 +1,15 @@
-import Button from '../components/Button'
-import Form from '../components/Form'
-import NativeSelect from '../components/NativeSelect'
-import { services } from '../data/routes'
+import Button from '../Button'
+import Form from '../Form'
+import NativeSelect from '../NativeSelect'
+import { services } from '../../data/routes'
 
-export default function ContactForm({extended, onFinish, onValuesChange}) {
+export default function ContactForm({
+  extended,
+  onFinish,
+  onValuesChange,
+  buttonRight,
+  buttonPrimary
+}) {
 
   return (
     <div className="max-w-lg mx-auto">
@@ -43,11 +49,11 @@ export default function ContactForm({extended, onFinish, onValuesChange}) {
             placeholder="Hi! I'm looking for your help with..."
           />
         </Form.Item>
-        <Form.Item className="text-center">
+        <Form.Item className={buttonRight ? 'text-right' : 'text-center'}>
           <Button
             className="px-14"
             htmlType="submit"
-            type="blue"
+            type={buttonPrimary ? 'primary' : 'blue'}
           >
             Get a quote
           </Button>

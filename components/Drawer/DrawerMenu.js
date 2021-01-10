@@ -18,7 +18,7 @@ export default function DrawerMenu({routes, cto}) {
   )
 
   const mapRoute = route => (
-    <div key={route.path} className="text-xl font-bold text-primary">
+    <div key={route.path} className="text-xl font-bold">
       {route.subItems ? (
         <Expand title={route.label} arrowPosition="right">
           {route.subItems.map(subRoute => (

@@ -1,5 +1,5 @@
 import Slider from './Slider';
-import { clients } from '../../containers/ClientsSlider'
+import { clients } from './ClientsSlider'
 
 export default {
   title: 'Example/Slider',

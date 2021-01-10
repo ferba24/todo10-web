@@ -1,24 +1,5 @@
-import { motion } from 'framer-motion'
 import NavbarMenu from './NavbarMenu'
 import Link from 'next/link'
-
-const transition = {
-  type: 'tween',
-  duration: 0.4,
-}
-
-const Waves = ({scrolled}) => (
-  <motion.img
-    className="absolute -z-0 -top-10 w-full"
-    style={{minHeight: 160}}
-    animate={{
-      y: scrolled ? -120 : 0,
-      opacity: scrolled ? 0 : 1,
-    }}
-    transition={transition}
-    src="/images/waves.svg"
-  />
-)
 
 export default function Navbar({routes, scrolled}) {
   return (
@@ -31,7 +12,6 @@ export default function Navbar({routes, scrolled}) {
           <NavbarMenu routes={routes} scrolled={scrolled}/>
         </div>
       </div>
-      <Waves scrolled={scrolled}/>
     </div>
   )
 }

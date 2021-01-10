@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import FeatureHighlight from '../components/FeatureHighlight'
 import List from '../components/List'
-import ContactForm from '../containers/ContactForm';
+import ContactForm from '../components/ContactForm';
 
 const list = [
   'First point',

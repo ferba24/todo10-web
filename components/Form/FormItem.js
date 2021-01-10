@@ -48,11 +48,11 @@ export default function FormItem({
 
   return (
     <div
-      className={`my-4 ${className}`}
+      className={`my-6 ${className}`}
       style={style}
     >
       {label && (
-        <div className="mb-1 text-primary font-normal ml-3">
+        <div className="mb-1 font-normal ml-3">
           {label}
         </div>
       )}
