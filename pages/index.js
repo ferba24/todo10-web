@@ -61,6 +61,98 @@ const CrmItem = ({icon, title, desc, link}) => (
   </div>
 )
 
+const FirstSection = () => (
+  <div className="section container flex justify-around">
+
+    <div className="mt-16 relative flex justify-center content-start flex-wrap">
+      <div className="text-4xl font-bold w-full mb-3">
+        You are <span className="text-orange">unique</span>,<br/>
+        so we are.
+      </div>
+      <div className="w-full">
+        Finally, the trustworthy team your web business deserves.
+      </div>
+
+      <motion.img
+        initial="hidden"
+        animate="visible"
+        variants={variants.DOWN}
+        transition={{delay: 1}}
+        className="hidden md:block absolute bottom-0"
+        src="/icons/arrow-down.svg"
+      />
+    </div>
+
+    <div className="hidden md:block">
+      <div className="w-96 h-96 rounded-full overflow-hidden flex justify-center">
+        <img className="max-w-none h-full" src="/images/young-man-laptop.jpg"/>
+      </div>
+    </div>
+  </div>
+)
+
+const hostingItems = [
+  'Real time monitoring',
+  'Wordpress and Xenforo ready',
+  'Safe and secure',
+  'Fast and optimum performance!'
+]
+
+const SecondSection = () => (
+  <div className="section container">
+    <Card
+      style={{ borderWidth: 3, borderColor: 'var(--color-blue)' }}
+      ribbon='Most Sold!'
+    >
+      <div className="md:flex justify-around items-center p-3">
+        <div className="flex-1 mt-4 ml-4 md:mt-0">
+          <FeatureDesc
+            title="Know our hosting plans"
+            desc="We offer a high-performance web hosting."
+            items={hostingItems}
+            link={paths.HOSTING}
+            linkLabel="Hosting plans"
+          />
+        </div>
+        <div className="flex-1 m-4 mt-10 md:m-0">
+          <div className="text-orange font-semibold">
+            Response time <span className="font-light">(in seconds)</span>
+          </div>
+          <Graph data={responseTimes} />
+        </div>
+      </div>
+    </Card>
+  </div>
+)
+
+const ThirdSection = () => (
+  <div className="relative pb-28">
+    <div className="container md:flex flex-row-reverse justify-around">
+      <div>
+        <FeatureDesc
+          title="Maintenance plans"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          items={hostingItems}
+          link={paths.MAINTENANCE}
+          linkLabel="Maintenance plans"
+        />
+      </div>
+      <div className="flex-1 relative">
+        <img
+          className="md:absolute bottom-0 left-8 w-9/12 z-10 mx-auto"
+          src="/images/spaceship.svg"
+          alt="Todo10"
+        />
+        <img
+          className="absolute -bottom-52 max-w-none"
+          style={{width: '140%', zIndex: -1}}
+          src="/images/cloud.svg"
+        />
+      </div>
+    </div>
+  </div>
+)
+
 const FourthSection = () => (
   <div className="bg-blue py-10">
     <div className="container sm:flex justify-around items-stretch">
@@ -156,107 +248,15 @@ const SeventhSection = () => (
 
 export default function Home() {
 
-  const firstSection = (
-    <div className="section container flex justify-around">
-
-      <div className="mt-16 relative flex justify-center content-start flex-wrap">
-        <div className="text-4xl font-bold w-full mb-3">
-          You are <span className="text-orange">unique</span>,<br/>
-          so we are.
-        </div>
-        <div className="w-full">
-          Finally, the trustworthy team your web business deserves.
-        </div>
-
-        <motion.img
-          initial="hidden"
-          animate="visible"
-          variants={variants.DOWN}
-          transition={{delay: 1}}
-          className="absolute bottom-0"
-          src="/icons/arrow-down.svg"
-        />
-      </div>
-
-      <div className="hidden md:block">
-        <div className="w-96 h-96 rounded-full overflow-hidden flex justify-center">
-          <img className="max-w-none h-full" src="/images/young-man-laptop.jpg"/>
-        </div>
-      </div>
-    </div>
-  )
-  
-  const hostingItems = [
-    'Real time monitoring',
-    'Wordpress and Xenforo ready',
-    'Safe and secure',
-    'Fast and optimum performance!'
-  ]
-
-  const secondSection = (
-    <div className="section container">
-      <Card
-        style={{ borderWidth: 3, borderColor: 'var(--color-blue)' }}
-        ribbon='Most Sold!'
-      >
-        <div className="md:flex justify-around items-center p-3">
-          <div className="flex-1 mt-4 ml-4 md:mt-0">
-            <FeatureDesc
-              title="Know our hosting plans"
-              desc="We offer a high-performance web hosting."
-              items={hostingItems}
-              link={paths.HOSTING}
-              linkLabel="Hosting plans"
-            />
-          </div>
-          <div className="flex-1 m-4 mt-10 md:m-0">
-            <div className="text-orange font-semibold">
-              Response time <span className="font-light">(in seconds)</span>
-            </div>
-            <Graph data={responseTimes} />
-          </div>
-        </div>
-      </Card>
-    </div>
-  )
-
-  const thirdSection = (
-    <div className="relative pb-28">
-      <div className="container md:flex flex-row-reverse justify-around">
-        <div>
-          <FeatureDesc
-            title="Maintenance plans"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            items={hostingItems}
-            link={paths.MAINTENANCE}
-            linkLabel="Maintenance plans"
-          />
-        </div>
-        <div className="flex-1 relative">
-          <img
-            className="md:absolute bottom-0 left-8 w-9/12 z-10 mx-auto"
-            src="/images/spaceship.svg"
-            alt="Todo10"
-          />
-          <img
-            className="absolute -bottom-52 max-w-none"
-            style={{width: '140%', zIndex: -1}}
-            src="/images/cloud.svg"
-          />
-        </div>
-      </div>
-    </div>
-  )
-
   return (
     <Layout>
       <Head>
         <title>Todo 10 - Home</title>
       </Head>
       <div className="my-40"/>
-      {firstSection}
-      {secondSection}
-      {thirdSection}
+      <FirstSection/>
+      <SecondSection/>
+      <ThirdSection/>
       <FourthSection/>
       <FifthSection/>
       <SixthSection/>

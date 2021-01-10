@@ -28,7 +28,9 @@ export default function GetAQuote() {
   return (
     <Layout>
       <div className="my-40"/>
-        <ContactForm extended/>
+        <div className="w-11/12 mx-auto">
+          <ContactForm extended/>
+        </div>
       <div className="my-60"/>
     </Layout>
   )
