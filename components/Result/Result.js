@@ -15,7 +15,7 @@ export default function Result({
 }) {
   
   return (
-    <div className="container text-center">
+    <div className="text-center">
       <Illustration/>
       <h3 className="mt-5 mb-2">
         {title}

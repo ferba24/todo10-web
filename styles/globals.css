@@ -65,7 +65,7 @@
   }
 
   .section {
-    @apply my-16 md:my-20;
+    @apply my-12 md:my-20;
   }
 
   .container {
