@@ -51,6 +51,10 @@
 }
 
 @layer utilities {
+  .top-13 {
+    top: 3.25rem;
+  }
+
   .h-full-screen {
     height: 100vh;
     height: calc(100vh - var(--vh-offset, 0px));
@@ -61,12 +65,11 @@
   }
 
   .section {
-    @apply my-20;
+    @apply my-16 md:my-20;
   }
 
   .container {
-    width: 95%;
-    @apply max-w-5xl mx-auto;
+    @apply w-11/12 max-w-5xl mx-auto;
   }
 
   .container-full {

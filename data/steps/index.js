@@ -26,7 +26,7 @@ const getPlansStep = diskSpace => ({
 
 const finalForm = {
   name: 'finalForm',
-  title: 'Tell us what you need',
+  title: 'Tell us what you need (The data you add here is not going to be sent)',
   desc: 'We will send you a personalized quote really fast!',
   type: 'contactForm',
   final: true

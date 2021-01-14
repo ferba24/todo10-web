@@ -24,7 +24,7 @@ export default function Step({
   nextStep: uniqueNextStep,
   final,
   onFinish = () => {},
-  className = 'flex flex-wrap justify-center items-stretch'
+  className = 'flex flex-wrap justify-center items-stretch',
 }) {
 
   const [nextStep, setNextStep] = useState(null)

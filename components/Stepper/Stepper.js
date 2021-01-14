@@ -1,9 +1,23 @@
 import Step from './Step'
 import { useState } from 'react'
+import Result from '../Result'
+import { AnimatePresence, motion } from 'framer-motion'
+import { variants } from '../../data/animations'
+
+const Animated = ({children}) => (
+  <motion.div
+    initial={variants.UP.hidden}
+    animate={variants.UP.visible}
+    exit={variants.UP.hidden}
+  >
+    {children}
+  </motion.div>
+)
 
 export default function Stepper({initialStep}) {
 
   const [values, setValues] = useState({})
+  const [finished, setFinished] = useState(false)
 
   const handleChange = values => {
     setValues(values)
@@ -11,17 +25,37 @@ export default function Stepper({initialStep}) {
   }
 
   const handleFinish = () => {
-    console.log("FINISHED", values)
+    window.scrollTo({top: 0, behavior: 'smooth'})
+    setTimeout(() => {
+      setFinished(true)
+    }, 200)
   }
   
   if(!initialStep) return null
 
+  const firstStep = (
+    <Animated key="firstStep">
+      <Step
+        {...initialStep}
+        key={initialStep.name}
+        onChange={handleChange}
+        onFinish={handleFinish}
+      />
+    </Animated>
+  )
+
+  const result = (
+    <Animated key="result">
+      <Result/>
+    </Animated>
+  )
+
   return (
-    <Step
-      {...initialStep}
-      key={initialStep.name}
-      onChange={handleChange}
-      onFinish={handleFinish}
-    />
+    <>
+      <AnimatePresence exitBeforeEnter initial={false}>
+        {!finished && firstStep}
+        {finished && result}
+      </AnimatePresence>
+    </>
   )
 }

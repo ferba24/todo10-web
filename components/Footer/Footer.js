@@ -51,8 +51,13 @@ export default function Footer({className = '', style}) {
         onClick={() => setFaqVisible(!faqVisible)}
       >
         {faq.map((item, i) => (
-          <Expand key={item.key} title={item.title} expanded={i == 0}>
-            <div className="text-opacity-50 font-extralight text-sm mx-3.5">
+          <Expand
+            key={item.key}
+            title={<span className="font-semibold">{item.title}</span>}
+            expanded={i == 0}
+            className="my-4"
+          >
+            <div className="opacity-70 font-extralight text-sm mx-3.5">
               {item.desc}
             </div>
           </Expand>

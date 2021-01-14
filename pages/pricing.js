@@ -8,10 +8,10 @@ export default function Pricing() {
   return (
     <Layout>
       <div className="my-40"/>
-      <div className="section">
+      <div className="section container">
         <PageHeader
           title="Pricing"
-          desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus."
+          desc="Complete these steps and submit the form, the data is not going to be sent anywhere"
         />
       </div>
       <div className="section container">

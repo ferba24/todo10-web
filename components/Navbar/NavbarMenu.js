@@ -64,7 +64,7 @@ const NavbarMenu = ({routes = [], scrolled}) => (
               {open && (
                 <SubItems
                   items={route.subItems}
-                  className={scrolled ? 'top-14' : 'top-16'}
+                  className={scrolled ? 'top-13' : 'top-16'}
                 />
               )}
             </div>

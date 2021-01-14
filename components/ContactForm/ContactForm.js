@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Button from '../Button'
 import Form from '../Form'
 import NativeSelect from '../NativeSelect'
@@ -5,22 +6,26 @@ import { services } from '../../data/routes'
 
 export default function ContactForm({
   extended,
-  onFinish,
-  onValuesChange,
+  onFinish = () => {},
+  onValuesChange = () => {},
   buttonRight,
   buttonPrimary
 }) {
 
+  const send = values => {
+    onFinish(values)
+  }
+
   return (
     <div className="max-w-lg mx-auto">
       <Form
-        onFinish={onFinish}
+        onFinish={send}
         onValuesChange={onValuesChange}
       >
-        <Form.Item name="name" label="Name" required>
+        <Form.Item name="name" label="Name">
           <input className="form-control" placeholder="Oscar Wilde"/>
         </Form.Item>
-        <Form.Item name="email" label="Email" required>
+        <Form.Item name="email" label="Email">
           <input className="form-control" placeholder="Oscar@gmail.com"/>
         </Form.Item>
         {extended && (

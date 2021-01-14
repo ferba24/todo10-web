@@ -6,7 +6,7 @@ export default function PageHeader({title, desc}) {
       <h3 className="text-center mb-4">
         {title}
       </h3>
-      <div className="text-center">
+      <div className="text-center opacity-80">
         {desc}
       </div>
     </div>
