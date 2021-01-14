@@ -2,7 +2,7 @@
 
 New website for [Todo10](https://www.todo10.com/en/).
 
-## [See the live demo](hhttps://todo10-web.vercel.app/pricing)!
+[See the live demo](hhttps://todo10-web.vercel.app/pricing)!
 
 Used for this project:
 - React
