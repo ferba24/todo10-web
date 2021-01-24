@@ -15,7 +15,7 @@
 
 @layer base {
   h3 {
-    @apply text-3xl font-quicksand font-bold;
+    @apply text-4xl font-quicksand font-bold;
   }
 }
 
@@ -69,11 +69,15 @@
   }
 
   .container {
-    @apply w-11/12 max-w-5xl mx-auto;
+    @apply w-11/12 max-w-7xl mx-auto;
   }
 
   .container-full {
     @apply max-w-5xl mx-auto;
+  }
+
+  .container-small {
+    @apply w-11/12 max-w-5xl mx-auto;
   }
 
   .tap-highlight-transparent {

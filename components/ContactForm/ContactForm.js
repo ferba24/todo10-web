@@ -52,6 +52,7 @@ export default function ContactForm({
           <textarea
             className="form-control"
             placeholder="Hi! I'm looking for your help with..."
+            rows="6"
           />
         </Form.Item>
         <Form.Item className={buttonRight ? 'text-right' : 'text-center'}>

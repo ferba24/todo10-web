@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import Fragment from '../../components/Fragment'
 import getOptionChild from './getOptionChild'
 import StepIndicator from './StepIndicator'
-import ContactForm from '../../components/ContactForm'
+import ContactForm from '../ContactForm'
+import useScrollHere from '../../lib/useScrollHere'
+import mapTypesSelectors from './mapTypesSelectors'
+import Fragment from '../Fragment'
 
 const variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 }
 }
 
@@ -17,8 +19,6 @@ export default function Step({
   options,
   type,
   currentStep = 1,
-  selector: Selector = Fragment,
-  option: Option = Fragment,
   onChange = () => {},
   multiple,
   nextStep: uniqueNextStep,
@@ -31,13 +31,17 @@ export default function Step({
   const [currentValue, setCurrentValue] = useState(undefined)
   const indicatorRef = useRef(null)
 
+  const {
+    selector: Selector = Fragment,
+    option: Option = Fragment
+  } = mapTypesSelectors[type] || {}
+
+  const scrollHere = useScrollHere(indicatorRef, 150)
+
   useEffect(() => {
     if(currentStep == 1 || document.body.offsetWidth > 767) return
-    const { top } = indicatorRef.current.getBoundingClientRect()
-    setTimeout(() => {
-      window.scrollTo({top: window.scrollY + top - 150 , behavior: 'smooth'})
-    }, 300)
-  }, [indicatorRef])
+    setTimeout(scrollHere, 300)
+  }, [scrollHere])
 
   const findSelectedOption = value => {
     for(const option of options) {
@@ -90,6 +94,7 @@ export default function Step({
       initial="hidden"
       animate="visible"
       variants={variants}
+      transition={{type: 'spring', bounce: 0.5}}
       className="my-16"
     >
       {indicator}

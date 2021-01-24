@@ -3,34 +3,39 @@ import BottomDrawer from '../BottomDrawer'
 import faq from '../../data/faq'
 import Expand from '../Expand'
 import { motion } from 'framer-motion'
-import { topItems } from '../../data/footer'
-import FooterItem from '../FooterItem/FooterItem'
+import {
+  topItems,
+  pricingItems,
+  aboutUsItems
+} from '../../data/footer'
 import { services } from '../../data/routes'
-import Link from 'next/link'
+import FooterItem from './FooterItem'
+import FooterList from './FooterList'
+import Newsletter from './Newsletter'
 
-const TopItems = () => (
-  <div className="container flex flex-wrap">
+const Top = () => (
+  <div className="container flex flex-wrap my-20">
       {topItems.map(item => (
-        <div key={item.key} className="px-10 py-4 w-full md:w-4/12">
+        <div key={item.key} className="px-5 lg:px-10 py-4 lg:w-4/12">
           <FooterItem {...item}/>
         </div> 
       ))}
   </div>
 )
 
-const BottomItems = () => (
-  <div className="container flex flex-wrap">
-    <div className="w-full md:w-4/12">
-      <div className="font-semibold">
-        Services
-      </div>
-      {services.map(({label, path}) => (
-        <div key={path}>
-          <Link href={path}>
-            <a>{label}</a>
-          </Link>
-        </div>
-      ))}
+const Bottom = () => (
+  <div className="container flex flex-wrap my-20">
+    <div className="w-full lg:flex-1 my-8 px-4">
+      <Newsletter/>
+    </div>
+    <div className="w-full lg:flex-1 my-8 px-4">
+      <FooterList title="Services" items={services} />
+    </div>
+    <div className="w-full lg:flex-1 my-8 px-4">
+      <FooterList {...pricingItems} />
+    </div>
+    <div className="w-full lg:flex-1 my-8 px-4 flex flex-col">
+      <FooterList {...aboutUsItems} />
     </div>
   </div>
 )
@@ -39,6 +44,13 @@ export default function Footer({className = '', style}) {
 
   const [faqVisible, setFaqVisible] = useState(false)
 
+  const faqTitle = (
+    <>
+      <span className="hidden sm:block">Frequently Asked Questions</span>
+      <span className="block sm:hidden">FAQs</span>
+    </>
+  )
+
   return (
     <div
       className={`relative flex justify-center ${className}`}
@@ -46,7 +58,7 @@ export default function Footer({className = '', style}) {
     >
       <BottomDrawer
         className="mx-auto z-10 w-11/12 max-w-xl"
-        headerTitle="Frequently Asked Questions"
+        headerTitle={faqTitle}
         visible={faqVisible}
         onClick={() => setFaqVisible(!faqVisible)}
       >
@@ -65,13 +77,14 @@ export default function Footer({className = '', style}) {
       </BottomDrawer>
       
       <div className="bg-blue w-full z-20 text-white">
-        <TopItems/>
-        <BottomItems/>
+        <Top/>
+        <Bottom/>
       </div>
 
       <motion.img
         onClick={() => faqVisible && setFaqVisible(false)}
-        className="absolute z-0"
+        className="absolute"
+        style={{zIndex: -1}}
         initial={{y: -190}}
         animate={{y: faqVisible ? -480 : -190}}
         transition={{

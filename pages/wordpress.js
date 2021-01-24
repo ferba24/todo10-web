@@ -12,7 +12,7 @@ const FirstSection = () => (
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
       />
     </div>
-    <div className="section container">
+    <div className="section container-small">
       <FeatureHighlight
         image="/icons/wordpress-screen.svg"
         title={<span className="text-orange">Why choose wordpress?</span>}
@@ -23,7 +23,7 @@ const FirstSection = () => (
 )
 
 const SecondSection = () => (
-  <div className="section container">
+  <div className="section container-small">
     <FeatureHighlight
       image="/icons/server.svg"
       title={<span>Wordpress <span className="text-orange">Hosting Plans</span></span>}
@@ -35,15 +35,24 @@ const SecondSection = () => (
   </div>
 )
 
+const Cloud = () => (
+  <img
+    src="/images/cloud.svg"
+    className="absolute z-0 max-w-none bottom-4 md:-bottom-10 opacity-40"
+    style={{maxWidth: '220%', left: '-150%'}}
+  />
+)
+
 const ThirdSection = () => (
   <div className="section bg-gray-200">
-    <div className="container py-20">
+    <div className="container-small py-20">
       <FeatureHighlight
         image="/icons/laptop.svg"
-        title={<span>Wordpress <span className="text-orange">Maintenance Plans</span></span>}
+        title={<span>Xenforo <span className="text-orange">Maintenance Plans</span></span>}
         desc={<span>Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc.</span>}
         link={paths.MAINTENANCE}
         linkLabel="Know more"
+        leftExtra={<Cloud />}
       />
     </div>
   </div>

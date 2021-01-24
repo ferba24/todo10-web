@@ -11,7 +11,7 @@ export default function Pricing() {
       <div className="section container">
         <PageHeader
           title="Pricing"
-          desc="Complete these steps and submit the form, the data is not going to be sent anywhere"
+          desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus."
         />
       </div>
       <div className="section container">

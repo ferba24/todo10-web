@@ -15,6 +15,7 @@ export default function Expand({
   title,
   children,
   arrowPosition = 'left',
+  animated = true,
   ...props
 }) {
   const [expanded, setExpanded] = useState(initialExpanded)
@@ -32,6 +33,7 @@ export default function Expand({
     <motion.div
       initial={initial}
       animate={animate}
+      transition={{duration: animated ? 0.2 : 0}}
       className="overflow-hidden"
     >
       {children}

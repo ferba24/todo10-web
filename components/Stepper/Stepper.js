@@ -1,8 +1,9 @@
 import Step from './Step'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Result from '../Result'
 import { AnimatePresence, motion } from 'framer-motion'
 import { variants } from '../../data/animations'
+import useScrollHere from '../../lib/useScrollHere'
 
 const Animated = ({children}) => (
   <motion.div
@@ -18,14 +19,24 @@ export default function Stepper({initialStep}) {
 
   const [values, setValues] = useState({})
   const [finished, setFinished] = useState(false)
+  const ref = useRef(null)
+  const scrollHere = useScrollHere(ref, 100)
 
   const handleChange = values => {
     setValues(values)
     console.log('GLOBAL', values)
   }
 
+  const scrollToTop = () => {
+    if(document.body.offsetWidth > 767) {
+      window.scrollTo({top: 0, behavior: 'smooth'})
+    } else {
+      scrollHere()
+    }
+  }
+
   const handleFinish = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'})
+    scrollToTop()
     setTimeout(() => {
       setFinished(true)
     }, 200)
@@ -51,11 +62,11 @@ export default function Stepper({initialStep}) {
   )
 
   return (
-    <>
+    <div ref={ref}>
       <AnimatePresence exitBeforeEnter initial={false}>
         {!finished && firstStep}
         {finished && result}
       </AnimatePresence>
-    </>
+    </div>
   )
 }

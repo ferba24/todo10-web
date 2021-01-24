@@ -54,7 +54,7 @@ const SubItems = ({items, className = ''}) => (
 )
 
 const NavbarMenu = ({routes = [], scrolled}) => (
-  <div className="w-7/12 lg:w-6/12 hidden md:flex items-center font-semibold justify-between">
+  <div className="w-7/12 lg:w-5/12 hidden md:flex items-center font-semibold justify-between">
     {routes.map(route => (
       route.subItems ? (
         <Dropdown key={route.path} openOnHover>

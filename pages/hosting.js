@@ -10,7 +10,7 @@ export default function Hosting() {
   return (
     <Layout>
       <div className="my-40"/>
-      <div className="section container">
+      <div className="section container-small">
         <FeatureHighlight
           image="/icons/server.svg"
           title={<>Outstanding <span className="text-orange">Web Hosting Plans</span></>}

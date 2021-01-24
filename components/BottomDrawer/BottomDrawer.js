@@ -5,7 +5,7 @@ export default function BottomDrawer({headerTitle, visible, onClick, className, 
 
   const header = (
     <div
-      className="flex items-center select-none p-3 sm:p-7 cursor-pointer tap-highlight-transparent"
+      className="flex items-center justify-center select-none p-4 sm:p-7 cursor-pointer tap-highlight-transparent"
       onClick={onClick}
     >
       <div className="mr-3 text-xl font-semibold">

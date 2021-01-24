@@ -7,7 +7,7 @@ import FeatureHighlight from '../components/FeatureHighlight'
 import { paths } from '../data/routes';
 
 const FirstSection = () => (
-  <div className="section container">
+  <div className="section container-small">
     <FeatureHighlight
       image="/icons/laptop.svg"
       title={<>What <span className="text-orange">maintenance plan</span> means?</>}

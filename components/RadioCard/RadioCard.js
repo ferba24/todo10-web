@@ -6,7 +6,7 @@ export default function RadioCard({children, checked, ribbon, ...props}) {
 
   return (
     <motion.div
-      animate={{ scale: checked ? 1.05 : 1 }}
+      animate={{ scale: checked ? 1.04 : 1 }}
       transition={{
         type: 'tween',
         ease: [.07,.79,.45,1],

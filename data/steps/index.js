@@ -1,7 +1,17 @@
+/**
+ * Steps for the app
+ * Feel free to separate these into smaller files if necessary.
+ * 
+ * Brief explanation for step props:
+ * `name` name of the property in the object that collects the user choices.
+ * `type` Available types: 'card', 'contactForm', 'select', 'chip', 'radioCard'.
+ * `options` Array of options for the user to choose.
+ * `title` Title to be shown above the step.
+ * `desc` Description to be shown below the title.
+ */
+
+
 import getPlans from './getPlans'
-import ChipSelector from '../../components/ChipSelector'
-import Select from '../../components/Select'
-import NativeSelect from '../../components/NativeSelect'
 
 const wordpress = '/icons/wordpress.svg'
 const xenforo = '/icons/xenforo.svg'
@@ -23,21 +33,27 @@ const getPlansStep = diskSpace => ({
   className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
 })
 
-
+/**
+ * This is a normal step, but has a `final` prop set as `true`.
+ * This means that this step is the last one, so the stepper will show
+ * a result after its completion.
+ */
 const finalForm = {
   name: 'finalForm',
-  title: 'Tell us what you need (The data you add here is not going to be sent)',
+  title: 'Tell us what you need',
   desc: 'We will send you a personalized quote really fast!',
   type: 'contactForm',
   final: true
 }
 
+/**
+ * This step, like others, has an `options` array. Every option has
+ * a `nextStep` prop, thus the next step will depend on the user choice.
+ */
 const diskSpaceOptions = {
   name: 'diskSpace',
   title: 'Disk space',
   type: 'select',
-  selector: NativeSelect,
-  option: NativeSelect.Option,
   options: [
     {label: 'Custom', value: 'custom', nextStep: finalForm},
     {label: '12 GB', value: '12GB', nextStep: getPlansStep(12)},
@@ -49,8 +65,6 @@ export const hostingOptions = {
   name: 'platform',
   title: 'Choose your platform',
   type: 'chip',
-  selector: ChipSelector,
-  option: Select.Option,
   options: [
     {
       value: "wordpress",
@@ -67,12 +81,14 @@ export const hostingOptions = {
   ]
 }
 
+/**
+ * This step has a "global" `nextStep`, this means that no matter what option the user
+ * chooses, the next step will be the same.
+ */
 export const personalizedStep = {
   name: 'personalizedOption',
   title: 'Choose one or more',
   type: 'radioCard',
-  selector: Select,
-  option: Select.Option,
   multiple: true,
   nextStep: finalForm,
   options: [
@@ -107,8 +123,6 @@ const initialStep = {
   name: 'general',
   title: 'Select what are you looking for',
   type: 'radioCard',
-  selector: Select,
-  option: Select.Option,
   options: [
     {
       value: 'maintenancePlans',

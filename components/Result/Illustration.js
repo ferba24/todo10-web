@@ -34,7 +34,7 @@ export default function Illustration() {
 
   return (
       <div
-        className="rounded-full overflow-hidden pt-11 pl-11 mx-auto"
+        className="rounded-full transform scale-90 md:scale-100 overflow-hidden pt-11 pl-11 mx-auto"
         style={style}
       >
         <div className="relative">

@@ -21,7 +21,7 @@ const FeatureDesc = ({title, desc, items, link, linkLabel}) => (
       {desc}
     </div>
     <List items={items} />
-    <div className="text-center md:text-left">
+    <div className="text-center lg:text-left">
       <Link href={link}>
         <a>
           <Button
@@ -37,7 +37,7 @@ const FeatureDesc = ({title, desc, items, link, linkLabel}) => (
 )
 
 const CrmItem = ({icon, title, desc, link}) => (
-  <div className="text-white mx-auto w-9/12 sm:w-5/12 md:w-4/12 lg:w-3/12 my-16">
+  <div className="text-white mx-auto w-9/12 sm:w-5/12 md:w-4/12 lg:w-3/12 my-16 flex flex-col">
     <div className="h-10 flex items-center mb-2">
       <img className="" src={icon}/>
     </div>
@@ -47,7 +47,7 @@ const CrmItem = ({icon, title, desc, link}) => (
     <div>
       {desc}
     </div>
-    <div className="text-center">
+    <div className="text-center mt-auto">
       <Link href={link}>
         <a>
           <Button
@@ -63,7 +63,7 @@ const CrmItem = ({icon, title, desc, link}) => (
 )
 
 const FirstSection = () => (
-  <div className="section container flex justify-around">
+  <div className="section container-small flex justify-around">
 
     <div className="mt-16 relative flex justify-center content-start flex-wrap">
       <div className="text-5xl font-bold w-full mb-5 font-quicksand">
@@ -103,16 +103,14 @@ const SecondSection = () => {
   
   const [ renderGraph, setRenderGraph ] = useState(true)
 
-  
-
   return (
     <div className="section container">
       <Card
         style={{ borderWidth: 3, borderColor: 'var(--color-blue)' }}
         ribbon='Most Sold!'
       >
-        <div className="md:flex justify-around items-center p-3">
-          <div className="flex-1 mt-4 ml-4 md:mt-0">
+        <div className="max-w-5xl mx-auto lg:flex justify-around items-center p-8 md:p-3">
+          <div className="lg:w-6/12">
             <FeatureDesc
               title="Know our hosting plans"
               desc="We offer a high-performance web hosting."
@@ -121,7 +119,7 @@ const SecondSection = () => {
               linkLabel="Hosting plans"
             />
           </div>
-          <div className="flex-1 m-4 mt-10 md:m-0">
+          <div className="lg:w-6/12 mt-10">
             <div className="text-orange font-semibold">
               Response time <span className="font-light">(in seconds)</span>
             </div>
@@ -135,8 +133,8 @@ const SecondSection = () => {
 
 const ThirdSection = () => (
   <div className="relative pb-28">
-    <div className="container md:flex flex-row-reverse justify-around">
-      <div>
+    <div className="container lg:flex flex-row-reverse justify-around">
+      <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -145,15 +143,15 @@ const ThirdSection = () => (
           linkLabel="Maintenance plans"
         />
       </div>
-      <div className="flex-1 relative">
+      <div className="lg:w-6/12 relative flex justify-center">
         <img
-          className="md:absolute bottom-0 left-8 w-9/12 z-10 mx-auto"
+          className="lg:absolute -bottom-2 w-9/12 z-10 mx-auto"
           src="/images/spaceship.svg"
           alt="Todo10"
         />
         <img
-          className="absolute -bottom-40 -left-56 max-w-none"
-          style={{width: '160%', zIndex: -1}}
+          className="absolute -bottom-28 md:-bottom-40 max-w-none"
+          style={{width: '170%', minWidth: 500, zIndex: -1}}
           src="/images/cloud.svg"
         />
       </div>
@@ -227,7 +225,8 @@ const BenefitCard = ({icon, title, desc}) => (
 )
 
 const SixthSection = () => (
-  <div className="section bg-gray-200 py-24 px-6 overflow-auto">
+  <div className="section bg-gray-200 py-16 px-6 overflow-auto">
+    <h3 className="text-center mb-10">Why choose us?</h3>
     <div className="flex sm:justify-center">
       <BenefitCard
         icon="/icons/timer.svg"
@@ -250,6 +249,7 @@ const SixthSection = () => (
 
 const SeventhSection = () => (
   <>
+    <h3 className="text-orange text-center mb-6">Our clients</h3>
     <ClientsSlider/>
   </>
 )

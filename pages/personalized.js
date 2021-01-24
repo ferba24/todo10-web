@@ -4,6 +4,18 @@ import { personalizedStep } from '../data/steps'
 import FeatureHighlight from '../components/FeatureHighlight'
 import List from '../components/List'
 
+const FirstSection = () => (
+  <div className="section container-small">
+    <FeatureHighlight
+      image="/images/personalized.svg"
+      title="Personalized services."
+      desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa."
+      link="/"
+      linkLabel="Get mine"
+    />
+  </div>
+)
+
 const list = [
   'First point',
   'What about other',
@@ -11,11 +23,11 @@ const list = [
   'Other one'
 ] 
 
-const FirstSection = () => (
+const SecondSection = () => (
   <div className="section bg-blue py-16">
-    <div className="container text-white">
+    <div className="w-11/12 max-w-4xl mx-auto text-white">
       <FeatureHighlight
-        image="/icons/pencil.svg"
+        image="/images/pencil-with-wheels.svg"
         title="Something important"
         desc={<List primary items={list}/>}
         reverse
@@ -30,7 +42,9 @@ export default function Personalized() {
     <Layout>
       <div className="my-40"/>
       <FirstSection/>
+      <SecondSection/>
       <div className="section container">
+        <h3 className="text-orange text-center">Get your quote</h3>
         <Stepper initialStep={personalizedStep}/>
       </div>
       <div className="my-60"/>

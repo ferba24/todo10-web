@@ -26,7 +26,7 @@ export default function Layout({children}) {
     <MenuIcon
       open={drawerV}
       onClick={() => setDrawerV(!drawerV)}
-      className={`transition-all duration-500 fixed z-50 right-6 ${scrolled ? 'top-5' : 'top-7'} md:hidden`}
+      className={`transition-all duration-500 fixed z-50 right-6 ${scrolled ? 'top-4' : 'top-7'} md:hidden`}
     />
   )
 

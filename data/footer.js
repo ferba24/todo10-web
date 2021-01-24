@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const DefaultLink = ({url = '/', children}) => (
   <Link href={url} prefetch={false}>
-    <a>
+    <a style={{color: '#F79E8C'}} className="underline">
       {children}
     </a>
   </Link>
@@ -28,3 +28,36 @@ export const topItems = [
     desc: 'Our lines are always open for you. Just call us.',
   }
 ]
+
+export const pricingItems = {
+  title: 'Pricing',
+  items: [
+    {
+      label: 'Choose your plan',
+      path: '/pricing'
+    },
+    {
+      label: 'Get a Quote',
+      path: '/get-a-quote'
+    }
+  ]
+}
+
+export const aboutUsItems = {
+  title: 'About Us',
+  items: [
+    {
+      label: 'Section',
+      path: '/'
+    },
+    {
+      label: 'Contact us',
+      path: '/'
+    },
+    {
+      label: <span>Already a client? <DefaultLink>Check status</DefaultLink></span>,
+      path: '/',
+      style: {marginTop: 'auto'}
+    }
+  ]
+}

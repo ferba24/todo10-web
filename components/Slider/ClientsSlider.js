@@ -5,7 +5,7 @@ const slideOptions = {
   autoplay: true,
   speed: 500,
   centerMode: true,
-  centerPadding: "20%",
+  centerPadding: "30%",
   responsive: [
     {
       breakpoint: 1024,
