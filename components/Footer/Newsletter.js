@@ -3,10 +3,16 @@ import Link from "next/link"
 const Input = props => {
   
   return (
-    <input
-      className="px-3 max-w-full py-1 rounded-xl bg-white bg-opacity-40 text-white appearance-none focus:outline-none"
-      {...props}
-    />
+    <div className="relative flex items-center max-w-xs bg-white bg-opacity-40 py-1 px-3 rounded-xl">
+      <input
+        className="flex-1 w-11/12 text-white bg-transparent appearance-none focus:outline-none"
+        {...props}
+      />
+      <img
+        src="icons/arrow-right-white.svg"
+        className="ml-2"
+      />
+    </div>
   )
 }
 
@@ -22,7 +28,7 @@ export default function Newsletter() {
       <Input
         placeholder="Enter your email"
       />
-      <div className="text-xs opacity-60 pl-2 mt-1">
+      <div className="text-xs opacity-60 pl-2 mt-2">
         Receive news and marketing
       </div>
       <div className="mt-3 flex space-x-3">
