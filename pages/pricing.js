@@ -14,7 +14,7 @@ export default function Pricing() {
           desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus."
         />
       </div>
-      <div className="section container">
+      <div className="section container-medium">
         <Stepper initialStep={initialStep}/>
       </div>
       <div className="my-60"/>

@@ -23,6 +23,7 @@ export default function Button({
   className,
   htmlType,
   size = defaultSize,
+  disabled,
   ...props
 }) {
 
@@ -31,9 +32,10 @@ export default function Button({
 
   return (
     <button
-      className={`button-base ${sizeClass} ${typeClass} ${className}`}
+      className={`button-base disabled: ${sizeClass} ${typeClass} ${className}`}
       onClick={onClick}
       type={htmlType}
+      disabled={disabled}
       {...props}
     >
       {children}

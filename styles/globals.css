@@ -21,7 +21,7 @@
 
 @layer components {
   .button-base {
-    @apply font-semibold focus:outline-none rounded-md;
+    @apply font-semibold focus:outline-none rounded-md disabled:opacity-50 disabled:cursor-auto;
   }
 
   .button-base:hover {
@@ -29,7 +29,7 @@
   }
 
   .form-control {
-    @apply py-2 px-3 bg-white rounded-lg border-2 border-blue w-full focus:outline-none;
+    @apply py-2 px-3 bg-white rounded-lg border-2 border-blue w-full focus:outline-none appearance-none;
   }
 
   .list-custom li {
@@ -74,6 +74,10 @@
 
   .container-full {
     @apply max-w-5xl mx-auto;
+  }
+
+  .container-medium {
+    @apply w-11/12 max-w-6xl mx-auto;
   }
 
   .container-small {

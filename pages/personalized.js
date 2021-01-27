@@ -43,7 +43,7 @@ export default function Personalized() {
       <div className="my-40"/>
       <FirstSection/>
       <SecondSection/>
-      <div className="section container">
+      <div className="section container-medium">
         <h3 className="text-orange text-center">Get your quote</h3>
         <Stepper initialStep={personalizedStep}/>
       </div>

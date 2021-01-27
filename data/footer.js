@@ -52,7 +52,7 @@ export const aboutUsItems = {
     },
     {
       label: 'Contact us',
-      path: '/'
+      path: '/about-us#form'
     },
     {
       label: <span>Already a client? <DefaultLink>Check status</DefaultLink></span>,

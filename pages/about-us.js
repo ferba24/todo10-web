@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
 import List from '../components/List'
 import ContactForm from '../components/ContactForm';
+import WithSend from '../components/ContactForm/WithSend'
 
 const list = [
   'First point',
@@ -33,17 +34,28 @@ const BlueSection = () => (
   </div>
 )
 
-const ContactSection = () => (
-  <div className="section container">
-    <h3 className="text-orange text-center mb-8">
-      Contact us!
-    </h3>
-    <ContactForm
-      buttonRight
-      buttonPrimary
-    />
-  </div>  
-)
+const ContactSection = () => {
+
+  return (
+    <div className="section container">
+      <a name="form" />
+      <h3 className="text-orange text-center mb-8">
+        Contact us!
+      </h3>
+      <WithSend>
+        {({send, sending}) => (
+          <ContactForm
+            buttonRight
+            buttonPrimary
+            onFinish={send}
+            sending={sending}
+            buttonLabel="Send"
+          />
+        )}
+      </WithSend>
+    </div>  
+  )
+}
 
 export default function AboutUs() {
 

@@ -6,10 +6,13 @@ import useMediaQuery from '../../lib/useMediaQuery'
 
 const variants = {
   hidden: { opacity: 0, height: 0},
-  visible: { opacity: 1, height: 'fit-content'}
+  visible: { opacity: 1, height: 'unset'}
 }
 
-const transition = { type: 'tween' }
+const transition = {
+  type: 'tween',
+  ease: 'easeInOut'
+}
 
 const itemMap = (item, i) => (
   <motion.div
@@ -21,8 +24,8 @@ const itemMap = (item, i) => (
     transition={transition}
     className="w-6/12 md:w-4/12"
   >
-    <div className="p-1 sm:p-2 md:p-3">
-      <Card bordered={false} shadow>
+    <div className="p-1 sm:p-2 md:p-3 h-full">
+      <Card bordered={false} shadow className="h-full">
         <Card.Content {...item}/>
       </Card>
     </div>
