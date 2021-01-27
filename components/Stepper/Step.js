@@ -25,6 +25,7 @@ export default function Step({
   final,
   onFinish = () => {},
   className = 'flex flex-wrap justify-center items-stretch',
+  sending
 }) {
 
   const [nextStep, setNextStep] = useState(null)
@@ -121,6 +122,7 @@ export default function Step({
         <ContactForm
           onFinish={handleFormFinish}
           onValuesChange={handleFormChange}
+          sending={sending}
         />
       )}
 
@@ -131,6 +133,7 @@ export default function Step({
           key={nextStep.name}
           onChange={handleChildChange}
           onFinish={onFinish}
+          sending={sending}
         />
       )}
     </motion.div>

@@ -3,10 +3,11 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader/PageHeader'
 import { paths } from '../data/routes'
 import ContactForm from '../components/ContactForm'
+import WithSend from '../components/ContactForm/WithSend'
 
 const FirstSection = () => (
   <>
-    <div className="section">
+    <div className="section container">
       <PageHeader
         title="Custom WordPress Services"
         desc="We have been helping over 200+ customers worldwide with WordPress web development services to deliver 130+ sites every month. We believe that our journey to build powerful digital solutions and enjoyable user experience with our WordPress Development Services has just begun."
@@ -65,10 +66,16 @@ const FourthSection = () => (
     <h3 className="text-orange text-center mb-10">
       Or contact us!
     </h3>
-    <ContactForm
-      buttonRight
-      buttonPrimary
-    />
+    <WithSend>
+      {({send, sending}) => (
+        <ContactForm
+          buttonRight
+          buttonPrimary
+          onFinish={send}
+          sending={sending}
+        />
+      )}
+    </WithSend>
   </div>
 )
 

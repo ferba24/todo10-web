@@ -14,7 +14,7 @@ export default function Pricing() {
           desc="For Individual and Companies. Wether you're amateur or a company, there's a plan for you."
         />
       </div>
-      <div className="section container">
+      <div className="section container-medium">
         <Stepper initialStep={initialStep}/>
       </div>
       <div className="my-60"/>

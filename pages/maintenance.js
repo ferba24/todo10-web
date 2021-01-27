@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import BenefitsSection from '../components/BenefitsSection'
 import Stepper from '../components/Stepper';
-import { hostingOptions } from '../data/steps'
+import { maintenanceOptions } from '../data/steps'
 import benefits from '../data/maintenance/benefits'
 import FeatureHighlight from '../components/FeatureHighlight'
 import { paths } from '../data/routes';
@@ -28,7 +28,7 @@ export default function Maintenance() {
         <BenefitsSection benefits={benefits}/>
       </div>
       <div className="section container">
-        <Stepper initialStep={hostingOptions}/>
+        <Stepper initialStep={maintenanceOptions}/>
       </div>
       <div className="my-60"/>
     </Layout>

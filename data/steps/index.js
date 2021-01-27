@@ -81,6 +81,26 @@ export const hostingOptions = {
   ]
 }
 
+export const maintenanceOptions = {
+  name: 'platform',
+  title: 'Choose your platform',
+  type: 'chip',
+  options: [
+    {
+      value: "wordpress",
+      image: wordpress,
+      title: 'Wordpress',
+      nextStep: getPlansStep(12)
+    },
+    {
+      value: "xenforo",
+      image: xenforo,
+      title: 'XenForo',
+      nextStep: getPlansStep(12)
+    }
+  ]
+}
+
 /**
  * This step has a "global" `nextStep`, this means that no matter what option the user
  * chooses, the next step will be the same.
@@ -129,7 +149,7 @@ const initialStep = {
       icon: notebook,
       title: 'Maintenance plans',
       desc: 'An intelligent option for your services.',
-      nextStep: hostingOptions
+      nextStep: maintenanceOptions
     },
     {
       value: 'hostingPlans',

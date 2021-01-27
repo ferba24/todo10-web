@@ -5,7 +5,7 @@ const validateChildren = children => {
     return false
   }
   if(typeof children != 'object') {
-    console.error('The child of this <Form.Item> is not a valid component')
+    console.error('The child of this <Form.Item> is not a valid component.')
     return false
   }
   return true

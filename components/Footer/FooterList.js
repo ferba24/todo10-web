@@ -11,7 +11,7 @@ const FooterList = ({title, items}) => (
         className="my-1 text-sm"
         style={style}
       >
-        <Link href={path} prefetch={false}>
+        <Link href={path} prefetch={false} shallow={true}>
           <a>{label}</a>
         </Link>
       </div>

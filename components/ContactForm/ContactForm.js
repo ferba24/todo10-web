@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Button from '../Button'
 import Form from '../Form'
 import NativeSelect from '../NativeSelect'
@@ -9,27 +8,25 @@ export default function ContactForm({
   onFinish = () => {},
   onValuesChange = () => {},
   buttonRight,
-  buttonPrimary
+  buttonPrimary,
+  buttonLabel = 'Get a quote',
+  sending
 }) {
-
-  const send = values => {
-    onFinish(values)
-  }
 
   return (
     <div className="max-w-lg mx-auto">
       <Form
-        onFinish={send}
+        onFinish={onFinish}
         onValuesChange={onValuesChange}
       >
-        <Form.Item name="name" label="Name">
+        <Form.Item name="name" label="Name" required>
           <input className="form-control" placeholder="Oscar Wilde"/>
         </Form.Item>
-        <Form.Item name="email" label="Email">
+        <Form.Item name="email" label="Email" required>
           <input className="form-control" placeholder="Oscar@gmail.com"/>
         </Form.Item>
         {extended && (
-          <Form.Item name="option" label="I'm looking for...">
+          <Form.Item name="option" label="I'm looking for..." required>
             <NativeSelect className="w-full">
               {services.map(service => (
                 <NativeSelect.Option
@@ -57,11 +54,12 @@ export default function ContactForm({
         </Form.Item>
         <Form.Item className={buttonRight ? 'text-right' : 'text-center'}>
           <Button
+            disabled={sending}
             className="px-14"
             htmlType="submit"
             type={buttonPrimary ? 'primary' : 'blue'}
           >
-            Get a quote
+            {buttonLabel}
           </Button>
         </Form.Item>
       </Form>
