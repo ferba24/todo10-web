@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-display: auto;
+  src: url(./Montserrat-Bold.ttf) format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-display: auto;
+  src: url(./Montserrat-SemiBold.ttf) format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-display: auto;
+  src: url(./Montserrat-Medium.ttf) format("woff");
+}

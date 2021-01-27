@@ -1,0 +1,111 @@
+@import '../public/fonts/Quicksand/Quicksand.css';
+@import '../public/fonts/Montserrat/Montserrat.css';
+
+:root {
+  --color-primary:#04283A;
+  --color-wordpress: #4A50AE;
+  --color-blue: #37395B;
+  --color-orange: #FF6043;
+  /* ... */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply text-4xl font-quicksand font-bold;
+  }
+}
+
+@layer components {
+  .button-base {
+    @apply font-semibold focus:outline-none rounded-md;
+  }
+
+  .button-base:hover {
+    filter: brightness(120%);
+  }
+
+  .form-control {
+    @apply py-2 px-3 bg-white rounded-lg border-2 border-blue w-full focus:outline-none;
+  }
+
+  .list-custom li {
+    @apply flex items-center my-2 text-lg;
+  }
+  
+  .list-custom li::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    margin-right: 10px;
+  }
+
+  .list-custom.primary li::before {
+    background-color: var(--color-orange);
+  }
+}
+
+@layer utilities {
+  .top-13 {
+    top: 3.25rem;
+  }
+
+  .h-full-screen {
+    height: 100vh;
+    height: calc(100vh - var(--vh-offset, 0px));
+  }
+
+  .border-3 {
+    border-width: 3px;
+  }
+
+  .section {
+    @apply my-12 md:my-20;
+  }
+
+  .container {
+    @apply w-11/12 max-w-7xl mx-auto;
+  }
+
+  .container-full {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .container-small {
+    @apply w-11/12 max-w-5xl mx-auto;
+  }
+
+  .tap-highlight-transparent {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .placeholder-shine {
+    overflow: hidden;
+  }
+
+  .placeholder-shine::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    left: 50;
+    top: -10px;
+    bottom: -10px;
+    background-color: white;
+    opacity: 0.3;
+    transform: rotate(20deg);
+    animation-name: placeholderShine;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes placeholderShine {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100% }
+  }
+}
