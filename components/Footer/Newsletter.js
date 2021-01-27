@@ -32,7 +32,7 @@ export default function Newsletter() {
         Receive news and marketing
       </div>
       <div className="mt-3 flex space-x-3">
-        <Link prefetch={false} href="">
+        <Link prefetch={false} href="https://www.facebook.com/Todo10.official">
           <a>
             <img src="/icons/facebook.svg"/>
           </a>

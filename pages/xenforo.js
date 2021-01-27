@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader/PageHeader'
 import { paths } from '../data/routes'
 import ContactForm from '../components/ContactForm'
+import WithSend from '../components/ContactForm/WithSend'
 
 const SearchCode = () => (
   <img
@@ -13,7 +14,7 @@ const SearchCode = () => (
 
 const FirstSection = () => (
   <>
-    <div className="section">
+    <div className="section container">
       <PageHeader
         title="Xenforo services"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
@@ -71,10 +72,16 @@ const FourthSection = () => (
     <h3 className="text-orange text-center mb-10">
       Or contact us!
     </h3>
-    <ContactForm
-      buttonRight
-      buttonPrimary
-    />
+    <WithSend>
+      {({send, sending}) => (
+        <ContactForm
+          buttonRight
+          buttonPrimary
+          onFinish={send}
+          sending={sending}
+        />
+      )}
+    </WithSend>
   </div>
 )
 

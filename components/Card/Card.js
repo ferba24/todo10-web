@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 export default function Card({
   children,
-  className,
+  className = '',
   shadow,
   shadowOnHover,
   bordered = true,
@@ -19,7 +19,7 @@ export default function Card({
 
   return (
     <div
-      className={`relative p-3 sm:p-5 md:p-7 lg:px-16 lg:py-10 bg-white dark rounded-xl duration-300 transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} ${bordered ? 'border' : ''} border-gray-300 ${className}`}
+      className={`relative p-3 sm:p-5 md:p-7 lg:px-10 lg:py-10 bg-white dark rounded-xl duration-300 transition-shadow ${shadowOnHover ? 'hover:shadow-xl' : ''} ${shadow ? 'shadow-xl' : ''} ${bordered ? 'border' : ''} border-gray-300 ${className}`}
       style={style}
       {...props}
     >
