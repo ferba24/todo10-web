@@ -12,19 +12,19 @@ export const topItems = [
   {
     key: 'email',
     icon: '/icons/mail.svg',
-    title: 'todo10@todo10.com',
-    desc: 'For any doubt you have. Your needs are our priorities'
+    title: 'support@todo10.com',
+    desc: 'For any doubt you have <DefaultLink url="/about-us">Contact Us</DefaultLink>. Your needs are our priorities'
   },
   {
     key: 'chat',
     icon: '/icons/message.svg',
     title: 'Chat with us...',
-    desc: <span><DefaultLink>Click here</DefaultLink> and get assistance from our team of experts</span>
+    desc: <span><DefaultLink url="https://go.crisp.chat/chat/embed/?website_id=64f36307-81ed-48ba-b126-fe0272becd73">Click here</DefaultLink> and get assistance from our team of experts</span>
   },
   {
     key: 'phone',
     icon: '/icons/phone.svg',
-    title: '+54 9 11509090',
+    title: '+54 9 3496525275',
     desc: 'Our lines are always open for you. Just call us.',
   }
 ]
@@ -55,7 +55,7 @@ export const aboutUsItems = {
       path: '/'
     },
     {
-      label: <span>Already a client? <DefaultLink>Check status</DefaultLink></span>,
+      label: <span>Already a client? <DefaultLink url="https://clientarea.todo10.com/clientarea.php">Client Area</DefaultLink></span>,
       path: '/',
       style: {marginTop: 'auto'}
     }

@@ -96,25 +96,25 @@ export const personalizedStep = {
       value: 'seo',
       icon: seoIcon,
       title: 'SEO',
-      desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in. ',
+      desc: 'If you are looking to command your market online, you need a comprehensive SEO strategy that delivers results.',
     },
     {
       value: 'webDesign',
       icon: designIcon,
       title: 'Web Design',
-      desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
+      desc: 'Expert website design that helps you stand out from your competitors and engage with your audience.',
     },
     {
       value: 'dedicatedServices',
       icon: computerIcon,
-      title: 'Dedicated Services',
-      desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
+      title: 'Dedicated Servers',
+      desc: 'Optimized, harden and fully managed servers. Let us know your needs.',
     },
     {
       value: 'somethingElse',
       icon: pencilIcon,
       title: 'Something Else',
-      desc: 'Nullam ullamcorper euismod odio, vel efficitur urna venenatis in.',
+      desc: 'More than 10 years of expertise give us the confidence to take on any project you have in mind.',
     }
   ]
 }

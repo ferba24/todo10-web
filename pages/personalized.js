@@ -9,9 +9,9 @@ const FirstSection = () => (
     <FeatureHighlight
       image="/images/personalized.svg"
       title="Personalized services."
-      desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa."
+      desc="You have a vision. We have a team to get you there."
       link="/"
-      linkLabel="Get mine"
+      linkLabel="Get a quote"
     />
   </div>
 )

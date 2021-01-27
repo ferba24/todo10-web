@@ -137,7 +137,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          desc="Let our experts handle the technical part of your IT infrastructure."
           items={hostingItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"

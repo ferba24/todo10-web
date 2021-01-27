@@ -4,10 +4,10 @@ import List from '../components/List'
 import ContactForm from '../components/ContactForm';
 
 const list = [
-  'First point',
-  'What about other',
-  'Here goes another',
-  'Other one'
+  'Provide details',
+  'Tell us your vision',
+  'Describe your needs',
+  'Every moment is a fresh beginning.'
 ] 
 
 const FirstSection = () => (
@@ -15,7 +15,7 @@ const FirstSection = () => (
     <div className="container text-white">
       <FeatureHighlight
         image="/icons/pencil.svg"
-        title="Something important"
+        title="Remember"
         desc={<List primary items={list}/>}
         reverse
       />

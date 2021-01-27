@@ -73,22 +73,22 @@ export default function AboutUs() {
       <div className="section container">
         <PageHeader
           title={headerTitle}
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
+          desc="Our mission is to provide outstanding customer service and support that is second to none."
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/about-us.svg"
-          title={<span className="text-orange">Title of a section</span>}
-          desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped."
+          title={<span className="text-orange">Always Champions for our Customers</span>}
+          desc="Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. We feel putting people first isn’t just the right way to do business, it’s the right thing, period."
           leftExtra={cloud}
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/spaceship-with-wheels.svg"
-          title={<span className="text-orange">Title of a section</span>}
-          desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped."
+          title={<span className="text-orange">Always Clear and Honest</span>}
+          desc="We strive to build a culture of integrity. All our interactions are honest, action-oriented, and decisive, whether they’re with a customer or a co-worker. We deliver authenticity and transparency in our promotions, the best prices on the market, and no unwanted upsells. We will never stop searching for the best ways to grow from our successes and learn from our failures."
           reverse
         />
       </div>

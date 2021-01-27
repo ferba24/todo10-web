@@ -8,15 +8,17 @@ const FirstSection = () => (
   <>
     <div className="section">
       <PageHeader
-        title="Wordpress services"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
+        title="Custom WordPress Services"
+        desc="We have been helping over 200+ customers worldwide with WordPress web development services to deliver 130+ sites every month. We believe that our journey to build powerful digital solutions and enjoyable user experience with our WordPress Development Services has just begun."
       />
     </div>
     <div className="section container-small">
       <FeatureHighlight
         image="/icons/wordpress-screen.svg"
-        title={<span className="text-orange">Why choose wordpress?</span>}
-        desc={<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa. Nunc volutpat sit amet nunc vitae ultrices. Etiam et tellus at nulla congue gravida at vitae libero.<br/><br/>In pellentesque arcu et tortor blandit mattis. Praesent molestie eleifend mauris, non facilisis orci consectetur in. Aliquam mollis volutpat ipsum, eu porttitor orci mollis quis.</div>}
+        title={<span className="text-orange">Why choose Wordpress?</span>}
+        desc={<div>WordPress is, by far, the most popular open source Content Management System (CMS), used by approximately 75 million websites.
+
+            <br/><br/>Thousands of plugins and templates power a flexible and simple interface, which reduces development costs and deployment time.</div>}
       />
     </div>
   </>
@@ -49,7 +51,7 @@ const ThirdSection = () => (
       <FeatureHighlight
         image="/icons/laptop.svg"
         title={<span>Wordpress <span className="text-orange">Maintenance Plans</span></span>}
-        desc={<span>Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc.</span>}
+        desc={<span>Let Todo10 deal with necessary maintenance while you take care of publishing great content, monetizing and growing your website.</span>}
         link={paths.MAINTENANCE}
         linkLabel="Know more"
         leftExtra={<Cloud />}

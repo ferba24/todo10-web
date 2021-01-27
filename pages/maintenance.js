@@ -11,7 +11,7 @@ const FirstSection = () => (
     <FeatureHighlight
       image="/icons/laptop.svg"
       title={<>What <span className="text-orange">maintenance plan</span> means?</>}
-      desc="Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa."
+      desc="We’ll do all the tech work and take care of the issues so you don’t have to. Many customers need help with their website because they don’t have the time or knowledge to manage it properly and that’s where we come in. We have the expertise and experience to effectively manage your site for you."
       link={paths.MAINTENANCE}
       linkLabel="Get mine"
     />

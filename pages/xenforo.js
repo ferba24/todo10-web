@@ -57,7 +57,7 @@ const ThirdSection = () => (
       <FeatureHighlight
         image="/icons/laptop.svg"
         title={<span>Xenforo <span className="text-orange">Maintenance Plans</span></span>}
-        desc={<span>Duis non elit accumsan, dignissim libero et, facilisis est. Vestibulum ante ipsum primis in faucibus orci luctus. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc.</span>}
+        desc={<span>We take care of all the technical aspects of your forum..</span>}
         link={paths.MAINTENANCE}
         linkLabel="Know more"
         leftExtra={<Cloud />}
