@@ -16,7 +16,6 @@ const CrispWithNoSSR = dynamic(
   { ssr: false }
 )
 
-
 const Waves = () => (
   <img
     className="absolute -top-10 w-full"
