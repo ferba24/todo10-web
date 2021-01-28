@@ -9,6 +9,14 @@ import Drawer from '../Drawer'
 import DrawerMenu from '../Drawer/DrawerMenu'
 import Footer from '../Footer'
 
+import dynamic from 'next/dynamic'
+
+const CrispWithNoSSR = dynamic(
+  () => import('../Crisp'),
+  { ssr: false }
+)
+
+
 const Waves = () => (
   <img
     className="absolute -top-10 w-full"
@@ -32,6 +40,7 @@ export default function Layout({children}) {
 
   return (
     <div className="overflow-hidden min-h-screen text-primary font-montserrat">
+      <CrispWithNoSSR/>
       <Waves/>
       <Head>
         <link rel="icon" href="/favicon.png" />
