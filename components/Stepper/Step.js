@@ -29,7 +29,7 @@ export default function Step({
 }) {
 
   const [nextStep, setNextStep] = useState(null)
-  const [currentValue, setCurrentValue] = useState(undefined)
+  const currentValueRef = useRef(undefined)
   const indicatorRef = useRef(null)
 
   const {
@@ -52,9 +52,9 @@ export default function Step({
 
   const goToNextStep = (nextStep, value) => {
     setNextStep(nextStep)
-    setCurrentValue(value)
+    currentValueRef.current = value
     onChange({[name]: value})
-    if(final) onFinish()
+    if(final) onFinish(value)
   }
 
   const handleChange = e => {
@@ -65,16 +65,7 @@ export default function Step({
   }
 
   const handleChildChange = childValueObj => {
-    onChange({[name]: currentValue, ...childValueObj})
-  }
-
-  const handleFormFinish = values => {
-    goToNextStep(uniqueNextStep, values)
-  }
-
-  const handleFormChange = values => {
-    setCurrentValue(values)
-    onChange({[name]: values})
+    onChange({[name]: currentValueRef.current, ...childValueObj})
   }
 
   const indicator = (
@@ -120,8 +111,7 @@ export default function Step({
 
       {type == 'contactForm' && (
         <ContactForm
-          onFinish={handleFormFinish}
-          onValuesChange={handleFormChange}
+          onFinish={values => goToNextStep(null, values)}
           sending={sending}
         />
       )}

@@ -9,11 +9,11 @@ export default function Stepper({initialStep}) {
   const ref = useRef(null)
   const scrollHere = useScrollHere(ref, 150)
 
-  const handleFinish = async send => {
-    await send(values)
+  const handleFinish = async (send, formValues) => {
+    await send({...formValues, ...values})
     scrollHere()
   }
-  
+
   if(!initialStep) return null
 
   return (
@@ -23,8 +23,8 @@ export default function Stepper({initialStep}) {
           <Step
             {...initialStep}
             key={initialStep.name}
-            onChange={values => setValues(values)}
-            onFinish={() => handleFinish(send)}
+            onChange={newValues => setValues(newValues)}
+            onFinish={value => handleFinish(send, value)}
             sending={sending}
           />
         )}
