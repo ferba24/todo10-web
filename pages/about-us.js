@@ -92,7 +92,7 @@ export default function AboutUs() {
         <FeatureHighlight
           image="/images/about-us.svg"
           title={<span className="text-orange">Always Champions for our Customers</span>}
-          desc="Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. <br> We feel putting people first isn’t just the right way to do business, it’s the right thing, period."
+          desc={<span>Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. <br /> We feel putting people first isn’t just the right way to do business, it’s the right thing, period.</span>}
           leftExtra={cloud}
         />
       </div>
@@ -100,7 +100,7 @@ export default function AboutUs() {
         <FeatureHighlight
           image="/images/spaceship-with-wheels.svg"
           title={<span className="text-orange">Always Clear and Honest</span>}
-          desc="We strive to build a culture of integrity. All our interactions are honest, action-oriented, and decisive, whether they’re with a customer or a co-worker. We deliver authenticity and transparency in our promotions, the best prices on the market, and no unwanted upsells. We will never stop searching for the best ways to grow from our successes and learn from our failures."
+          desc={<span>We strive to build a culture of integrity. All our interactions are honest, action-oriented, and decisive, whether they’re with a customer or a co-worker.<br />We deliver authenticity and transparency in our promotions, the best prices on the market, and no unwanted upsells. We will never stop searching for the best ways to grow from our successes and learn from our failures.</span>}
           reverse
         />
       </div>

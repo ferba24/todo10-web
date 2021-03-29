@@ -45,7 +45,7 @@ export default function ContactForm({
             </NativeSelect>
           </Form.Item>
         )}
-        <Form.Item name="message" label="What do you need?">
+        <Form.Item name="message" label="How we can help you?">
           <textarea
             className="form-control"
             placeholder="Hi! I'm looking for your help with..."
