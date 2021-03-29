@@ -102,7 +102,8 @@ const hostingItems = [
 const maintenanceItems = [
     'Adapted to your needs',
     'Security, optimization, troubleshooting',
-    'Top-notch support staff'
+    'Top-notch support staff',
+    'Rely on us for maintaining your websites'
 ]
 
 const SecondSection = () => {

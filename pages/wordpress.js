@@ -16,7 +16,7 @@ const FirstSection = () => (
     <div className="section container-small">
       <FeatureHighlight
         image="/icons/wordpress-screen.svg"
-        title={<span className="text-orange">Why choose Wordpress?</span>}
+        title={<span className="text-orange">Why Choose Wordpress?</span>}
         desc={<div>WordPress is, by far, the most popular open source Content Management System (CMS), used by approximately 75 million websites.
 
             <br/><br/>Thousands of plugins and templates power a flexible and simple interface, which reduces development costs and deployment time.</div>}
@@ -30,7 +30,7 @@ const SecondSection = () => (
     <FeatureHighlight
       image="/icons/server.svg"
       title={<span>Wordpress <span className="text-orange">Hosting Plans</span></span>}
-      desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped. "
+      desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped & secure backups. "
       link={paths.HOSTING}
       linkLabel="Know more"
       reverse

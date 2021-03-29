@@ -148,7 +148,7 @@ const initialStep = {
       value: 'maintenancePlans',
       icon: notebook,
       title: 'Maintenance plans',
-      desc: 'An intelligent option for your services.',
+      desc: 'Rely on us for maintaining your online business',
       nextStep: maintenanceOptions
     },
     {
@@ -163,14 +163,14 @@ const initialStep = {
       value: 'services',
       icon: servicesIcon,
       title: 'Services',
-      desc: 'Xenforo and Wordpress available!',
+      desc: 'Focused on Xenforo and Wordpress',
       nextStep: finalForm
     },
     {
       value: 'personalizedServices',
       icon: personalizedIcon,
       title: 'Personalized Services',
-      desc: 'SEO, Web Design, Dedicated services, everything you need.',
+      desc: 'Dedicated Servers, SEO, Web Design, custom services, everything you need.',
       nextStep: personalizedStep
     }
   ]

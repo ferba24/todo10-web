@@ -92,7 +92,7 @@ export default function AboutUs() {
         <FeatureHighlight
           image="/images/about-us.svg"
           title={<span className="text-orange">Always Champions for our Customers</span>}
-          desc="Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. We feel putting people first isn’t just the right way to do business, it’s the right thing, period."
+          desc="Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. <br> We feel putting people first isn’t just the right way to do business, it’s the right thing, period."
           leftExtra={cloud}
         />
       </div>

@@ -13,7 +13,7 @@ export const topItems = [
     key: 'email',
     icon: '/icons/mail.svg',
     title: 'support@todo10.com',
-    desc: '<span>For any doubt you have <DefaultLink url="/about-us">Contact Us</DefaultLink>. Your needs are our priorities</span>'
+    desc: <span>For any doubt you have <DefaultLink url="/about-us">Contact Us</DefaultLink>. Your needs are our priorities</span>
   },
   {
     key: 'chat',
