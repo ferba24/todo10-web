@@ -62,7 +62,7 @@ const diskSpaceOptions = {
 }
 
 export const hostingOptions = {
-  name: 'platform',
+  name: 'platform-hosting',
   title: 'Choose your platform',
   type: 'chip',
   options: [
@@ -82,7 +82,7 @@ export const hostingOptions = {
 }
 
 export const maintenanceOptions = {
-  name: 'platform',
+  name: 'platform-maintenance',
   title: 'Choose your platform',
   type: 'chip',
   options: [
