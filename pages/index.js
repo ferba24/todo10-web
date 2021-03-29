@@ -93,10 +93,16 @@ const FirstSection = () => (
 )
 
 const hostingItems = [
-  'Real time monitoring',
-  'Wordpress and Xenforo ready',
-  'Safe and secure',
-  'Fast and optimum performance!'
+    '24/7 monitored',
+    'Wordpress and Xenforo ready',
+    'Safe and secure',
+    'Fast and optimum performance!'
+]
+
+const maintenanceItems = [
+    'Adapted to your needs',
+    'Security, optimization, troubleshooting',
+    'Top-notch support staff'
 ]
 
 const SecondSection = () => {
@@ -138,7 +144,7 @@ const ThirdSection = () => (
         <FeatureDesc
           title="Maintenance plans"
           desc="Let our experts handle the technical part of your IT infrastructure."
-          items={hostingItems}
+          items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"
         />
@@ -181,7 +187,7 @@ const FourthSection = () => (
 const somethingElseItems = [
   {icon: '/icons/seo-list.svg', label: 'SEO'},
   {icon: '/icons/web-design-list.svg', label: 'Web Design'},
-  {icon: '/icons/server-list.svg', label: 'Dedicated services'},
+  {icon: '/icons/server-list.svg', label: 'Dedicated Servers'},
   {icon: '/icons/world-list.svg', label: 'Everything you need, just ask about it!'},
 ]
 
