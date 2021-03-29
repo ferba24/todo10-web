@@ -1,5 +1,6 @@
 import Slider from '.';
 import ClientCard from '../ClientCard'
+import testimonials from '../../data/testimonials'
 
 const slideOptions = {
   autoplay: true,
@@ -23,16 +24,14 @@ const slideOptions = {
   ]
 }
 
-const sampleText = '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum mattis ornare. Nulla arcu massa, eleifend non est quis”'
-const sampleExtra = "Alejandro Sanz, Cantante. Sony Music."
 
-export const clients = [1,2,3,4,5].map(n => (
-  <div key={n}>
+export const clients = testimonials.map(testimonial => (
+  <div key={testimonial.image}>
     <div className="p-2 md:p-4">
       <ClientCard
-        image="/images/alejandro-sanz.jpg"
-        text={sampleText}
-        extra={sampleExtra}
+        image={testimonial.image}
+        text={testimonial.text}
+        extra={testimonial.extra}
       />
     </div>
   </div>
