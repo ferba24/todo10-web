@@ -44,12 +44,6 @@ export default function Step({
     setTimeout(scrollHere, 300)
   }, [scrollHere])
 
-  const findSelectedOption = value => {
-    for(const option of options) {
-      if(option.value == value) return option
-    }
-  }
-
   const goToNextStep = (nextStep, value) => {
     setNextStep(nextStep)
     currentValueRef.current = value
@@ -59,7 +53,7 @@ export default function Step({
 
   const handleChange = e => {
     const { value } = e.target
-    const option = findSelectedOption(value)
+    const option = options.find(({value: optionValue}) => optionValue == value)
     const nextStep = multiple ? !!value.length && uniqueNextStep : option.nextStep
     goToNextStep(nextStep, value)
   }
