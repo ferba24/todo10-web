@@ -86,40 +86,32 @@ export default function AboutUs() {
       <div className="section container">
         <PageHeader
           title={headerTitle}
-          desc="Being first is a matter of chance. Being the best and getting it right is what matters in our end."
+          desc=""
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/about-us.svg"
-          title={<span className="text-orange">Customers First.</span>}
-          desc={<span>They are at the forefront of everything we do and the reason we are excited to get up every day and head to work.<br /> We feel putting people first it’s the right thing, period.</span>}
+          title={<span className="text-orange">Our Mission</span>}
+          desc={<span>We believe being first is a matter of chance. Being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work.<br /><br /> We feel putting people first it’s the right thing, period.</span>}
           leftExtra={cloud}
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/spaceship-with-wheels.svg"
-          title={<span className="text-orange">Our Mission</span>}
-          desc={<span>We believe businesses can grow with a conscience, and succeed with a soul. That's why we've created an ecosystem of services to help businesses grow better every day.<br /></span>}
+          title={<span className="text-orange">Our Story</span>}
+          desc={<span>Many people have had a poor experience with a hosting company, you have probably had one too. It’s an industry which is easy to get started in but extremely hard to do well, and back in 2007 options were limited and not focused in forum platforms.<br /><br />
+People wanted a hosting company that they could rely on to run their successful projects, so did Claudio. That’s how Todo10 started. One small server used to sell Shared Hosting with a focus on customer service and many sleepless nights.<br />
+It worked. Customers started coming in and Todo10 quickly grew. More servers were purchased, the team expanded and the office moved. The rest they say is history, which really means over a decade of hard work, some lows and some big highs in a rapidly changing industry.<br /><br />
+    <b>Why being a small company?</b><br />
+Being a small team allow us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
+<br /><br />We know everyone wants to feel like they're special and being listened to so we really take your needs into consideration and quickly implement changes to your business or products that better serve your requests.
+
+<br /></span>}
           reverse
         />
       </div>
-    <div className="section container">
-        <FeatureHighlight
-            image="/images/spaceship-with-wheels.svg"
-            title={<span className="text-orange">Our Story</span>}
-            desc={<span>Many people have had a poor experience with a hosting company, you have probably had one too. It’s an industry which is easy to get started in but extremely hard to do well, and back in 2007 options were limited and not focused in forum platforms.<br />
-People wanted a hosting company that they could rely on to run their successful projects, so did Claudio. That’s how Todo10 started. One small server used to sell Shared Hosting with a focus on customer service and many sleepless nights.<br />
-It worked. Customers started coming in and Todo10 quickly grew. More servers were purchased, the team expanded and the office moved. The rest they say is history, which really means over a decade of hard work, some lows and some big highs in a rapidly changing industry.<br /><br />
-Why being a small company?<br />
-Being a small team allow us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
-We know everyone wants to feel like they're special and being listened to so we really take your needs into consideration and quickly implement changes to your business or products that better serve your requests.
-
-<br /></span>}
-            reverse
-        />
-    </div>
       <BlueSection/>
       <ContactSection/>
       <div className="my-60"/>
