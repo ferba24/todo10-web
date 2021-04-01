@@ -14,7 +14,7 @@ export default function Hosting() {
         <FeatureHighlight
           image="/icons/server.svg"
           title={<>Outstanding <span className="text-orange">Web Hosting Plans</span></>}
-          desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litespeed."
+          desc="Providing reliability and security for your business with high-quality hosting. <br />Full managed optimized hosting powered by Litespeed."
           link='/'
           linkLabel="Get Started"
         />
