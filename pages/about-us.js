@@ -40,8 +40,8 @@ const ContactSection = () => {
     <div className="section container">
       <a name="form" />
         <PageHeader
-            title={<span className="text-orange">Contact us</span>}
-            desc="We'd love to show you the amazing things we can do together!"
+            title={<span className="text-orange">Let's do great things</span>}
+            desc="We'd love to know about your amazing project!"
         />
         <WithSend>
         {({send, sending}) => (
@@ -86,25 +86,41 @@ export default function AboutUs() {
       <div className="section container">
         <PageHeader
           title={headerTitle}
-          desc="Our mission is to provide outstanding customer service and support that is second to none."
+          desc="Being first is a matter of chance. Being the best and getting it right is what matters in our end."
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/about-us.svg"
-          title={<span className="text-orange">Always Champions for our Customers</span>}
-          desc={<span>Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. <br /> We feel putting people first isn’t just the right way to do business, it’s the right thing, period.</span>}
+          title={<span className="text-orange">Customers First.</span>}
+          desc={<span>They are at the forefront of everything we do and the reason we are excited to get up every day and head to work.<br /> We feel putting people first it’s the right thing, period.</span>}
           leftExtra={cloud}
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/spaceship-with-wheels.svg"
-          title={<span className="text-orange">Always Clear and Honest</span>}
-          desc={<span>We strive to build a culture of integrity. All our interactions are honest, action-oriented, and decisive, whether they’re with a customer or a co-worker.<br />We deliver authenticity and transparency in our promotions, the best prices on the market, and no unwanted upsells. We will never stop searching for the best ways to grow from our successes and learn from our failures.</span>}
+          title={<span className="text-orange">Our Mission</span>}
+          desc={<span>We believe businesses can grow with a conscience, and succeed with a soul. That's why we've created an ecosystem of services to help businesses grow better every day.<br /></span>}
           reverse
         />
       </div>
+    <div className="section container">
+        <FeatureHighlight
+            image="/images/spaceship-with-wheels.svg"
+            title={<span className="text-orange">Our Story</span>}
+            desc={<span>Many people have had a poor experience with a hosting company, you have probably had one too. It’s an industry which is easy to get started in but extremely hard to do well, and back in 2007 options were limited and not focused in forum platforms.<br />
+People wanted a hosting company that they could rely on to run their successful projects, so did Claudio. That’s how Todo10 started. One small server used to sell Shared Hosting with a focus on customer service and many sleepless nights.<br />
+It worked. Customers started coming in and Todo10 quickly grew. More servers were purchased, the team expanded and the office moved. The rest they say is history, which really means over a decade of hard work, some lows and some big highs in a rapidly changing industry.<br /><br />
+
+Why being a small company?<br />
+Being a small team allow us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
+We know everyone wants to feel like they're special and being listened to so we really take your needs into consideration and quickly implement changes to your business or products that better serve your requests.
+
+<br /></span>}
+            reverse
+        />
+    </div>
       <BlueSection/>
       <ContactSection/>
       <div className="my-60"/>
