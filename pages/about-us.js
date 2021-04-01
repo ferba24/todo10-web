@@ -42,14 +42,15 @@ const ContactSection = () => {
       <h3 className="text-orange text-center mb-8">
         Contact us!
       </h3>
-      <WithSend>
+        We'd love to show you how you can get more traffic and leads, increase your sales productivity, provide better customer service, or all of the above!
+        <WithSend>
         {({send, sending}) => (
           <ContactForm
             buttonRight
             buttonPrimary
             onFinish={send}
             sending={sending}
-            buttonLabel="Send"
+            buttonLabel="Send Message"
           />
         )}
       </WithSend>
