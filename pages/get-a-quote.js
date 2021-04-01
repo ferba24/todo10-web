@@ -10,8 +10,8 @@ export default function GetAQuote() {
       <div className="my-40"/>
       <div className="section container">
         <PageHeader
-          title={<span className="text-orange">Get a Quote</span>}
-          desc="Whatever you need can be done, write us blabah, we are great, blablah."
+          title={<span className="text-orange">How We Can Help You?</span>}
+          desc="Let’s talk about your website or project. Send us a message and we will be in touch within one business day."
         />
       </div>
       <div className="w-11/12 mx-auto">
@@ -21,7 +21,7 @@ export default function GetAQuote() {
               extended
               buttonRight
               buttonPrimary
-              buttonLabel="Send"
+              buttonLabel="Send Message"
               onFinish={send}
               sending={sending}
             />
