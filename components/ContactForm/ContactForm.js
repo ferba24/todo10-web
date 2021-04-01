@@ -19,32 +19,32 @@ export default function ContactForm({
         onFinish={onFinish}
         onValuesChange={onValuesChange}
       >
+        {extended && (
+            <Form.Item name="option" label="I'm looking for..." required>
+              <NativeSelect className="w-full">
+                {services.map(service => (
+                    <NativeSelect.Option
+                        key={service.path}
+                        value={service.label}
+                    >
+                      <div className="flex items-center">
+                        <img
+                            className="w-5 mr-3"
+                            src={service.icon}
+                        />
+                        {service.label}
+                      </div>
+                    </NativeSelect.Option>
+                ))}
+              </NativeSelect>
+            </Form.Item>
+        )}
         <Form.Item name="name" label="Name" required>
           <input className="form-control" placeholder="Oscar Wilde"/>
         </Form.Item>
         <Form.Item name="email" label="Email" required>
           <input className="form-control" placeholder="Oscar@gmail.com"/>
         </Form.Item>
-        {extended && (
-          <Form.Item name="option" label="I'm looking for..." required>
-            <NativeSelect className="w-full">
-              {services.map(service => (
-                <NativeSelect.Option
-                  key={service.path}
-                  value={service.label}
-                >
-                  <div className="flex items-center">
-                    <img
-                      className="w-5 mr-3"
-                      src={service.icon}
-                    />
-                    {service.label}
-                  </div>
-                </NativeSelect.Option>
-              ))}
-            </NativeSelect>
-          </Form.Item>
-        )}
         <Form.Item name="message" label="How we can help you?">
           <textarea
             className="form-control"
