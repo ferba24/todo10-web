@@ -36,6 +36,11 @@ const benefits = [
     title: 'Scalable',
       desc: "Your plan can grow with your business and there won't be any limitations as to the level to which you can scale your hosting plan."
   },
+  {
+    icon: optimization,
+    title: 'Scalable',
+    desc: "Your plan can grow with your business and there won't be any limitations as to the level to which you can scale your hosting plan."
+  },
 ]
 
 export default benefits
