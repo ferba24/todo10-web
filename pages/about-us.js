@@ -43,6 +43,10 @@ const ContactSection = () => {
         Contact us!
       </h3>
         We'd love to show you how you can get more traffic and leads, increase your sales productivity, provide better customer service, or all of the above!
+        <PageHeader
+            title={<span className="text-orange">How We Can Help You?</span>}
+            desc="Let’s talk about your website or project. Send us a message and we will be in touch within one business day."
+        />
         <WithSend>
         {({send, sending}) => (
           <ContactForm
