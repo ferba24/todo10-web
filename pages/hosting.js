@@ -16,7 +16,7 @@ export default function Hosting() {
           title={<>Outstanding <span className="text-orange">Web Hosting Plans</span></>}
           desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litespeed."
           link='/'
-          linkLabel="Get mine"
+          linkLabel="Get Started"
         />
       </div>
       <div className="section container-full">
