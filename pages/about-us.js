@@ -6,10 +6,10 @@ import ContactForm from '../components/ContactForm';
 import WithSend from '../components/ContactForm/WithSend'
 
 const list = [
-  'First point',
-  'What about other',
-  'Here goes another',
-  'Other one'
+  'Teamwork',
+  'Proactive',
+  'Listen',
+  'Care'
 ] 
 
 const wheels = (
@@ -25,7 +25,7 @@ const BlueSection = () => (
     <div className="container text-white">
       <FeatureHighlight
         image="/icons/pencil.svg"
-        title="Something important"
+        title="Our core values"
         desc={<List primary items={list}/>}
         imageStyle={{maxWidth: 170}}
         leftExtra={wheels}
@@ -93,7 +93,7 @@ export default function AboutUs() {
         <FeatureHighlight
           image="/images/about-us.svg"
           title={<span className="text-orange">Our Mission</span>}
-          desc={<span>We believe being first is a matter of chance. Being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work.<br /><br /> We feel putting people first it’s the right thing, period.</span>}
+          desc={<span>We believe being first is a matter of chance and being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br /><br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work. We still work hard each day to provide a better experience than our competitors.</span>}
           leftExtra={cloud}
         />
       </div>
@@ -104,8 +104,8 @@ export default function AboutUs() {
           desc={<span>Many people have had a poor experience with a hosting company, you have probably had one too. It’s an industry which is easy to get started in but extremely hard to do well, and back in 2007 options were limited and not focused in forum platforms.<br /><br />
 People wanted a hosting company that they could rely on to run their successful projects, so did Claudio. That’s how Todo10 started. One small server used to sell Shared Hosting with a focus on customer service and many sleepless nights.<br />
 It worked. Customers started coming in and Todo10 quickly grew. More servers were purchased, the team expanded and the office moved. The rest they say is history, which really means over a decade of hard work, some lows and some big highs in a rapidly changing industry.<br /><br />
-    <b>Why being a small company?</b><br />
-Being a small team allow us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
+    <b>Why did you decide to be a small business?</b><br />
+Being a small team allowed us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
 <br /><br />We know everyone wants to feel like they're special and being listened to so we really take your needs into consideration and quickly implement changes to your business or products that better serve your requests.
 
 <br /></span>}
