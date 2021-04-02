@@ -170,7 +170,7 @@ const initialStep = {
       value: 'personalizedServices',
       icon: personalizedIcon,
       title: 'Personalized Services',
-      desc: 'Dedicated Servers, SEO, Web Design, custom services, everything you need.',
+      desc: 'Dedicated Servers, SEO, Web Design, custom services, anything you need.',
       nextStep: personalizedStep
     }
   ]
