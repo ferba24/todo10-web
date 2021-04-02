@@ -10,8 +10,8 @@ const FirstSection = () => (
   <div className="section container-small">
     <FeatureHighlight
       image="/icons/laptop.svg"
-      title={<>What <span className="text-orange">maintenance plan</span> means?</>}
-      desc="We’ll do all the tech work and take care of the issues so you don’t have to. Many customers need help with their website because they don’t have the time or knowledge to manage it properly and that’s where we come in. We have the expertise and experience to effectively manage your site for you."
+      title={<>What is a <span className="text-orange">maintenance plan</span>?</>}
+      desc="We’ll do all the tech work and take care of the issues so you don’t have to. <Br />Many customers need help with their website because they don’t have the time or knowledge to manage it properly and that’s where we come in. <Br /><b>We have the expertise and experience to effectively manage your site for you.</b>"
       link={paths.MAINTENANCE}
       linkLabel="Get mine"
     />
