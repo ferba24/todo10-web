@@ -11,7 +11,7 @@ export default function Pricing() {
       <div className="section container">
         <PageHeader
           title="Pricing"
-          desc="For Individual and Companies. Wether you're amateur or a company, there's a plan for you."
+          desc="For Individual and Companies. Whether you're amateur or a company, there's a plan for you."
         />
       </div>
       <div className="section container-medium">
