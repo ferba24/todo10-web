@@ -4,6 +4,7 @@ const backup = '/icons/backup.svg'
 const signal = '/icons/signal.svg'
 const wordpressOptimized = '/icons/wordpress-optimized.svg'
 const optimization = '/icons/optimization.svg'
+const graph = '/icons/graph.svg'
 
 const benefits = [
   {
