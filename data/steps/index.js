@@ -141,7 +141,7 @@ export const personalizedStep = {
 
 const initialStep = {
   name: 'general',
-  title: 'Select what are you looking for',
+  title: 'Select the items you are interested in',
   type: 'radioCard',
   options: [
     {

@@ -33,7 +33,7 @@ export const pricingItems = {
   title: 'Pricing',
   items: [
     {
-      label: 'Choose your plan',
+      label: 'See the options',
       path: '/pricing'
     },
     {
@@ -47,8 +47,8 @@ export const aboutUsItems = {
   title: 'About Us',
   items: [
     {
-      label: 'Section',
-      path: '/'
+      label: 'Our Story',
+      path: '/about-us'
     },
     {
       label: 'Contact us',
