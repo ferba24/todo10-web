@@ -39,7 +39,7 @@ const benefits = [
   {
     icon: optimization,
     title: 'Unlimited',
-    desc: "We don't limit your business or ask you to learn stuff. Our plans have no CPU/memory/bandwidth limits or whatsoever."
+    desc: "We don't limit your business or ask you to learn hosting stuff. Our plans have no CPU/memory/bandwidth limits."
   },
 ]
 
