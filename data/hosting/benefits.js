@@ -32,14 +32,14 @@ const benefits = [
     desc: 'Knowing about your platform is the key of success and something we have been doing for more than a decade.'
   },
   {
-    icon: optimization,
+    icon: graph,
     title: 'Scalable',
       desc: "Your plan can grow with your business and there won't be any limitations as to the level to which you can scale your hosting plan."
   },
   {
     icon: optimization,
-    title: 'Scalable',
-    desc: "Your plan can grow with your business and there won't be any limitations as to the level to which you can scale your hosting plan."
+    title: 'Unlimited',
+    desc: "We don't limit your business or ask you to learn stuff. Our plans have no CPU/memory/bandwidth limits or whatsoever."
   },
 ]
 
