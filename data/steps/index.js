@@ -52,7 +52,7 @@ const finalForm = {
  */
 const diskSpaceOptions = {
   name: 'diskSpace',
-  title: 'Disk space',
+  title: 'Disk space you need',
   type: 'select',
   options: [
     {label: 'Custom', value: 'custom', nextStep: finalForm},

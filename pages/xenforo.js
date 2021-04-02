@@ -17,14 +17,18 @@ const FirstSection = () => (
     <div className="section container">
       <PageHeader
         title="Xenforo services"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc."
+        desc="More than 10 years of expertise give us the confidence we can take any work or XenForo project you have in mind."
       />
     </div>
     <div className="section container-small">
       <FeatureHighlight
         image="/images/xenforo.svg"
         title={<span className="text-orange">Compelling community forum platform</span>}
-        desc={<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices ex rhoncus, vehicula magna at, tempor nunc. Curabitur libero ex, venenatis non lectus ut, feugiat molestie massa. Nunc volutpat sit amet nunc vitae ultrices. Etiam et tellus at nulla congue gravida at vitae libero.<br/><br/>In pellentesque arcu et tortor blandit mattis. Praesent molestie eleifend mauris, non facilisis orci consectetur in. Aliquam mollis volutpat ipsum, eu porttitor orci mollis quis.</div>}
+        desc={<div>There is no better platform upon which to grow your community and XenForo has been a success story right from the start.
+<br />
+            The XenForo discussion board software was developed developed by former vBulletin lead developers Kier Darby and Mike Sullivan. Both devs have over 20 years of experience in developing forum software.
+            <br /><br />
+            XenForo is its flagship product—it is a product that has been designed with speed, security, and flexibility in mind. Both Kier and Mike goal was to create a product that would both give the site administrators the tools that they need to get the job done, and give the end user effective communication and an enjoyable experience. The end users have a variety of tools at their disposal that allow them to communicate effectively with others, while administrators and moderators have powerful tools that allow them to move, edit, or delete posts, threads, and users, as well as a powerful control panel to control the look, feel, and function of the discussion board.</div>}
         leftExtra={<SearchCode />}
       />
     </div>
@@ -36,7 +40,7 @@ const SecondSection = () => (
     <FeatureHighlight
       image="/icons/server.svg"
       title={<span>Xenforo <span className="text-orange">Hosting Plans</span></span>}
-      desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped. "
+      desc="Providing reliability and security for your XenForo forum with high-quality hosting. Full managed optimized hosting powered by Litesped & secure backups. "
       link={paths.HOSTING}
       linkLabel="Know more"
       reverse

@@ -10,16 +10,16 @@ const FirstSection = () => (
     <div className="section container">
       <PageHeader
         title="Custom WordPress Services"
-        desc="We have been helping over 200+ customers worldwide with WordPress web development services to deliver 130+ sites every month. We believe that our journey to build powerful digital solutions and enjoyable user experience with our WordPress Development Services has just begun."
+        desc={<>We have been helping over 200+ customers worldwide with WordPress web development services to deliver 130+ sites every month.
+            <br />We believe that our journey to build powerful digital solutions and enjoyable user experience with our WordPress Development Services has just begun.</>}
       />
     </div>
     <div className="section container-small">
       <FeatureHighlight
         image="/icons/wordpress-screen.svg"
         title={<span className="text-orange">Why Choose Wordpress?</span>}
-        desc={<div>WordPress is, by far, the most popular open source Content Management System (CMS), used by approximately 75 million websites.
-
-            <br/><br/>Thousands of plugins and templates power a flexible and simple interface, which reduces development costs and deployment time.</div>}
+        desc={<>WordPress is, by far, the most popular open source Content Management System (CMS), used by approximately 75 million websites.
+            <br/><br/>Thousands of plugins and templates power a flexible and simple interface, which reduces development costs and deployment time.</>}
       />
     </div>
   </>
@@ -30,9 +30,9 @@ const SecondSection = () => (
     <FeatureHighlight
       image="/icons/server.svg"
       title={<span>Wordpress <span className="text-orange">Hosting Plans</span></span>}
-      desc="Providing reliability and security for your business with high-quality hosting. Full managed optimized hosting powered by Litesped & secure backups. "
+      desc={<>Providing reliability and security for your Wordpress website with high-quality hosting. Full managed optimized hosting powered by Litespeed & secure backups.</>}
       link={paths.HOSTING}
-      linkLabel="Know more"
+      linkLabel="Learn more"
       reverse
     />
   </div>
@@ -52,9 +52,9 @@ const ThirdSection = () => (
       <FeatureHighlight
         image="/icons/laptop.svg"
         title={<span>Wordpress <span className="text-orange">Maintenance Plans</span></span>}
-        desc={<span>Let Todo10 deal with necessary maintenance while you take care of publishing great content, monetizing and growing your website.</span>}
+        desc={<span>Let Todo10 <b>deal with necessary tech maintenance</b> of your website while you take care of publishing great content, monetizing and growing your website.</span>}
         link={paths.MAINTENANCE}
-        linkLabel="Know more"
+        linkLabel="Learn more"
         leftExtra={<Cloud />}
       />
     </div>

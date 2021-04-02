@@ -9,7 +9,7 @@ export default function ContactForm({
   onValuesChange = () => {},
   buttonRight,
   buttonPrimary,
-  buttonLabel = 'Get a quote',
+  buttonLabel = 'Get a Quote',
   sending
 }) {
 
