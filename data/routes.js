@@ -29,7 +29,7 @@ export const services = [
     label: 'Maintenance plans',
     path: paths.MAINTENANCE,
     icon: windows,
-    desc: 'Lorem ipsum dolor sit amet, consectetur.'
+    desc: 'We maintain your platforms or websites for a fixed price.'
   },
   {
     label: 'Wordpress services',
@@ -47,7 +47,7 @@ export const services = [
     label: 'Personalized Services',
     path: paths.PERSONALIZED,
     icon: settings,
-    desc: 'SEO, Web Design, Dedicated services, everything you need.'
+    desc: 'Dedicated Servers, SEO, Web Design, custom services, anything you need.'
   }
 ]
 

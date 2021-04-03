@@ -6,10 +6,10 @@ import ContactForm from '../components/ContactForm';
 import WithSend from '../components/ContactForm/WithSend'
 
 const list = [
-  'First point',
-  'What about other',
-  'Here goes another',
-  'Other one'
+  'Teamwork',
+  'Proactive',
+  'Listen',
+  'Care'
 ] 
 
 const wheels = (
@@ -25,7 +25,7 @@ const BlueSection = () => (
     <div className="container text-white">
       <FeatureHighlight
         image="/icons/pencil.svg"
-        title="Something important"
+        title="Our core values"
         desc={<List primary items={list}/>}
         imageStyle={{maxWidth: 170}}
         leftExtra={wheels}
@@ -39,17 +39,18 @@ const ContactSection = () => {
   return (
     <div className="section container">
       <a name="form" />
-      <h3 className="text-orange text-center mb-8">
-        Contact us!
-      </h3>
-      <WithSend>
+        <PageHeader
+            title={<span className="text-orange">Let's do great things</span>}
+            desc="We'd love to know about your amazing project!"
+        />
+        <WithSend>
         {({send, sending}) => (
           <ContactForm
             buttonRight
             buttonPrimary
             onFinish={send}
             sending={sending}
-            buttonLabel="Send"
+            buttonLabel="Send Message"
           />
         )}
       </WithSend>
@@ -85,22 +86,29 @@ export default function AboutUs() {
       <div className="section container">
         <PageHeader
           title={headerTitle}
-          desc="Our mission is to provide outstanding customer service and support that is second to none."
+          desc=""
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/about-us.svg"
-          title={<span className="text-orange">Always Champions for our Customers</span>}
-          desc="Our customers take first priority in every decision we make. And every day, we share our values of authenticity and reliability with the people we serve. <br> We feel putting people first isn’t just the right way to do business, it’s the right thing, period."
+          title={<span className="text-orange">Our Mission</span>}
+          desc={<span>We believe being first is a matter of chance and being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br /><br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work. We still work hard each day to provide a better experience than our competitors.</span>}
           leftExtra={cloud}
         />
       </div>
       <div className="section container">
         <FeatureHighlight
           image="/images/spaceship-with-wheels.svg"
-          title={<span className="text-orange">Always Clear and Honest</span>}
-          desc="We strive to build a culture of integrity. All our interactions are honest, action-oriented, and decisive, whether they’re with a customer or a co-worker. We deliver authenticity and transparency in our promotions, the best prices on the market, and no unwanted upsells. We will never stop searching for the best ways to grow from our successes and learn from our failures."
+          title={<span className="text-orange">Our Story</span>}
+          desc={<span>Many people have had a poor experience with a hosting company, you have probably had one too. It’s an industry which is easy to get started in but extremely hard to do well, and back in 2007 options were limited and not focused in forum platforms.<br /><br />
+People wanted a hosting company that they could rely on to run their successful projects, so did Claudio. That’s how Todo10 started. One small server used to sell Shared Hosting with a focus on customer service and many sleepless nights.<br />
+It worked. Customers started coming in and Todo10 quickly grew. More servers were purchased, the team expanded and the office moved. The rest they say is history, which really means over a decade of hard work, some lows and some big highs in a rapidly changing industry.<br /><br />
+    <b>Why did you decide to be a small business?</b><br />
+Being a small team allowed us to create stronger ties, trust and repeat customers. We feel involved, engaged and connected to the business when each of us has a higher level of responsibility and stake in it.
+<br /><br />We know everyone wants to feel like they're special and being listened to so we really take your needs into consideration and quickly implement changes to your business or products that better serve your requests.
+
+<br /></span>}
           reverse
         />
       </div>

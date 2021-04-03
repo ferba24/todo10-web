@@ -186,10 +186,10 @@ const FourthSection = () => (
 )
 
 const somethingElseItems = [
-  {icon: '/icons/seo-list.svg', label: 'SEO'},
-  {icon: '/icons/web-design-list.svg', label: 'Web Design'},
-  {icon: '/icons/server-list.svg', label: 'Dedicated Servers'},
-  {icon: '/icons/world-list.svg', label: 'Everything you need, just ask about it!'},
+    {icon: '/icons/server-list.svg', label: 'Dedicated Servers'},
+    {icon: '/icons/seo-list.svg', label: 'SEO'},
+    {icon: '/icons/web-design-list.svg', label: 'Web Design'},
+    {icon: '/icons/world-list.svg', label: 'Everything you need, just ask about it!'},
 ]
 
 const FifthSection = () => (

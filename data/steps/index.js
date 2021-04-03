@@ -60,7 +60,7 @@ const finalForm = {
  */
 const diskSpaceOptions = {
   name: 'diskSpace',
-  title: 'Disk space',
+  title: 'Disk space you need',
   type: 'select',
   options: [
     {label: 'Custom', value: 'custom', nextStep: finalForm},
@@ -149,7 +149,7 @@ export const personalizedStep = {
 
 const initialStep = {
   name: 'general',
-  title: 'Select what are you looking for',
+  title: 'Select the items you are interested in',
   type: 'radioCard',
   options: [
     {
@@ -178,7 +178,7 @@ const initialStep = {
       value: 'personalizedServices',
       icon: personalizedIcon,
       title: 'Personalized Services',
-      desc: 'Dedicated Servers, SEO, Web Design, custom services, everything you need.',
+      desc: 'Dedicated Servers, SEO, Web Design, custom services, anything you need.',
       nextStep: personalizedStep
     }
   ]
