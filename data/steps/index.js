@@ -10,8 +10,8 @@
  * `desc` Description to be shown below the title.
  */
 
-
 import getPlans from './getPlans'
+import maintenancePlans from './maintenancePlans'
 
 const wordpress = '/icons/wordpress.svg'
 const xenforo = '/icons/xenforo.svg'
@@ -32,6 +32,14 @@ const getPlansStep = diskSpace => ({
   options: getPlans(diskSpace),
   className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
 })
+
+const maintenancePlansStep = {
+  name: 'plansStep',
+  title: 'Select the best plan for you',
+  type: 'card',
+  options: maintenancePlans,
+  className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
+}
 
 /**
  * This is a normal step, but has a `final` prop set as `true`.
@@ -90,13 +98,13 @@ export const maintenanceOptions = {
       value: "wordpress",
       image: wordpress,
       title: 'Wordpress',
-      nextStep: getPlansStep(12)
+      nextStep: maintenancePlansStep
     },
     {
       value: "xenforo",
       image: xenforo,
       title: 'XenForo',
-      nextStep: getPlansStep(12)
+      nextStep: maintenancePlansStep
     }
   ]
 }
