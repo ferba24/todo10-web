@@ -3,6 +3,7 @@ import Stepper from '../components/Stepper';
 import { personalizedStep } from '../data/steps'
 import FeatureHighlight from '../components/FeatureHighlight'
 import List from '../components/List'
+import Head from "next/head";
 
 const FirstSection = () => (
   <div className="section container-small">
@@ -40,6 +41,9 @@ export default function Personalized() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Personalized</title>
+        </Head>
       <div className="my-40"/>
       <FirstSection/>
       <SecondSection/>

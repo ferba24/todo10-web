@@ -4,6 +4,7 @@ import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
 import List from '../components/List'
 import ContactForm from '../components/ContactForm';
 import WithSend from '../components/ContactForm/WithSend'
+import Head from "next/head";
 
 const list = [
   'Teamwork',
@@ -82,6 +83,9 @@ export default function AboutUs() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - About Us</title>
+        </Head>
       <div className="my-40"/>
       <div className="section container">
         <PageHeader

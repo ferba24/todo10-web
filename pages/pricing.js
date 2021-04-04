@@ -2,11 +2,15 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader/PageHeader';
 import Stepper from '../components/Stepper';
 import initialStep from '../data/steps'
+import Head from "next/head";
 
 export default function Pricing() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Pricing</title>
+        </Head>
       <div className="my-40"/>
       <div className="section container">
         <PageHeader

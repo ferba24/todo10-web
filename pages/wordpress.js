@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader/PageHeader'
 import { paths } from '../data/routes'
 import ContactForm from '../components/ContactForm'
 import WithSend from '../components/ContactForm/WithSend'
+import Head from "next/head";
 
 const FirstSection = () => (
   <>
@@ -83,6 +84,9 @@ export default function Wordpress() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Wordpress</title>
+        </Head>
       <div className="my-40"/>
         <FirstSection/>
         <SecondSection/>

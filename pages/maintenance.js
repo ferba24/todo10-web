@@ -5,6 +5,7 @@ import { maintenanceOptions } from '../data/steps'
 import benefits from '../data/maintenance/benefits'
 import FeatureHighlight from '../components/FeatureHighlight'
 import { paths } from '../data/routes';
+import Head from "next/head";
 
 const FirstSection = () => (
   <div className="section container-small">
@@ -22,6 +23,9 @@ export default function Maintenance() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Maintenance</title>
+        </Head>
       <div className="my-40"/>
       <FirstSection/>
       <div className="section container-full">

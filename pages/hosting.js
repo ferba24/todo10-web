@@ -4,11 +4,15 @@ import Stepper from '../components/Stepper';
 import { hostingOptions } from '../data/steps'
 import benefits from '../data/hosting/benefits'
 import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
+import Head from "next/head";
 
 export default function Hosting() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Hosting</title>
+        </Head>
       <div className="my-40"/>
       <div className="section container-small">
         <FeatureHighlight

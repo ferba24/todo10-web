@@ -2,11 +2,15 @@ import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm';
 import PageHeader from '../components/PageHeader'
 import WithSend from '../components/ContactForm/WithSend'
+import Head from "next/head";
 
 export default function GetAQuote() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - Get a Quote</title>
+        </Head>
       <div className="my-40"/>
       <div className="section container">
         <PageHeader

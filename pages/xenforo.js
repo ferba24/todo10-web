@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader/PageHeader'
 import { paths } from '../data/routes'
 import ContactForm from '../components/ContactForm'
 import WithSend from '../components/ContactForm/WithSend'
+import Head from "next/head";
 
 const SearchCode = () => (
   <img
@@ -24,11 +25,9 @@ const FirstSection = () => (
       <FeatureHighlight
         image="/images/xenforo.svg"
         title={<span className="text-orange">Compelling community forum platform</span>}
-        desc={<div>There is no better platform upon which to grow your community and XenForo has been a success story right from the start.
-<br />
-            The XenForo discussion board software was developed developed by former vBulletin lead developers Kier Darby and Mike Sullivan. Both devs have over 20 years of experience in developing forum software.
+        desc={<div>There is no better platform upon which to grow your discussion board. Developed by former vBulletin lead developers Kier Darby and Mike Sullivan with over 20 years of experience in developing forum software, XenForo is a product that has been designed with speed, security, and flexibility in mind.
             <br /><br />
-            XenForo is its flagship product—it is a product that has been designed with speed, security, and flexibility in mind. Both Kier and Mike goal was to create a product that would both give the site administrators the tools that they need to get the job done, and give the end user effective communication and an enjoyable experience. The end users have a variety of tools at their disposal that allow them to communicate effectively with others, while administrators and moderators have powerful tools that allow them to move, edit, or delete posts, threads, and users, as well as a powerful control panel to control the look, feel, and function of the discussion board.</div>}
+            The end users have a variety of tools at their disposal that allow them to communicate effectively with others, while administrators and moderators have powerful tools that allow them to move, edit, or delete posts, threads, and users, as well as a powerful control panel to control the look, feel, and function of the discussion board.</div>}
         leftExtra={<SearchCode />}
       />
     </div>
@@ -93,6 +92,9 @@ export default function Xenforo() {
 
   return (
     <Layout>
+        <Head>
+            <title>Todo 10 - XenForo</title>
+        </Head>
       <div className="my-40"/>
         <FirstSection/>
         <SecondSection/>
