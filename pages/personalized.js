@@ -4,25 +4,39 @@ import { personalizedStep } from '../data/steps'
 import FeatureHighlight from '../components/FeatureHighlight'
 import List from '../components/List'
 import Head from "next/head";
+import PageHeader from "../components/PageHeader";
 
 const FirstSection = () => (
+    <>
+    <div className="section container">
+        <PageHeader
+            title="Custom Services"
+            desc={<>You have a VISION.<br />We have a TEAM to get you there. Whatever you need.</>}
+        />
+    </div>
+
+
+
+</>
+)
+/*
+
   <div className="section container-small">
     <FeatureHighlight
       image="/images/personalized.svg"
-      title="Personalized services."
-      desc="You have a vision. We have a team to get you there."
+      title="Custom Services."
+      desc={<>You have a VISION.<br />We have a TEAM to get you there. Whatever you need.</>}
       link="/"
-      linkLabel="Get a quote"
+      linkLabel="Get a Quote"
     />
   </div>
-)
 
 const list = [
   'First point',
   'What about other',
   'Here goes another',
   'Other one'
-] 
+] */
 
 const SecondSection = () => (
   <div className="section bg-blue py-16">
@@ -42,7 +56,7 @@ export default function Personalized() {
   return (
     <Layout>
         <Head>
-            <title>Todo 10 - Personalized</title>
+            <title>Todo 10 - Custom Services</title>
         </Head>
       <div className="my-40"/>
       <FirstSection/>

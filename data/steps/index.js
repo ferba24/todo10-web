@@ -49,7 +49,7 @@ const maintenancePlansStep = {
 const finalForm = {
   name: 'finalForm',
   title: 'Tell us what you need',
-  desc: 'We will send you a personalized quote really fast!',
+  desc: 'We will send you a custom quote really fast!',
   type: 'contactForm',
   final: true
 }

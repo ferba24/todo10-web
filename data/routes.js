@@ -12,7 +12,7 @@ export const paths = {
   MAINTENANCE: '/maintenance',
   WORDPRESS: '/wordpress',
   XENFORO: '/xenforo',
-  PERSONALIZED: '/personalized',
+  PERSONALIZED: '/custom-services',
   PRICING: '/pricing',
   ABOUT_US: '/about-us',
   GET_A_QUOTE: '/get-a-quote',

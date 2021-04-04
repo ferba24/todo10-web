@@ -144,7 +144,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc="Let our experts handle the technical part of your IT infrastructure."
+          desc="Let our experts handle the technical part of your IT infrastructure:"
           items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"
@@ -208,7 +208,7 @@ const FifthSection = () => (
     <div className="w-full text-center mt-4">
       <Link href={paths.PERSONALIZED}>
         <a>
-          <Button type="blue">Personalized services</Button>
+          <Button type="blue">Custom Services</Button>
         </a>
       </Link>
     </div>
