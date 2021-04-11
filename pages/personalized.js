@@ -36,7 +36,7 @@ const list = [
   'What about other',
   'Here goes another',
   'Other one'
-] */
+]
 
 const SecondSection = () => (
   <div className="section bg-blue py-16">
@@ -50,7 +50,7 @@ const SecondSection = () => (
     </div>
   </div>
 )
-
+*/
 export default function Personalized() {
 
   return (
