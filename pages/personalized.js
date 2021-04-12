@@ -11,7 +11,7 @@ const FirstSection = () => (
     <div className="section container">
         <PageHeader
             title="Custom Services"
-            desc={<>You have a VISION.<br />We have a TEAM to get you there. Whatever you need.</>}
+            desc={<></>}
         />
     </div>
 
@@ -50,6 +50,11 @@ const SecondSection = () => (
     </div>
   </div>
 )
+
+We have a highly skilled development staff with broad experience in web hosting, web development and IT solutions. Our team can provide remote server administration services to fit any budget, and we can scale management solutions to your needs.<br />
+Todo10 provides IT services to clients all around the world.
+
+Choose Todo10, and put your business in safe hands.
 */
 
 
@@ -58,9 +63,9 @@ const SecondSection = () => (
         <div className="section container-small">
             <FeatureHighlight
                 image="/images/personalized.svg"
-                title={<span className="text-orange">We transform ideas into success</span>}
+                title={<span className="text-orange">You have a <b>VISION</b>.<br />We have a <b>TEAM</b> to get you there.</span>}
                 desc={<>
-                    We have a highly skilled development staff with broad experience in web hosting, web development and IT solutions. Our team can provide remote server administration services to fit any budget, and we can scale management solutions to your needs.<br /> Todo10 provides IT services to clients all around the world. Our dedicated team can provide web hosting, web development and custom services to fit any budget, and we can scale management solutions to your needs. <br />Our services are personal enough to give each of our clients the attention they need, and flexible enough to handle the requirements of large organizations and enterprise systems, allowing you to concentrate on your business without worrying about the technology on which it relies. Choose Todo10, and put your business in safe hands.</>}
+                    Our dedicated team can provide web hosting, web development and custom services to fit any budget, and we can scale management solutions to your needs. <br />Our services are personal enough to give each of our clients the attention they need, and flexible enough to handle the requirements of large organizations, allowing you to concentrate on your business without worrying about the technology on which it relies.</>}
             />
         </div>
     </>
