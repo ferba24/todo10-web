@@ -20,7 +20,7 @@ const wheels = (
     style={{maxWidth: '220%', left: '-40%'}}
   />
 )
-
+/*
 const BlueSection = () => (
   <div className="section bg-blue py-20">
     <div className="container text-white">
@@ -34,7 +34,7 @@ const BlueSection = () => (
     </div>
   </div>
 )
-
+*/
 const ContactSection = () => {
 
   return (
@@ -95,7 +95,7 @@ export default function AboutUs() {
       </div>
       <div className="section container">
         <FeatureHighlight
-          image="/images/about-us.svg"
+          image="/icons/laptop.svg"
           title={<span className="text-orange">We transform ideas into success</span>}
           desc={<span>Whatever your needs, Todo10 will be able to meet them. Our staff is dynamic in its work, from troubleshooting to disaster recovery, project management to software design and implementation. We have a highly skilled development staff with broad experience in web hosting, web development and IT solutions. Our team can provide server administration services to fit any budget, and we can scale management solutions to your needs.</span>}
           leftExtra={cloud}
@@ -106,18 +106,9 @@ export default function AboutUs() {
             image="/images/about-us.svg"
             title={<span className="text-orange">Our Mission</span>}
             desc={<span>We believe being first is a matter of chance and being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br /><br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work. We still work hard each day to provide a better experience than our competitors.</span>}
-            leftExtra={cloud}
+            reverse
         />
     </div>
-
-
-
-
-
-
-
-
-
 
       <div className="section container">
         <FeatureHighlight
@@ -133,7 +124,7 @@ Being a small team allowed us to create stronger ties, trust and repeat customer
           reverse
         />
       </div>
-      <BlueSection/>
+
       <ContactSection/>
       <div className="my-60"/>
     </Layout>

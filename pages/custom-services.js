@@ -63,9 +63,8 @@ const SecondSection = () => (
         <div className="section container-small">
             <FeatureHighlight
                 image="/images/personalized.svg"
-                title={<span className="text-orange">You have a <b>VISION</b>.<br />We have a <b>TEAM</b> to get you there.</span>}
-                desc={<>
-                    Our dedicated team can provide web hosting, web development and custom services to fit any budget, and we can scale management solutions to your needs. <br />Our services are personal enough to give each of our clients the attention they need, and flexible enough to handle the requirements of large organizations, allowing you to concentrate on your business without worrying about the technology on which it relies.</>}
+                title={<span className="text-orange">You have a VISION.<br />We have a TEAM to get you there.</span>}
+                desc={<>Our dedicated team can provide web hosting, web development and custom services to fit any budget, and we can scale management solutions to your needs. <br /><br />Our services are personal enough to give each of our clients the attention they need, and flexible enough to handle the requirements of large organizations, allowing you to concentrate on your business without worrying about the technology on which it relies.</>}
             />
         </div>
     </>
