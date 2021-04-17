@@ -55,7 +55,7 @@ export const aboutUsItems = {
       path: '/about-us#form'
     },
     {
-      label: <span>Already a client? <DefaultLink url="https://clientarea.todo10.com/clientarea.php">Client Area</DefaultLink></span>,
+      label: <span>Already a client? <a style={{color: '#F79E8C'}} className="underline" href="https://clientarea.todo10.com/clientarea.php">Client Area</a></span>,
       path: '/',
       style: {marginTop: 'auto'}
     }

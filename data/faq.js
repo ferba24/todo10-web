@@ -2,7 +2,7 @@ const faq = [
   {
     key: '1',
     title: 'Will your hosting perform better than my current hosting?',
-    desc: 'Absolutely. Our servers are optimized for big websites by making use of caching, Litespeed, CDN, ElasticSearch and numerous optimizations. You will notice performance improvements!'
+    desc: 'Our servers are optimized for big websites by making use of caching, Litespeed, CDN, ElasticSearch and numerous optimizations. You will notice performance improvements!'
   },
   {
     key: '2',
