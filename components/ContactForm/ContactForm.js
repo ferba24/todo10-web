@@ -40,10 +40,10 @@ export default function ContactForm({
             </Form.Item>
         )}
         <Form.Item name="name" label="Name" required>
-          <input className="form-control" placeholder="Oscar Wilde"/>
+          <input className="form-control" placeholder="Your name"/>
         </Form.Item>
         <Form.Item name="email" label="Email" required>
-          <input className="form-control" placeholder="Oscar@gmail.com"/>
+          <input className="form-control" placeholder="Your email"/>
         </Form.Item>
         <Form.Item name="message" label="How we can help you?">
           <textarea
