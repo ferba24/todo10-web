@@ -88,7 +88,7 @@ const FourthSection = () => (
   </div>
 )
 
-export default function Xenforo() {
+export default function XenforoServices() {
 
   return (
     <Layout>

@@ -8,10 +8,10 @@ const xenforo = '/icons/xenforo-small.svg'
 
 export const paths = {
   SERVICES: '/services',
-  HOSTING: '/hosting',
-  MAINTENANCE: '/maintenance',
-  WORDPRESS: '/wordpress',
-  XENFORO: '/xenforo',
+  HOSTING: '/web-hosting',
+  MAINTENANCE: '/maintenance-plans',
+  WORDPRESS: '/wordpress-services',
+  XENFORO: '/xenforo-services',
   PERSONALIZED: '/custom-services',
   PRICING: '/pricing',
   ABOUT_US: '/about-us',
