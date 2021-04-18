@@ -63,9 +63,11 @@ const diskSpaceOptions = {
   title: 'Disk space you need',
   type: 'select',
   options: [
-    {label: 'Custom', value: 'custom', nextStep: finalForm},
+    {label: '<b>Custom</b>', value: 'custom', nextStep: finalForm},
     {label: '12 GB', value: '12GB', nextStep: getPlansStep(12)},
     {label: '24 GB', value: '24GB', nextStep: getPlansStep(24)},
+    {label: '39 GB', value: '39GB', nextStep: getPlansStep(39)},
+    {label: '75 GB', value: '75GB', nextStep: getPlansStep(75)},
   ]
 }
 

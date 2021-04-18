@@ -36,8 +36,8 @@ const getDefaultPlans = (annuallyPrice, monthlyPrice) => [
 const plans = {
   '12': getDefaultPlans(20.83, 24.99),
   '24': getDefaultPlans(33.32, 39.99),
-  '38': getDefaultPlans(74.16, 89.99),
-  '76': getDefaultPlans(149.99, 179.99),
+  '39': getDefaultPlans(74.16, 89.99),
+  '75': getDefaultPlans(149.99, 179.99),
 }
 
 export default function getPlans(diskSpace) {
