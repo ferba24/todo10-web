@@ -8,8 +8,7 @@ const annuallyList = [
 const quarterlyList = [
   'Real Time Monitoring',
   '24/7 Unlimited Support',
-  'All the benefits included',
-  'Maintenance block'
+  'All the benefits included'
 ]
 
 const maintenancePlans = [
