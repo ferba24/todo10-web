@@ -256,7 +256,7 @@ const SixthSection = () => (
 
 const SeventhSection = () => (
   <>
-    <h3 className="text-orange text-center mb-6">Our clients</h3>
+    <h3 className="text-orange text-center mb-6">What Our Clients Say</h3>
     <ClientsSlider/>
   </>
 )

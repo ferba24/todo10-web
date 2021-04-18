@@ -15,19 +15,19 @@ const testimonials = [
     extra: 'FLORIN BARBU - Warwickforum.com'
   },
   {
-    image: '/images/testimonials/alejandro-sanz.jpg',
+    image: '/images/testimonials/john.jpg',
     text: 'We hired Todo10 for a professional migration services. Also, we are very satisfied by the quality of the host. I highly recommend Todo10 services, 5 ⭐!',
-    extra: 'John Doe - Laleagane.ro'
+    extra: 'JOHN DOE - Laleagane.ro'
   },
   {
     image: '/images/testimonials/luca.jpg',
     text: 'They have migrated my vBulletin forum to Xenforo 2.0 with a minimum downtime . A very good job for a wide community: 2M posts and several GB of data. Hope to work in the next future with this very professional Team.',
-    extra: 'Luca. Punterforum.com'
+    extra: 'LUCA. Punterforum.com'
   },
   {
     image: '/images/testimonials/anton.jpg',
-    text: 'I really don t think there is a better partner for migration than Todo10. I have never seen such a friendly and patient company that just doesn\'t give up until the customer is happy and satisfied.',
-      extra: 'Anton - Motoredbikes.com'
+    text 'I really don\'t think there is a better partner for migration than Todo10. I have never seen such a friendly and patient company that just doesn\'t give up until the customer is happy and satisfied.',
+      extra: 'ANTON - Motoredbikes.com'
   },
 ]
 export default testimonials
