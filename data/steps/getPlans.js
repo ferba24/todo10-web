@@ -1,19 +1,20 @@
 const annuallyList = [
-  'Real Time Monitoring',
+  'Fully Managed',
   '24/7 Support',
-  'Daily Backups',
+  'Hourly Backups',
   'Save 20% 🔥',
-  'All features included'
+  'All benefits included'
 ]
 
-const quarterlyList = [
-  'Real Time Monitoring',
+const monthlyList = [
+  'Fully Managed',
   '24/7 Support',
-  'Daily Backups',
-  'All features included'
+  'Hourly Backups',
+  'Save 20% 🔥',
+  'All benefits included'
 ]
 
-const getDefaultPlans = (annuallyPrice, quarterlyPrice) => [
+const getDefaultPlans = (annuallyPrice, monthlyPrice) => [
   {
     value: 'annually',
     title: 'BILLED ANNUALLY',
@@ -25,16 +26,18 @@ const getDefaultPlans = (annuallyPrice, quarterlyPrice) => [
   },
   {
     value: 'quarterly',
-    title: 'BILLED QUARTERLY',
-    price: quarterlyPrice,
+    title: 'BILLED MONTHLY',
+    price: monthlyPrice,
     desc: 'per month',
-    list: quarterlyList
+    list: monthlyList
   }
 ]
 
 const plans = {
-  '12': getDefaultPlans(99.93, 119.93),
-  '24': getDefaultPlans(139.93, 159.93),
+  '12': getDefaultPlans(20.83, 24.99),
+  '24': getDefaultPlans(33.32, 39.99),
+  '38': getDefaultPlans(74.16, 89.99),
+  '76': getDefaultPlans(149.99, 179.99),
 }
 
 export default function getPlans(diskSpace) {
