@@ -1,4 +1,5 @@
 import { paths } from './routes'
+import Pricing from "../pages/pricing";
 
 const hostingFaqs = [
   {
@@ -19,7 +20,7 @@ const hostingFaqs = [
   {
     key: '4',
     title: 'Do you monitor your servers?',
-    desc: 'Yes. Administrators monitor our servers 24 hours a day, 7 days a week, 365 days a year.'
+    desc: 'Yes. We monitor our servers <b>and your websites </b>24 hours a day, 7 days a week, 365 days a year.'
   },
   {
     key: '5',
@@ -27,7 +28,7 @@ const hostingFaqs = [
     desc: 'Yes, all accounts can be upgraded.'
   }
 ]
-const indexFaqs = [
+const generalFaqs = [
   {
     key: '1',
     title: 'What forms of payment do you accept?',
@@ -51,8 +52,16 @@ const indexFaqs = [
 ]
 
 const faqs = {
+  [paths.HOME]: generalFaqs,
+  [paths.SERVICES]: generalFaqs,
   [paths.HOSTING]: hostingFaqs,
-  [paths.HOME]: indexFaqs
+  [paths.MAINTENANCE]: generalFaqs,
+  [paths.WORDPRESS]: generalFaqs,
+  [paths.XENFORO]: generalFaqs,
+  [paths.PERSONALIZED]: generalFaqs,
+  [paths.PRICING]: generalFaqs,
+  [paths.ABOUT_US]: generalFaqs,
+  [paths.GET_A_QUOTE]: generalFaqs
 }
 
 export default faqs
