@@ -1,25 +1,27 @@
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
-import List from '../components/List'
+// import List from '../components/List'
 import ContactForm from '../components/ContactForm';
 import WithSend from '../components/ContactForm/WithSend'
 import Head from "next/head";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const list = [
-  'Teamwork',
-  'Proactive',
-  'Listen',
-  'Care'
-] 
+// const list = [
+//   'Teamwork',
+//   'Proactive',
+//   'Listen',
+//   'Care'
+// ] 
 
-const wheels = (
-  <img
-    src="/images/about-us-wheels.svg"
-    className="absolute z-0 max-w-none"
-    style={{maxWidth: '220%', left: '-40%'}}
-  />
-)
+// const wheels = (
+//   <img
+//     src="/images/about-us-wheels.svg"
+//     className="absolute z-0 max-w-none"
+//     style={{maxWidth: '220%', left: '-40%'}}
+//   />
+// )
 /*
 const BlueSection = () => (
   <div className="section bg-blue py-20">
@@ -60,6 +62,18 @@ const ContactSection = () => {
 }
 
 export default function AboutUs() {
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const [, anchorName] = router.asPath.split('#')
+    if(!anchorName) return
+    const anchor = document.querySelector(`a[name=${anchorName}]`)
+    if(!anchor) return
+    const { top } = anchor.getBoundingClientRect()
+    const targetTop = window.scrollY + top - 100
+    window.scrollTo({top: targetTop , behavior: 'smooth'})
+  }, [])
 
   const headerTitle = (
     <div className="flex items-center justify-center">
