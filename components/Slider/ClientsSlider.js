@@ -18,6 +18,7 @@ const slideOptions = {
     {
       breakpoint: 767,
       settings: {
+        centerPadding: '70px',
         slidesToShow: 1,
       }
     }
@@ -27,7 +28,7 @@ const slideOptions = {
 
 export const clients = testimonials.map(testimonial => (
   <div key={testimonial.image}>
-    <div className="p-2 md:p-4">
+    <div className="p-2 px-8">
       <ClientCard
         image={testimonial.image}
         text={testimonial.text}

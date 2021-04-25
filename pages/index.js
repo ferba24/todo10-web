@@ -221,7 +221,7 @@ const BenefitCard = ({icon, title, desc}) => (
     className="flex-shrink-0 max-w-xs mx-4 sm:flex-1 p-6 py-10"
     bordered={false}
     shadow
-    style={{maxWidth: 250}}
+    style={{maxWidth: 250, padding: '35px 25px'}}
   >
     <Card.Content
       icon={icon}
@@ -231,24 +231,40 @@ const BenefitCard = ({icon, title, desc}) => (
   </Card>
 )
 
+function BenefitTitle({text}) {
+  return (
+    <span className="text-xl font-bold">
+      {text}
+    </span>
+  )
+}
+
+function BenefitP({text}) {
+  return (
+    <p className="text-sm font-semibold mt-3">
+      {text}
+    </p>
+  )
+}
+
 const SixthSection = () => (
   <div className="section bg-gray-200 py-16 px-6 overflow-auto">
     <h3 className="text-center mb-10">Why choose us?</h3>
     <div className="flex sm:justify-center">
       <BenefitCard
         icon="/icons/timer.svg"
-        title="Large experience"
-        desc="More than a decade of experience, you can be rest assured we will be around for the long-haul."
+        title={<BenefitTitle text="Large experience" />}
+        desc={<BenefitP text="More than a decade of experience, you can be rest assured we will be around for the long-haul." />}
       />
       <BenefitCard
         icon="/icons/sand-clock.svg"
-        title="Your time"
-        desc="It doesn’t matter how is your schedule or in what time zone are you, our team can match your needs."
+        title={<BenefitTitle text="Your time" />}
+        desc={<BenefitP text="It doesn’t matter how is your schedule or in what time zone are you, our team can match your needs." />}
       />
       <BenefitCard
         icon="/icons/messages.svg"
-        title="Constant support"
-        desc="24 hours a day, 7 days a week, 356 days a year, the fastest and most efficient help. "
+        title={<BenefitTitle text="Constant support" />}
+        desc={<BenefitP text="24 hours a day, 7 days a week, 356 days a year, the fastest and most efficient help. " />}
       />
     </div>
   </div>
@@ -256,7 +272,7 @@ const SixthSection = () => (
 
 const SeventhSection = () => (
   <>
-    <h3 className="text-orange text-center mb-6">What Our Clients Say</h3>
+    <h3 className="text-orange text-center mb-12">What Our Clients Say</h3>
     <ClientsSlider/>
   </>
 )
