@@ -1,4 +1,6 @@
-const faq = [
+import { paths } from './routes'
+
+const hostingFaqs = [
   {
     key: '1',
     title: 'Will your hosting perform better than my current hosting?',
@@ -25,4 +27,9 @@ const faq = [
     desc: 'It is one of the faster web servers in the industry. The uniquely developed & optimized code of Litespeed increases the PHP performance up to 50% as well as serves the static content faster than Apache. It has the capability of handling sudden spikes in traffic as well as help in managing DDOS attacks.'
   }
 ]
-export default faq
+
+const faqs = {
+  [paths.HOSTING]: hostingFaqs
+}
+
+export default faqs

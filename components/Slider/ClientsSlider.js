@@ -25,7 +25,6 @@ const slideOptions = {
   ]
 }
 
-
 export const clients = testimonials.map(testimonial => (
   <div key={testimonial.image}>
     <div className="p-2 px-8">

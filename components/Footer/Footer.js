@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import BottomDrawer from '../BottomDrawer'
-import faq from '../../data/faq'
 import Expand from '../Expand'
 import { motion } from 'framer-motion'
 import {
@@ -12,6 +11,8 @@ import { services } from '../../data/routes'
 import FooterItem from './FooterItem'
 import FooterList from './FooterList'
 import Newsletter from './Newsletter'
+import { useRouter } from 'next/router'
+import faqs from '../../data/faq'
 
 const Top = () => (
   <div className="container flex flex-wrap my-20">
@@ -43,6 +44,8 @@ const Bottom = () => (
 export default function Footer({className = '', style}) {
 
   const [faqVisible, setFaqVisible] = useState(false)
+  const { pathname } = useRouter()
+  const faq = pathname && faqs[pathname] || []
 
   const faqTitle = (
     <>

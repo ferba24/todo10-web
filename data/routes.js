@@ -7,6 +7,7 @@ const wordpress = '/icons/wordpress-small.svg'
 const xenforo = '/icons/xenforo-small.svg'
 
 export const paths = {
+  HOME: '/',
   SERVICES: '/services',
   HOSTING: '/web-hosting',
   MAINTENANCE: '/maintenance-plans',
