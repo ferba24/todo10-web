@@ -2,6 +2,9 @@ import Button from '../Button'
 import Form from '../Form'
 import NativeSelect from '../NativeSelect'
 import { services } from '../../data/routes'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { RECAPTCHA_SITE_KEY } from '../../data/constants'
+import { useState } from 'react'
 
 export default function ContactForm({
   extended,
@@ -12,11 +15,21 @@ export default function ContactForm({
   buttonLabel = 'Get a Quote',
   sending
 }) {
+  
+  const [validCaptcha, setValidCaptcha] = useState(false)
+
+  function validateCaptchaAndFinish(values) {
+    if(!validCaptcha) {
+      alert('You must click the captcha checkbox')
+      return
+    }
+    onFinish(values)
+  }
 
   return (
     <div className="max-w-lg mx-auto">
       <Form
-        onFinish={onFinish}
+        onFinish={validateCaptchaAndFinish}
         onValuesChange={onValuesChange}
       >
         {extended && (
@@ -52,6 +65,10 @@ export default function ContactForm({
             rows="6"
           />
         </Form.Item>
+        <ReCAPTCHA
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={value => setValidCaptcha(Boolean(value))}
+        />
         <Form.Item className={buttonRight ? 'text-right' : 'text-center'}>
           <Button
             disabled={sending}

@@ -26,8 +26,8 @@ const testimonials = [
   },
   {
     image: '/images/testimonials/anton.jpg',
-    text 'I really don\'t think there is a better partner for migration than Todo10. I have never seen such a friendly and patient company that just doesn\'t give up until the customer is happy and satisfied.',
-      extra: 'ANTON - Motoredbikes.com'
+    text: 'I really don\'t think there is a better partner for migration than Todo10. I have never seen such a friendly and patient company that just doesn\'t give up until the customer is happy and satisfied.',
+    extra: 'ANTON - Motoredbikes.com'
   },
 ]
 export default testimonials

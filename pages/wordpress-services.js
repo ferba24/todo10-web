@@ -67,16 +67,18 @@ const FourthSection = () => (
     <h3 className="text-orange text-center mb-10">
       Or contact us!
     </h3>
-    <WithSend>
-      {({send, sending}) => (
-        <ContactForm
-          buttonRight
-          buttonPrimary
-          onFinish={send}
-          sending={sending}
-        />
-      )}
-    </WithSend>
+    <div className="w-11/12 mx-auto">
+      <WithSend>
+        {({send, sending}) => (
+          <ContactForm
+            buttonRight
+            buttonPrimary
+            onFinish={send}
+            sending={sending}
+          />
+        )}
+      </WithSend>
+    </div>
   </div>
 )
 

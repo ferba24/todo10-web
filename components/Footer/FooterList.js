@@ -5,15 +5,20 @@ const FooterList = ({title, items}) => (
     <div className="font-medium text-lg">
       {title}
     </div>
-    {items.map(({label, path, style}) => (
+    {items.map(({label, path, style, key}) => (
       <div
-        key={path}
+        key={key || path}
         className="my-1 text-sm"
         style={style}
       >
-        <Link href={path} prefetch={false} shallow={true}>
-          <a>{label}</a>
-        </Link>
+        {path ? (
+          <Link href={path} prefetch={false} shallow={true}>
+            <a>{label}</a>
+          </Link>
+        ) : (
+          label
+        )}
+        
       </div>
     ))}
   </>
