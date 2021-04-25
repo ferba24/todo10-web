@@ -38,13 +38,13 @@ const BlueSection = () => (
 const ContactSection = () => {
 
   return (
-    <div className="section container">
-      <a name="form" />
-        <PageHeader
-            title={<span className="text-orange">Let's do great things</span>}
-            desc="We'd love to know about your amazing project!"
-        />
-        <WithSend>
+    <div className="section container relative">
+      <a name="form" className="absolute -top-32" />
+      <PageHeader
+          title={<span className="text-orange">Let's do great things</span>}
+          desc="We'd love to know about your amazing project!"
+      />
+      <WithSend>
         {({send, sending}) => (
           <ContactForm
             buttonRight
@@ -101,14 +101,14 @@ export default function AboutUs() {
           leftExtra={cloud}
         />
       </div>
-    <div className="section container">
+      <div className="section container">
         <FeatureHighlight
             image="/images/about-us.svg"
             title={<span className="text-orange">Our Mission</span>}
             desc={<span>We believe being first is a matter of chance and being the best and getting it right is what matters in our end. That's why we've created an ecosystem of services to help businesses grow better every day.<br /><br />Customers are at the forefront of everything we do and the reason we are excited to get up every day and head to work. We still work hard each day to provide a better experience than our competitors.</span>}
             reverse
         />
-    </div>
+      </div>
 
       <div className="section container">
         <FeatureHighlight

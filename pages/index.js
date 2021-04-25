@@ -65,7 +65,7 @@ const CrmItem = ({icon, title, desc, link}) => (
 const FirstSection = () => (
   <div className="section container-small flex justify-around">
 
-    <div className="mt-16 relative flex justify-center content-start flex-wrap">
+    <div className="md:mt-16 relative flex justify-center content-start flex-wrap">
       <div className="text-5xl font-bold w-full mb-5 font-quicksand">
         You are <span className="text-orange">unique</span>,<br/>
         so we are.

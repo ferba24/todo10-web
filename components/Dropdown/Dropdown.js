@@ -74,7 +74,7 @@ export default function Dropdown({
       </span>
       {open && (
         <div
-          className="absolute z-20"
+          className="absolute z-50"
           style={{
             [placement]: 0
           }}
