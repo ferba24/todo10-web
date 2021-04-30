@@ -49,8 +49,8 @@ const benefits = [
   },
   {
     icon: backup,
-    title: 'Hourly Backups',
-    desc: 'We take hourly offsite backups automatically, guaranteeing the safety of your website.'
+    title: 'Backups',
+    desc: 'We\'ll ensure your hosting is taking backups, guaranteeing the safety of your website.'
   },
   {
     icon: windowConfig,
