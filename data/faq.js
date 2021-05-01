@@ -1,35 +1,67 @@
 import { paths } from './routes'
+import Pricing from "../pages/pricing";
 
 const hostingFaqs = [
   {
     key: '1',
-    title: 'Will your hosting perform better than my current hosting?',
-    desc: 'Our servers are optimized for big websites by making use of caching, Litespeed, CDN, ElasticSearch and numerous optimizations. You will notice performance improvements!'
+    title: 'What’s managed hosting - and do I need it?',
+    desc: 'At Todo10, we only offer managed hosting, because we believe it’s absolutely 100% what’s best for our clients. Managed hosting means a team that helps you look after your servers, do your thing and deal with whatever comes your way. '
   },
   {
     key: '2',
-    title: 'Will you migrate my site for me?',
-    desc: 'Yes, and for free!'
+    title: 'How long will it take to set up my account?',
+    desc: 'New hosting account purchases are activated the same day, typically within minutes of purchase. Custom Dedicated Server configs can take up to 1-2 business days to complete deployment.'
   },
   {
     key: '3',
-    title: 'What type of technical skills do I need to manage my hosting?',
-    desc: 'We manage every technical aspect for you. However, we also include an easy-to-use cPanel Control Panel that gives you power/control over your entire website.'
+    title: 'Do you have an online control panel?',
+    desc: 'All of our Shared and Managed hosting services include cPanel control panel. We also offer dedicated servers with no control panels included.'
   },
   {
     key: '4',
-    title: 'How many domains or emails can i host on my hosting plan?',
-    desc: 'Unlimited. There is no limit regarding domains, email accounts, databases or files!'
+    title: 'Do you monitor your servers?',
+    desc: 'Yes. We monitor our servers <b>and your websites </b>24 hours a day, 7 days a week, 365 days a year.'
   },
   {
     key: '5',
-    title: 'What is LiteSpeed?',
-    desc: 'It is one of the faster web servers in the industry. The uniquely developed & optimized code of Litespeed increases the PHP performance up to 50% as well as serves the static content faster than Apache. It has the capability of handling sudden spikes in traffic as well as help in managing DDOS attacks.'
+    title: 'Can I upgrade my hosting plan at a later stage?',
+    desc: 'Yes, all accounts can be upgraded.'
   }
+]
+const generalFaqs = [
+  {
+    key: '1',
+    title: 'What forms of payment do you accept?',
+    desc: 'We accept Visa, MasterCard, American Express, PayPal, Bank Transfer and Bitcoins (BTC).'
+  },
+  {
+    key: '2',
+    title: 'What are your hours of Technical Support?',
+    desc: 'Phone, email, and chat support is available 24 hours a day, 7 days a week, 365 days a year.'
+  },
+  {
+    key: '3',
+    title: 'Do you offer a Money Back guarantee?',
+    desc: 'Your satisfaction is our top priority, and we’re confident you’ll be pleased with our services. Still, if you are not satisfied, Hosting services billed on 1-month terms are eligible for 30 day money back guarantee period.'
+  },
+  {
+  key: '4',
+    title: 'How long has Todo10 been in business?',
+    desc: 'Todo10 has been hosting shared accounts since our inception in 2007. '
+}
 ]
 
 const faqs = {
-  [paths.HOSTING]: hostingFaqs
+  [paths.HOME]: generalFaqs,
+  [paths.SERVICES]: generalFaqs,
+  [paths.HOSTING]: hostingFaqs,
+  [paths.MAINTENANCE]: generalFaqs,
+  [paths.WORDPRESS]: generalFaqs,
+  [paths.XENFORO]: generalFaqs,
+  [paths.PERSONALIZED]: generalFaqs,
+  [paths.PRICING]: generalFaqs,
+  [paths.ABOUT_US]: generalFaqs,
+  [paths.GET_A_QUOTE]: generalFaqs
 }
 
 export default faqs
