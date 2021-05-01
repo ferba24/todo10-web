@@ -1,5 +1,6 @@
 import List from '../List'
 import Button from '../Button'
+import Link from 'next/link'
 
 export default function Plan({
   title,
@@ -7,6 +8,7 @@ export default function Plan({
   desc,
   list,
   primary,
+  url = '/'
 }) {
   return(
     <div className="p-5 md:p-2">
@@ -17,12 +19,16 @@ export default function Plan({
         items={list}
         primary={primary}
       />
-      <Button
-        type={primary ? 'primary' : 'blue'}
-        className="w-full mt-6"
-      >
-        Get plan
-      </Button>
+      <Link href={url}>
+        <a>
+          <Button
+            type={primary ? 'primary' : 'blue'}
+            className="w-full mt-6"
+          >
+            Get plan
+          </Button>
+        </a>
+      </Link>
     </div>
   )
 }

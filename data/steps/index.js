@@ -10,7 +10,7 @@
  * `desc` Description to be shown below the title.
  */
 
-import getPlans from './getPlans'
+import plansData from './getPlans'
 import maintenancePlans from './maintenancePlans'
 
 const wordpress = '/icons/wordpress.svg'
@@ -19,19 +19,10 @@ const windowIcon = '/icons/window.svg'
 const notebook = '/icons/notebook.svg'
 const servicesIcon = '/icons/services.svg'
 const personalizedIcon = '/icons/personalized.svg'
-
 const seoIcon = '/icons/seo.svg'
 const designIcon = '/icons/design.svg'
 const computerIcon = '/icons/computer.svg'
 const pencilIcon = '/icons/pencil.svg'
-
-const getPlansStep = diskSpace => ({
-  name: 'plansStep',
-  title: 'Select the best plan for you',
-  type: 'card',
-  options: getPlans(diskSpace),
-  className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
-})
 
 const maintenancePlansStep = {
   name: 'plansStep',
@@ -64,10 +55,7 @@ const diskSpaceOptions = {
   type: 'select',
   options: [
     {label: 'Custom', value: 'custom', nextStep: finalForm},
-    {label: '12 GB', value: '12GB', nextStep: getPlansStep(12)},
-    {label: '24 GB', value: '24GB', nextStep: getPlansStep(24)},
-    {label: '39 GB', value: '39GB', nextStep: getPlansStep(39)},
-    {label: '75 GB', value: '75GB', nextStep: getPlansStep(75)},
+    ...plansData
   ]
 }
 

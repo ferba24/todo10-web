@@ -19,14 +19,16 @@ const maintenancePlans = [
     desc: 'per month',
     list: annuallyList,
     primary: true,
-    ribbon: 'Save 20%'
+    ribbon: 'Save 20%',
+    url: 'https://google.com'
   },
   {
     value: 'quarterly',
     title: 'BILLED QUARTERLY',
     price: 119.93,
     desc: 'per month',
-    list: quarterlyList
+    list: quarterlyList,
+    url: 'https://google.com'
   }
 ]
 export default maintenancePlans

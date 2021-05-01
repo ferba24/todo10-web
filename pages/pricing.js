@@ -21,7 +21,7 @@ export default function Pricing() {
       <div className="section container-medium">
         <Stepper initialStep={initialStep}/>
       </div>
-      <div className="my-60"/>
+      <div className="my-80"/>
     </Layout>
   )
 }
