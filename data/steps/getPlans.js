@@ -66,6 +66,5 @@ const plansData = [
     nextStep: plansStep(getDefaultPlans(149.99, 'https://annually_plan_here.com', 179.99, 'https://monthlylly_plan_here.com'))
   },
 ]
-console.log(plansData)
 
 export default plansData
