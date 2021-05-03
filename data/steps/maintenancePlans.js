@@ -1,4 +1,4 @@
-import DefaultLink from "../../components/DefaultLink/DefaultLink"
+import DefaultLink from "../../components/DefaultLink"
 
 const annuallyList = [
   'Real Time Monitoring',
@@ -10,7 +10,7 @@ const annuallyList = [
 const quarterlyList = [
   'Real Time Monitoring',
   '24/7 Unlimited Support',
-  '<DefaultLink url="#benefits">All the benefits included</DefaultLink>'
+  <DefaultLink url="#benefits">All the benefits included</DefaultLink>
 ]
 
 const getMaintenancePlans = (annuallyLink, quarterlyLink) => [
