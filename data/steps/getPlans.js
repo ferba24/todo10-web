@@ -43,28 +43,27 @@ const plansStep = options => ({
   className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
 })
 
+const pricesAndUrlsByPlatform = {
+  wordpress: {
+    '12': [20.83, 'https://wordpress_annually_plan', 24.99, 'https://wordpress_monthly_plan'],
+    '24': [33.32, 'https://wordpress_annually_plan', 39.99, 'https://wordpress_monthly_plan'],
+    '39': [74.16, 'https://wordpress_annually_plan', 89.99, 'https://wordpress_monthly_plan'],
+    '75': [149.99, 'https://wordpress_annually_plan', 179.99, 'https://wordpress_monthly_plan'],
+  },
+  xenforo: {
+    '12': [20.83, 'https://xenforo_annually_plan', 24.99, 'https://xenforo_monthly_plan'],
+    '24': [33.32, 'https://xenforo_annually_plan', 39.99, 'https://xenforo_monthly_plan'],
+    '39': [74.16, 'https://xenforo_annually_plan', 89.99, 'https://xenforo_monthly_plan'],
+    '75': [149.99, 'https://xenforo_annually_plan', 179.99, 'https://xenforo_monthly_plan'],
+  }
+}
 
-const plansData = [
-  {
-    label: '12 GB',
-    value: '12GB',
-    nextStep: plansStep(getDefaultPlans(20.83, 'https://annually_plan_here', 24.99, 'https://monthly_plan_here'))
-  },
-  {
-    label: '24 GB',
-    value: '24GB',
-    nextStep: plansStep(getDefaultPlans(33.32, 'https://annually_plan_here.com', 39.99, 'https://monthly_plan_here.com'))
-  },
-  {
-    label: '39 GB',
-    value: '39GB',
-    nextStep: plansStep(getDefaultPlans(74.16, 'https://annually_plan_here.com', 89.99, 'https://monthly_plan_here.com'))
-  },
-  {
-    label: '75 GB',
-    value: '75GB',
-    nextStep: plansStep(getDefaultPlans(149.99, 'https://annually_plan_here.com', 179.99, 'https://monthlylly_plan_here.com'))
-  },
-]
+const sizes = ['12', '24', '39', '75']
 
-export default plansData
+const getPlansData = platform => sizes.map(size => ({
+  label: `${size} GB`,
+  value: `${size}GB`,
+  nextStep: plansStep(getDefaultPlans(...pricesAndUrlsByPlatform[platform][size]))
+}))
+
+export default getPlansData

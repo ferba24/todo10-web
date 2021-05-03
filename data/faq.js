@@ -1,5 +1,4 @@
 import { paths } from './routes'
-import Pricing from "../pages/pricing";
 
 const hostingFaqs = [
   {

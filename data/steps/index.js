@@ -10,7 +10,7 @@
  * `desc` Description to be shown below the title.
  */
 
-import plansData from './getPlans'
+import getPlansData from './getPlans'
 import maintenancePlans from './maintenancePlans'
 
 const wordpress = '/icons/wordpress.svg'
@@ -24,13 +24,13 @@ const designIcon = '/icons/design.svg'
 const computerIcon = '/icons/computer.svg'
 const pencilIcon = '/icons/pencil.svg'
 
-const maintenancePlansStep = {
+const getMaintenancePlansStep = platform =>  ({
   name: 'plansStep',
   title: 'Select the best plan for you',
   type: 'card',
-  options: maintenancePlans,
+  options: maintenancePlans[platform],
   className: 'flex flex-nowrap overflow-x-auto justify-start sm:justify-center'
-}
+})
 
 /**
  * This is a normal step, but has a `final` prop set as `true`.
@@ -49,15 +49,15 @@ const finalForm = {
  * This step, like others, has an `options` array. Every option has
  * a `nextStep` prop, thus the next step will depend on the user choice.
  */
-const diskSpaceOptions = {
-  name: 'diskSpace',
+const getDiskSpaceOptions = platform => ({
+  name: `disk_space_${platform}`,
   title: 'Disk space you need',
   type: 'select',
   options: [
     {label: 'Custom', value: 'custom', nextStep: finalForm},
-    ...plansData
+    ...getPlansData(platform)
   ]
-}
+})
 
 export const hostingOptions = {
   name: 'platform-hosting',
@@ -68,13 +68,13 @@ export const hostingOptions = {
       value: "wordpress",
       image: wordpress,
       title: 'Wordpress',
-      nextStep: diskSpaceOptions
+      nextStep: getDiskSpaceOptions('wordpress')
     },
     {
       value: "xenforo",
       image: xenforo,
       title: 'XenForo',
-      nextStep: diskSpaceOptions
+      nextStep: getDiskSpaceOptions('xenforo')
     }
   ]
 }
@@ -88,13 +88,13 @@ export const maintenanceOptions = {
       value: "wordpress",
       image: wordpress,
       title: 'Wordpress',
-      nextStep: maintenancePlansStep
+      nextStep: getMaintenancePlansStep('wordpress')
     },
     {
       value: "xenforo",
       image: xenforo,
       title: 'XenForo',
-      nextStep: maintenancePlansStep
+      nextStep: getMaintenancePlansStep('xenforo')
     }
   ]
 }

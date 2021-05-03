@@ -1,12 +1,4 @@
-import Link from 'next/link'
-
-const DefaultLink = ({url = '/', children}) => (
-  <Link href={url} prefetch={false}>
-    <a style={{color: '#F79E8C'}} className="underline">
-      {children}
-    </a>
-  </Link>
-)
+import DefaultLink from "../components/DefaultLink"
 
 export const topItems = [
   {
