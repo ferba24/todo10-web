@@ -149,7 +149,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc={"Let our experts handle the technical part of your IT infrastructure and never worry about your website again.\n Our support team will keep your website updated, schedule automated offsite backups, external security scans, and more."}
+          desc={<><p>Let our experts handle the technical part of your IT infrastructure and never worry about your website again.</p><p>Our support team will keep your website updated, schedule automated offsite backups, security scans, and more.</p></>}
           items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"
@@ -177,13 +177,13 @@ const FourthSection = () => (
       <CrmItem
         icon="/icons/wordpress-circle.svg"
         title="WordPress Services"
-        desc="We offer WP custom development, consulting, custom themes, security audits and maintenance"
+        desc="We offer WP custom development, consulting, custom themes, security audits and maintenance."
         link={paths.WORDPRESS}
       />
       <CrmItem
         icon="/icons/xenforo-text.svg"
         title="XenForo Services"
-        desc="Migration, tunning, addons, styles, we are pros and can do anything on XenForo!"
+        desc="Migration, tuning, addons, styles, we are pros and can do anything on XenForo!"
         link={paths.XENFORO}
       />
     </div>
