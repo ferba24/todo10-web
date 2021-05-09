@@ -107,8 +107,7 @@ const hostingItems = [
 const maintenanceItems = [
     'Adapted to your needs',
     'Security, optimization, troubleshooting',
-    'Top-notch support staff',
-    'Rely on us for maintaining your websites'
+    'Top-notch support staff'
 ]
 
 const SecondSection = () => {
@@ -149,7 +148,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc={<><p>Let our experts handle the technical part of your IT infrastructure and never worry about your website again.</p><p>Our support team will keep your website updated, schedule automated offsite backups, security scans, and more.</p></>}
+          desc={<><p>Let our experts handle the technical part of your IT infrastructure and never worry about your website again.</p><br><p>Our support team will keep your website updated, schedule automated offsite backups, security scans, and more.</p></>}
           items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"

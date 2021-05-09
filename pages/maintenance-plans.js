@@ -35,7 +35,7 @@ export default function Maintenance() {
       <div className="my-40"/>
       <FirstSection onCtoClicked={scrollToStep} />
       <div className="section container-full">
-          <a name="benefits" className="absolute -top-32" />
+          <a name="benefits" />
         <BenefitsSection benefits={benefits}/>
       </div>
       <div className="section container" ref={stepRef}>

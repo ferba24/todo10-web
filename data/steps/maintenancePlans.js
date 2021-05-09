@@ -1,10 +1,11 @@
 import DefaultLink from "../../components/DefaultLink"
 
 const annuallyList = [
+  'All the above plus:',
   'Real Time Monitoring',
   '24/7 Unlimited Support',
   'Save 20% 🔥',
-  'All the benefits included'
+
 ]
 
 const quarterlyList = [
