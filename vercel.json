@@ -1,7 +1,13 @@
 {
   "redirects": [
     { "source": "/en/web-hosting", "destination": "/web-hosting" },
-    { "source": "/en/xenforo-maintenance", "destination": "/xenforo-services", "permanent": false },
-    { "source": "/en/contact-us", "destination": "/about-us#form" }
+    { "source": "/en/xenforo-maintenance", "destination": "/xenforo-services"},
+    { "source": "/en/wordpress-maintenance", "destination": "/wordpress-services"},
+    { "source": "/en/contact-us", "destination": "/get-a-quote" },
+    { "source": "/en", "destination": "/" },
+    { "source": "/en/web-design", "destination": "/personalized-services" },
+    { "source": "/en/privacy-policy", "destination": "/" },
+    { "source": "/en/terms-and-conditions", "destination": "/" },
+    { "source": "/en/acceptable-use-policy,", "destination": "/" }
   ]
 }
