@@ -149,7 +149,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc="Let our experts handle the technical part of your IT infrastructure. Never worry about your website again. Our support team will keep your website updated, schedule automated offsite backups, external security scans, and more."
+          desc={<span>Let our experts handle the technical part of your IT infrastructure and never worry about your website again.<br/>Our support team will keep your website updated, schedule automated offsite backups, external security scans, and more."</span>}
           items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"
@@ -194,7 +194,7 @@ const somethingElseItems = [
     {icon: '/icons/server-list.svg', label: 'Dedicated Servers'},
     {icon: '/icons/seo-list.svg', label: 'SEO'},
     {icon: '/icons/web-design-list.svg', label: 'Web Design'},
-    {icon: '/icons/world-list.svg', label: 'Everything you need, just ask about it!'},
+    {icon: '/icons/world-list.svg', label: 'Anything you need, just ask about it!'},
 ]
 
 const FifthSection = () => (

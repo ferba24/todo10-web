@@ -4,12 +4,12 @@ const hostingFaqs = [
   {
     key: '1',
     title: 'What’s managed hosting - and do I need it?',
-    desc: 'At Todo10, we only offer managed hosting, because we believe it’s absolutely 100% what’s best for our clients. Managed hosting means a team that helps you look after your servers, do your thing and deal with whatever comes your way. '
+    desc: 'At Todo10, we only offer managed hosting, because we believe it’s absolutely 100% what’s best for our clients.\nManaged hosting means a team that helps you look after your servers, do your thing and deal with whatever comes your way. '
   },
   {
     key: '2',
     title: 'How long will it take to set up my account?',
-    desc: 'New hosting account purchases are activated the same day, typically within minutes of purchase. Custom Dedicated Server configs can take up to 1-2 business days to complete deployment.'
+    desc: 'New hosting account purchases are activated the same day, typically within minutes of purchase.\nCustom Dedicated Server configs can take up to 1-2 business days to complete deployment.'
   },
   {
     key: '3',
@@ -19,7 +19,7 @@ const hostingFaqs = [
   {
     key: '4',
     title: 'Do you monitor your servers?',
-    desc: 'Yes. We monitor our servers <b>and your websites </b>24 hours a day, 7 days a week, 365 days a year.'
+    desc: 'Yes. We monitor our servers and your websites 24 hours a day, 7 days a week, 365 days a year.'
   },
   {
     key: '5',

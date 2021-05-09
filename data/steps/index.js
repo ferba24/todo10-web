@@ -54,8 +54,17 @@ const getDiskSpaceOptions = platform => ({
   title: 'Disk space you need',
   type: 'select',
   options: [
-    {label: 'Custom', value: 'custom', nextStep: finalForm},
-    ...getPlansData(platform)
+    {
+      label: 'Custom',
+      value: 'custom',
+      nextStep: finalForm
+    },
+    ...getPlansData(platform),
+    {
+      label: 'Custom',
+      value: 'custom',
+      nextStep: finalForm
+    }
   ]
 })
 
