@@ -42,7 +42,7 @@ export const services = [
     label: 'Xenforo services',
     path: paths.XENFORO,
     icon: xenforo,
-    desc: 'Migration, tunning, addons, styles and more.'
+    desc: 'Todo10 is one-stop-place for all your XenForo needs. Custom addons, styles, migrations, security and more.'
   },
   {
     label: 'Personalized Services',

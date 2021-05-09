@@ -1,6 +1,6 @@
 const responseTimes = [
   {
-    label: 'Todo10',
+    label: 'Running on Todo10',
     value: 0.92,
     color: '#7EB131',
     labelPrefix: ' 😌 .'

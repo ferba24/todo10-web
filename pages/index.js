@@ -61,14 +61,19 @@ const CrmItem = ({icon, title, desc, link}) => (
     </div>
   </div>
 )
+// You are unique, so we are
+// You are unique, so you deserve solid web hosting
+// Looking for solid, fast web hosting?
 
+// You are unique, we know you want the best IT team.
 const FirstSection = () => (
   <div className="section container-small flex justify-around">
 
     <div className="md:mt-16 relative flex justify-center content-start flex-wrap">
       <div className="text-5xl font-bold w-full mb-5 font-quicksand">
-        Looking only for <span className="text-orange">The Best</span>,<br/>
-        of <span className="text-orange">The Best</span>?.
+        Looking for <span className="text-orange">unique</span>,<br/>
+          <span className="text-orange">solid and fast</span><br/>
+          Web Hosting?.
       </div>
       <div className="w-full">
         Finally, the trustworthy team your web business deserves.
@@ -94,7 +99,7 @@ const FirstSection = () => (
 
 const hostingItems = [
     '24/7 monitored',
-    'Wordpress and Xenforo ready',
+    'Wordpress and XenForo ready',
     'Safe, secure and fast',
     'and we optimize your website too!'
 ]
@@ -120,7 +125,7 @@ const SecondSection = () => {
           <div className="lg:w-6/12">
             <FeatureDesc
               title="Know our hosting plans"
-              desc="We offer a high-performance web hosting."
+              desc="We only offer high-performance web hosting."
               items={hostingItems}
               link={paths.HOSTING}
               linkLabel="Hosting plans"
@@ -128,7 +133,7 @@ const SecondSection = () => {
           </div>
           <div className="lg:w-6/12 mt-10">
             <div className="text-orange font-semibold">
-              Response time <span className="font-light">(in seconds)</span>
+              Loading time <span className="font-light">(normal XenForo set up)</span>
             </div>
             {renderGraph && <Graph data={responseTimes} />}
           </div>
@@ -144,7 +149,7 @@ const ThirdSection = () => (
       <div className="lg:w-6/12 p-3 flex justify-center">
         <FeatureDesc
           title="Maintenance plans"
-          desc="Let our experts handle the technical part of your IT infrastructure:"
+          desc="Let our experts handle the technical part of your IT infrastructure. Never worry about your website again. Our support team will keep your website updated, schedule automated offsite backups, external security scans, and more."
           items={maintenanceItems}
           link={paths.MAINTENANCE}
           linkLabel="Maintenance plans"
@@ -172,7 +177,7 @@ const FourthSection = () => (
       <CrmItem
         icon="/icons/wordpress-circle.svg"
         title="WordPress Services"
-        desc="Themes, plugins, hosting, we do it all!"
+        desc="We offer WP custom development, consulting, custom themes, security audits and maintenance"
         link={paths.WORDPRESS}
       />
       <CrmItem
@@ -195,7 +200,7 @@ const somethingElseItems = [
 const FifthSection = () => (
   <div className="section container flex justify-center flex-wrap">
     <h3 className="text-xl font-semibold w-full text-center">
-      Do you need something else?
+      Still looking for more stuff?
     </h3>
     <div>
       {somethingElseItems.map(({icon, label}) => (
