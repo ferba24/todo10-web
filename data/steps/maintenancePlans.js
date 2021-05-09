@@ -35,8 +35,8 @@ const getMaintenancePlans = (annuallyLink, quarterlyLink) => [
 ]
 
 const maintenancePlans = {
-  wordpress: getMaintenancePlans('https://link_wordpress_annually', 'https://link_wordpress_quarterly'),
-  xenforo: getMaintenancePlans('https://link_xenforo_annually', 'https://link_xenforo_quarterly')
+  wordpress: getMaintenancePlans('https://clientarea.todo10.com/cart.php?a=add&pid=45&billingcycle=annually', 'https://clientarea.todo10.com/cart.php?a=add&pid=45&billingcycle=quarterly'),
+  xenforo: getMaintenancePlans('https://clientarea.todo10.com/cart.php?a=add&pid=44&billingcycle=annually', 'https://clientarea.todo10.com/cart.php?a=add&pid=44&billingcycle=quarterly')
 }
 
 export default maintenancePlans

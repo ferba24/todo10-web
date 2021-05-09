@@ -67,8 +67,8 @@ const FirstSection = () => (
 
     <div className="md:mt-16 relative flex justify-center content-start flex-wrap">
       <div className="text-5xl font-bold w-full mb-5 font-quicksand">
-        You are <span className="text-orange">unique</span>,<br/>
-        so we are.
+        Looking only for <span className="text-orange">The Best</span>,<br/>
+        of <span className="text-orange">The Best</span>?.
       </div>
       <div className="w-full">
         Finally, the trustworthy team your web business deserves.
@@ -95,8 +95,8 @@ const FirstSection = () => (
 const hostingItems = [
     '24/7 monitored',
     'Wordpress and Xenforo ready',
-    'Safe and secure',
-    'Fast and optimum performance!'
+    'Safe, secure and fast',
+    'and we optimize your website too!'
 ]
 
 const maintenanceItems = [

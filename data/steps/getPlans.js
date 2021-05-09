@@ -45,16 +45,16 @@ const plansStep = options => ({
 
 const pricesAndUrlsByPlatform = {
   wordpress: {
-    '12': [20.83, 'https://wordpress_annually_plan', 24.99, 'https://wordpress_monthly_plan'],
-    '24': [33.32, 'https://wordpress_annually_plan', 39.99, 'https://wordpress_monthly_plan'],
-    '39': [74.16, 'https://wordpress_annually_plan', 89.99, 'https://wordpress_monthly_plan'],
-    '75': [149.99, 'https://wordpress_annually_plan', 179.99, 'https://wordpress_monthly_plan'],
+    '12': [20.83, 'https://clientarea.todo10.com/cart.php?a=add&pid=46&billingcycle=annually', 24.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=46&billingcycle=monthly'],
+    '24': [33.32, 'https://clientarea.todo10.com/cart.php?a=add&pid=48&billingcycle=annually', 39.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=48&billingcycle=monthly'],
+    '39': [74.16, 'https://clientarea.todo10.com/cart.php?a=add&pid=51&billingcycle=annually', 89.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=51&billingcycle=monthly'],
+    '75': [149.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=53&billingcycle=annually', 179.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=53&billingcycle=monthly'],
   },
   xenforo: {
-    '12': [20.83, 'https://xenforo_annually_plan', 24.99, 'https://xenforo_monthly_plan'],
-    '24': [33.32, 'https://xenforo_annually_plan', 39.99, 'https://xenforo_monthly_plan'],
-    '39': [74.16, 'https://xenforo_annually_plan', 89.99, 'https://xenforo_monthly_plan'],
-    '75': [149.99, 'https://xenforo_annually_plan', 179.99, 'https://xenforo_monthly_plan'],
+    '12': [20.83, 'https://clientarea.todo10.com/cart.php?a=add&pid=47&billingcycle=annually', 24.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=47&billingcycle=monthly'],
+    '24': [33.32, 'https://clientarea.todo10.com/cart.php?a=add&pid=49&billingcycle=annually', 39.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=49&billingcycle=monthly'],
+    '39': [74.16, 'https://clientarea.todo10.com/cart.php?a=add&pid=50&billingcycle=annually', 89.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=50&billingcycle=monthly'],
+    '75': [149.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=52&billingcycle=annually', 179.99, 'https://clientarea.todo10.com/cart.php?a=add&pid=52&billingcycle=monthly'],
   }
 }
 
