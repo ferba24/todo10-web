@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/en/web-hosting", "destination": "/web-hosting" },
+    { "source": "/en/xenforo-maintenance", "destination": "/xenforo-services", "permanent": false },
+    { "source": "/en/contact-us", "destination": "/about-us#form" }
+  ]
+}
