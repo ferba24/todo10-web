@@ -2,15 +2,14 @@ const annuallyList = [
   'Fully Managed',
   '24/7 Support',
   'Hourly Backups',
-  'Save 20% 🔥',
-  'All benefits included'
+  'All benefits included',
+  'Save 20% 🔥'
 ]
 
 const monthlyList = [
   'Fully Managed',
   '24/7 Support',
   'Hourly Backups',
-  'Save 20% 🔥',
   'All benefits included'
 ]
 

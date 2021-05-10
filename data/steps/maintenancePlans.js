@@ -1,7 +1,7 @@
 import DefaultLink from "../../components/DefaultLink"
 
 const annuallyList = [
-  'All the above plus:',
+  'All the benefits above',
   'Real Time Monitoring',
   '24/7 Unlimited Support',
   'Save 20% 🔥',
@@ -9,6 +9,7 @@ const annuallyList = [
 ]
 
 const quarterlyList = [
+  'All the benefits above',
   'Real Time Monitoring',
   '24/7 Unlimited Support',
   <DefaultLink url="#benefits">All the benefits included</DefaultLink>
