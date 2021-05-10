@@ -87,7 +87,7 @@ export default function Wordpress() {
   return (
     <Layout>
         <Head>
-            <title>Todo 10 - Wordpress</title>
+            <title>Todo 10 - Wordpress Services</title>
         </Head>
       <div className="my-40"/>
         <FirstSection/>

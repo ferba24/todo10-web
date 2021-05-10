@@ -17,7 +17,7 @@ export default function Hosting() {
   return (
     <Layout>
         <Head>
-            <title>Todo 10 - Hosting</title>
+            <title>Todo 10 - Web Hosting</title>
         </Head>
       <div className="my-40"/>
       <div className="section container-small">

@@ -17,7 +17,7 @@ const FirstSection = () => (
   <>
     <div className="section container">
       <PageHeader
-        title="Xenforo services"
+        title="Xenforo Services"
         desc="More than 10 years of expertise give us the confidence we can take any work or XenForo project you have in mind."
       />
     </div>
@@ -95,7 +95,7 @@ export default function XenforoServices() {
   return (
     <Layout>
         <Head>
-            <title>Todo 10 - XenForo</title>
+            <title>Todo 10 - XenForo Services</title>
         </Head>
       <div className="my-40"/>
         <FirstSection/>

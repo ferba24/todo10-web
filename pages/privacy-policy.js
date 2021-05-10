@@ -11,24 +11,6 @@ import { useEffect } from 'react';
 
 export default function AboutUs() {
 
-    const router = useRouter()
-
-    useEffect(() => {
-        const [, anchorName] = router.asPath.split('#')
-        if(!anchorName) return
-        const anchor = document.querySelector(`a[name=${anchorName}]`)
-        if(!anchor) return
-        const { top } = anchor.getBoundingClientRect()
-        const targetTop = window.scrollY + top - 100
-        window.scrollTo({top: targetTop , behavior: 'smooth'})
-    }, [])
-
-    const headerTitle = (
-        <div className="flex items-center justify-center">
-            <span>Privacy Statement</span>
-        </div>
-    )
-
     return (
         <Layout>
             <Head>

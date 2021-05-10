@@ -30,7 +30,7 @@ export default function Maintenance() {
   return (
     <Layout>
         <Head>
-            <title>Todo 10 - Maintenance</title>
+            <title>Todo 10 - Maintenance Plans</title>
         </Head>
       <div className="my-40"/>
       <FirstSection onCtoClicked={scrollToStep} />
