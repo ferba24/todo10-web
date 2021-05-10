@@ -19,7 +19,7 @@ export default function AboutUs() {
             <div className="my-40"/>
             <div className="section container">
                 <PageHeader
-                    title={headerTitle}
+                    title="Privacy Policy"
                     desc=""
                 />
             </div>
