@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 
-export default function AboutUs() {
+export default function PrivacyPolicy() {
 
     return (
         <Layout>
@@ -23,7 +23,7 @@ export default function AboutUs() {
                     desc=""
                 />
             </div>
-            <div className="section container">
+            <div className="section container w-full">
                 <FeatureHighlight
                     title={<span className="text-orange">We are committed to protecting your privacy</span>}
                     desc={<span>We are committed to protecting your privacy
@@ -42,7 +42,6 @@ Contacting Us
 If you have any questions about our Privacy Policy, or if you want to know what information we have collected about you, please email us at support@todo10.com. You can also correct any factual errors in that information or require us to remove your details from any list under our control.</span>}
                 />
             </div>
-            <div className="my-60"/>
         </Layout>
     )
 }
