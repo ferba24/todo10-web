@@ -60,8 +60,6 @@ Contacting Us
 If you have any questions about our Privacy Policy, or if you want to know what information we have collected about you, please email us at support@todo10.com. You can also correct any factual errors in that information or require us to remove your details from any list under our control.</span>}
                 />
             </div>
-
-            <ContactSection/>
             <div className="my-60"/>
         </Layout>
     )
