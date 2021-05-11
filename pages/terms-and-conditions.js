@@ -28,7 +28,7 @@ export default function TermsAndConditions() {
             <div className="max-w-3xl mx-auto">
                 <h3>Terms and Conditions</h3>
                 <div className="my-5">
-                    The use of services from Todo10.com constitutes agreement to these terms. You may view our <DefaultLink url="/privacy-policy">Privacy Policy</DefaultLink><br /><br />
+                    The use of services from Todo10.com constitutes agreement to these terms. You may view our Privacy Policy<br /><br />
 
                     <b>General Terms of Service</b>
                     <p>We will setup your account after we have received payment and we and/or our payment partner(s) have screened the order(s) in case of fraud. It is your responsibility to provide us with an email address which is not @ the domain(s) you are signing up under. If there is ever an abuse issue or we need to contact you, the primary email address on file will be used for this purpose. It is your responsibility to ensure the email address on file is current or up to date at all times. In dedicated server purchases or high risk transactions, it will be necessary to provide government issued identification and possibly a scan of the credit card used for the purchase. If you fail to meet these requirements, the order may be considered fraudulent in nature and be denied.</p><br />
