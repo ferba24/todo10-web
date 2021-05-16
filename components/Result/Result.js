@@ -3,8 +3,8 @@ import Button from '../Button'
 import Link from 'next/link'
 
 const defaultTitle = 'Thanks!'
-const defaultDesc = 'Will be in contact really soon. Meanwhile you can know us better'
-const defaultLink = '/about-us'
+const defaultDesc = 'Will be in contact really soon. Meanwhile you can know us better clicking the button above :)'
+const defaultLink = '/en/about-us'
 const defaultLinkLabel = 'About us'
 
 export default function Result({
