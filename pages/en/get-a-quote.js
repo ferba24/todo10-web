@@ -1,7 +1,7 @@
-import Layout from '../components/Layout'
-import ContactForm from '../components/ContactForm';
-import PageHeader from '../components/PageHeader'
-import WithSend from '../components/ContactForm/WithSend'
+import Layout from '../../components/Layout'
+import ContactForm from '../../components/ContactForm';
+import PageHeader from '../../components/PageHeader'
+import WithSend from '../../components/ContactForm/WithSend'
 import Head from "next/head";
 
 export default function GetAQuote() {

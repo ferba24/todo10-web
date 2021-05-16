@@ -11,8 +11,7 @@ const annuallyList = [
 const quarterlyList = [
   'All the benefits above',
   'Real Time Monitoring',
-  '24/7 Unlimited Support',
-  <DefaultLink url="#benefits">All the benefits included</DefaultLink>
+  '24/7 Unlimited Support'
 ]
 
 const getMaintenancePlans = (annuallyLink, quarterlyLink) => [

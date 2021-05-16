@@ -1,7 +1,7 @@
-import Layout from '../components/Layout'
-import PageHeader from '../components/PageHeader/PageHeader';
-import Stepper from '../components/Stepper';
-import initialStep from '../data/steps'
+import Layout from '../../components/Layout'
+import PageHeader from '../../components/PageHeader/PageHeader';
+import Stepper from '../../components/Stepper';
+import initialStep from '../../data/steps'
 import Head from "next/head";
 
 export default function Pricing() {

@@ -5,7 +5,7 @@ export const topItems = [
     key: 'email',
     icon: '/icons/mail.svg',
     title: 'support@todo10.com',
-    desc: <>For any doubt you have please <DefaultLink url="/about-us#form">Contact Us</DefaultLink>. Your needs are our priorities</>
+    desc: <>For any doubt you have please <DefaultLink url="/en/about-us#form">Contact Us</DefaultLink>. Your needs are our priorities</>
   },
   {
     key: 'chat',
@@ -26,11 +26,11 @@ export const pricingItems = {
   items: [
     {
       label: 'See the options',
-      path: '/pricing'
+      path: '/en/pricing'
     },
     {
       label: 'Get a Quote',
-      path: '/get-a-quote'
+      path: '/en/get-a-quote'
     }
   ]
 }
@@ -40,11 +40,11 @@ export const aboutUsItems = {
   items: [
     {
       label: 'Our Story',
-      path: '/about-us'
+      path: '/en/about-us'
     },
     {
       label: 'Contact us',
-      path: '/about-us#form'
+      path: '/en/about-us#form'
     },
     {
       label: <>Already a client? <DefaultLink url="https://clientarea.todo10.com/clientarea.php">Client Area</DefaultLink></>,

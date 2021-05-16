@@ -7,19 +7,19 @@ const wordpress = '/icons/wordpress-small.svg'
 const xenforo = '/icons/xenforo-small.svg'
 
 export const paths = {
-  HOME: '/',
-  SERVICES: '/services',
-  HOSTING: '/web-hosting',
-  MAINTENANCE: '/maintenance-plans',
-  WORDPRESS: '/wordpress-services',
-  XENFORO: '/xenforo-services',
-  PERSONALIZED: '/personalized-services',
-  PRICING: '/pricing',
-  ABOUT_US: '/about-us',
-  GET_A_QUOTE: '/get-a-quote',
-  PRIVACY_POLICY: '/privacy-policy',
-  TERMS_AND_CONDITIONS: '/terms-and-conditions',
-  ACCEPTABLE_USE_POLICY: '/acceptable-use-policy'
+  HOME: '/en/',
+  SERVICES: '/en/services',
+  HOSTING: '/en/web-hosting',
+  MAINTENANCE: '/en/maintenance-plans',
+  WORDPRESS: '/en/wordpress-services',
+  XENFORO: '/en/xenforo-services',
+  PERSONALIZED: '/en/personalized-services',
+  PRICING: '/en/pricing',
+  ABOUT_US: '/en/about-us',
+  GET_A_QUOTE: '/en/get-a-quote',
+  PRIVACY_POLICY: '/en/privacy-policy',
+  TERMS_AND_CONDITIONS: '/en/terms-and-conditions',
+  ACCEPTABLE_USE_POLICY: '/en/acceptable-use-policy'
 }
 
 export const services = [
@@ -27,7 +27,7 @@ export const services = [
     label: 'Hosting plans 🔥',
     path: paths.HOSTING,
     icon: devices,
-    desc: 'High-performance web hosting plans.'
+    desc: 'High-performance web hosting.'
   },
   {
     label: 'Maintenance plans',
@@ -39,13 +39,13 @@ export const services = [
     label: 'Wordpress services',
     path: paths.WORDPRESS,
     icon: wordpress,
-    desc: 'Themes, plugins, hosting, we do it all!'
+    desc: 'Updates, themes, hardening, support. We do it all!'
   },
   {
     label: 'Xenforo services',
     path: paths.XENFORO,
     icon: xenforo,
-    desc: 'Todo10 is one-stop-place for all your XenForo needs. Custom addons, styles, migrations, security and more.'
+    desc: 'Custom addons, styles, migrations, security and more.'
   },
   {
     label: 'Personalized Services',

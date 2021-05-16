@@ -1,13 +1,13 @@
-import Layout from '../components/Layout'
-import BenefitsSection from '../components/BenefitsSection'
-import Stepper from '../components/Stepper';
-import { hostingOptions } from '../data/steps'
-import benefits from '../data/hosting/benefits'
-import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
+import Layout from '../../components/Layout'
+import BenefitsSection from '../../components/BenefitsSection'
+import Stepper from '../../components/Stepper';
+import { hostingOptions } from '../../data/steps'
+import benefits from '../../data/hosting/benefits'
+import FeatureHighlight from '../../components/FeatureHighlight/FeatureHighlight';
 import Head from "next/head";
-import useScrollHere from '../lib/useScrollHere';
+import useScrollHere from '../../lib/useScrollHere';
 import { useRef } from 'react';
-import { paths } from '../data/routes';
+import { paths } from '../../data/routes';
 
 export default function Hosting() {
 

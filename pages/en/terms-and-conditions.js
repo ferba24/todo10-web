@@ -1,13 +1,13 @@
-import Layout from '../components/Layout'
-import PageHeader from '../components/PageHeader'
-import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight';
+import Layout from '../../components/Layout'
+import PageHeader from '../../components/PageHeader'
+import FeatureHighlight from '../../components/FeatureHighlight/FeatureHighlight';
 // import List from '../components/List'
-import ContactForm from '../components/ContactForm';
-import WithSend from '../components/ContactForm/WithSend'
+import ContactForm from '../../components/ContactForm';
+import WithSend from '../../components/ContactForm/WithSend'
 import Head from "next/head";
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import DefaultLink from "../components/DefaultLink";
+import DefaultLink from "../../components/DefaultLink";
 
 export default function TermsAndConditions() {
 

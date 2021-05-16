@@ -1,10 +1,10 @@
-import Layout from '../components/Layout'
-import Stepper from '../components/Stepper';
-import { personalizedStep } from '../data/steps'
-import FeatureHighlight from '../components/FeatureHighlight'
-import List from '../components/List'
+import Layout from '../../components/Layout'
+import Stepper from '../../components/Stepper';
+import { personalizedStep } from '../../data/steps'
+import FeatureHighlight from '../../components/FeatureHighlight'
+import List from '../../components/List'
 import Head from "next/head";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 
 const FirstSection = () => (
     <>

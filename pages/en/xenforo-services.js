@@ -1,9 +1,9 @@
-import FeatureHighlight from '../components/FeatureHighlight/FeatureHighlight'
-import Layout from '../components/Layout'
-import PageHeader from '../components/PageHeader/PageHeader'
-import { paths } from '../data/routes'
-import ContactForm from '../components/ContactForm'
-import WithSend from '../components/ContactForm/WithSend'
+import FeatureHighlight from '../../components/FeatureHighlight/FeatureHighlight'
+import Layout from '../../components/Layout'
+import PageHeader from '../../components/PageHeader/PageHeader'
+import { paths } from '../../data/routes'
+import ContactForm from '../../components/ContactForm'
+import WithSend from '../../components/ContactForm/WithSend'
 import Head from "next/head";
 
 const SearchCode = () => (
@@ -17,7 +17,7 @@ const FirstSection = () => (
   <>
     <div className="section container">
       <PageHeader
-        title="Xenforo Services"
+        title="XenForo Services"
         desc="More than 10 years of expertise give us the confidence we can take any work or XenForo project you have in mind."
       />
     </div>
@@ -39,7 +39,7 @@ const SecondSection = () => (
     <FeatureHighlight
       image="/icons/server.svg"
       title={<span>Xenforo <span className="text-orange">Hosting Plans</span></span>}
-      desc="Providing reliability and security for your XenForo forum with high-quality hosting. Full managed optimized hosting powered by Litesped & secure backups. "
+      desc={<><b>High-quality hosting</b> to provide reliability and security for your XenForo forum.<br />Powered by Litespeed, NVMe disks and <b>fully managed optimized servers.</b></>}
       link={paths.HOSTING}
       linkLabel="Know more"
       reverse
@@ -61,7 +61,7 @@ const ThirdSection = () => (
       <FeatureHighlight
         image="/icons/laptop.svg"
         title={<span>Xenforo <span className="text-orange">Maintenance Plans</span></span>}
-        desc={<span>We take care of all the technical aspects of your forum..</span>}
+        desc={<span>Let Todo10 <b>deal with the necessary tech maintenance</b> of your website while you take care of publishing content, monetizing and growing your website.</span>}
         link={paths.MAINTENANCE}
         linkLabel="Know more"
         leftExtra={<Cloud />}
@@ -73,7 +73,7 @@ const ThirdSection = () => (
 const FourthSection = () => (
   <div className="section py-14">
     <h3 className="text-orange text-center mb-10">
-      Or contact us!
+      Tell us more!
     </h3>
     <div className="w-11/12 mx-auto">
       <WithSend>

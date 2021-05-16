@@ -3,6 +3,7 @@ const annuallyList = [
   '24/7 Support',
   'Hourly Backups',
   'All benefits included',
+  'Website optimization',
   'Save 20% 🔥'
 ]
 

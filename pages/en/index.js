@@ -1,15 +1,15 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import Card from '../components/Card';
-import List from '../components/List';
-import Graph from '../components/Graph/Graph';
-import responseTimes from '../data/hosting/responseTimes';
+import Layout from '../../components/Layout'
+import Card from '../../components/Card';
+import List from '../../components/List';
+import Graph from '../../components/Graph/Graph';
+import responseTimes from '../../data/hosting/responseTimes';
 import Link from 'next/link';
-import Button from '../components/Button';
-import { paths } from '../data/routes'
-import ClientsSlider from '../components/Slider/ClientsSlider'
+import Button from '../../components/Button';
+import { paths } from '../../data/routes'
+import ClientsSlider from '../../components/Slider/ClientsSlider'
 import { motion } from 'framer-motion';
-import { variants } from '../data/animations';
+import { variants } from '../../data/animations';
 import { useState } from 'react';
 
 const FeatureDesc = ({title, desc, items, link, linkLabel}) => (
@@ -76,7 +76,7 @@ const FirstSection = () => (
           Web Hosting?.
       </div>
       <div className="w-full">
-        Finally, the trustworthy team your web business deserves.
+        Finally, the trustworthy hosting your business deserves.
       </div>
 
       <motion.img
