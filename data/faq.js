@@ -60,7 +60,10 @@ const faqs = {
   [paths.PERSONALIZED]: generalFaqs,
   [paths.PRICING]: generalFaqs,
   [paths.ABOUT_US]: generalFaqs,
-  [paths.GET_A_QUOTE]: generalFaqs
+  [paths.PRIVACY_POLICY]: generalFaqs,
+  [paths.ACCEPTABLE_USE_POLICY]: generalFaqs,
+  [paths.TERMS_AND_CONDITIONS]: generalFaqs
+
 }
 
 export default faqs

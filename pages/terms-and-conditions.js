@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import DefaultLink from "../components/DefaultLink";
 
-
 export default function TermsAndConditions() {
 
     return (
@@ -18,17 +17,11 @@ export default function TermsAndConditions() {
                 <title>Todo 10 - Terms and Conditions</title>
             </Head>
             <div className="my-40"/>
-            <div className="section container">
-                <PageHeader
-                    title="Terms and Conditions"
-                    desc=""
-                />
-            </div>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto container-small">
                 <h3>Terms and Conditions</h3>
                 <div className="my-5">
-                    The use of services from Todo10.com constitutes agreement to these terms. You may view our Privacy Policy<br /><br />
+                    The use of services from Todo10.com constitutes agreement to these terms. You may view our <DefaultLink url="/privacy-policy">Privacy Policy</DefaultLink><br /><br />
 
                     <b>General Terms of Service</b>
                     <p>We will setup your account after we have received payment and we and/or our payment partner(s) have screened the order(s) in case of fraud. It is your responsibility to provide us with an email address which is not @ the domain(s) you are signing up under. If there is ever an abuse issue or we need to contact you, the primary email address on file will be used for this purpose. It is your responsibility to ensure the email address on file is current or up to date at all times. In dedicated server purchases or high risk transactions, it will be necessary to provide government issued identification and possibly a scan of the credit card used for the purchase. If you fail to meet these requirements, the order may be considered fraudulent in nature and be denied.</p><br />
@@ -37,28 +30,28 @@ export default function TermsAndConditions() {
                     <p>Any dedicated IP order in addition to ones provided with a hosting package may be subject to IP Justification. Justification practices are subject to change to remain in conformity with policies of American Registry for Internet Numbers (ARIN). We reserve the right to deny any dedicated IP request based on insufficient justification or current IP utilization.</p><br />
 
                     <b>Content</b>
-                    <p>All services provided by Todo10 may only be used for lawful purposes. Use of our services to infringe upon any copyright or trademark is prohibited. This includes but is not limited to unauthorized copying of music, books, photographs, or any other copyrighted work. The offer of sale of any counterfeit merchandise of a trademark holder will result in the immediate termination of your account. Any account found to be in violation of anothers copyright will be expeditiously removed, or access to the material disabled. Any account found to be in repeated violation of copyright laws will be suspended and/or terminated from our hosting. If you believe that your copyright or trademark is being infringed upon, please email us.</p><br />
+                    <p>All services provided by Todo10 may only be used for lawful purposes. Use of our services to infringe upon any copyright or trademark is prohibited. This includes but is not limited to unauthorized copying of music, books, photographs, or any other copyrighted work. The offer of sale of any counterfeit merchandise of a trademark holder will result in the immediate termination of your account. Any account found to be in violation of another copyright will be expeditiously removed, or access to the material disabled. Any account found to be in repeated violation of copyright laws will be suspended and/or terminated from our hosting. If you believe that your copyright or trademark is being infringed upon, please email us.</p><br />
                     <p>Examples of unacceptable material on all Optimized Hosting and Dedicate servers include:</p>
                     <ul>
-                        <li style="list-style-type:circle;">IRCD (irc servers)</li>
-                        <li style="list-style-type:circle;">IRC Scripts/Bots</li>
-                        <li style="list-style-type:circle;">Pirated Software/Warez</li>
-                        <li style="list-style-type:circle;">IP Scanners</li>
-                        <li style="list-style-type:circle;">Bruteforce Programs/Scripts/Applications</li>
-                        <li style="list-style-type:circle;">Mail Bombers/spam Scripts</li>
-                        <li style="list-style-type:circle;">Escrow</li>
-                        <li style="list-style-type:circle;">High-Yield Interest Programs (HYIP) or Related Sites</li>
-                        <li style="list-style-type:circle;">Investment Sites (FOREX, E-Gold Exchange, Second Life/Linden Exchange, Ponzi, MLM/Pyramid Scheme)</li>
-                        <li style="list-style-type:circle;">Sale of any controlled substance without prior proof of appropriate permit(s)</li>
-                        <li style="list-style-type:circle;">Prime Banks Programs</li>
-                        <li style="list-style-type:circle;">Lottery/Gambling Sites</li>
-                        <li style="list-style-type:circle;">Hacker focused sites/archives/programs</li>
-                        <li style="list-style-type:circle;">Sites promoting illegal activities</li>
-                        <li style="list-style-type:circle;">Forums and/or websites that distribute or link to warez/pirated/illegal content</li>
-                        <li style="list-style-type:circle;">Bank Debentures/Bank Debenture Trading Programs</li>
-                        <li style="list-style-type:circle;">Fraudulent Sites (Including, but not limited to sites listed at aa419.org &amp; escrow-fraud.com)</li>
-                        <li style="list-style-type:circle;">Mailer Pro</li>
-                        <li style="list-style-type:circle;">Broadcast or Streaming of Live Sporting Events (UFC, NASCAR, FIFA, NFL, MLB, NBA, WWE, WWF, etc) </li>
+                        <li className="list-disc">IRCD (irc servers)</li>
+                        <li className="list-disc">IRC Scripts/Bots</li>
+                        <li className="list-disc">Pirated Software/Warez</li>
+                        <li className="list-disc">IP Scanners</li>
+                        <li className="list-disc">Bruteforce Programs/Scripts/Applications</li>
+                        <li className="list-disc">Mail Bombers/spam Scripts</li>
+                        <li className="list-disc">Escrow</li>
+                        <li className="list-disc">High-Yield Interest Programs (HYIP) or Related Sites</li>
+                        <li className="list-disc">Investment Sites (FOREX, E-Gold Exchange, Second Life/Linden Exchange, Ponzi, MLM/Pyramid Scheme)</li>
+                        <li className="list-disc">Sale of any controlled substance without prior proof of appropriate permit(s)</li>
+                        <li className="list-disc">Prime Banks Programs</li>
+                        <li className="list-disc">Lottery/Gambling Sites</li>
+                        <li className="list-disc">Hacker focused sites/archives/programs</li>
+                        <li className="list-disc">Sites promoting illegal activities</li>
+                        <li className="list-disc">Forums and/or websites that distribute or link to warez/pirated/illegal content</li>
+                        <li className="list-disc">Bank Debentures/Bank Debenture Trading Programs</li>
+                        <li className="list-disc">Fraudulent Sites (Including, but not limited to sites listed at aa419.org &amp; escrow-fraud.com)</li>
+                        <li className="list-disc">Mailer Pro</li>
+                        <li className="list-disc">Broadcast or Streaming of Live Sporting Events (UFC, NASCAR, FIFA, NFL, MLB, NBA, WWE, WWF, etc) </li>
                     </ul>
 
                     <p>It is your responsibility to ensure that scripts/programs installed under your account are secure and permissions of directories are set properly, regardless of installation method. When at all possible, set permissions on most directories to 755 or as restrictive as possible. Users are ultimately responsible for all actions taken under their account. This includes the compromise of credentials such as user name and password. It is required that you use a secure password. If a weak password is used, your account may be suspended until you agree to use a more secure password. Audits may be done to prevent weak passwords from being used. If an audit is performed, and your password is found to be weak, we will notify you and allow time for you to change/update your password.</p><br />

@@ -17,15 +17,9 @@ export default function PrivacyPolicy() {
                 <title>Todo 10 - Privacy Policy</title>
             </Head>
             <div className="my-40"/>
-            <div className="section container">
-                <PageHeader
-                    title="Privacy Policy"
-                    desc=""
-                />
-            </div>
 
-            <div className="max-w-3xl mx-auto">
-                <h3>We are committed to protecting your privacy</h3>
+            <div className="max-w-3xl mx-auto container-small">
+                <h3>Privacy Policy</h3>
                 <div className="my-5">
                     <p>We collect the minimum amount of information about you that is commensurate with providing you with a satisfactory service. This Policy indicates the type of processes that may result in data being collected about you. The purpose of this Privacy Policy to enable you to understand which personal identifying information ("PII", "Personal Information") of yours is collected, how and when we might use your information, who has access to this information, and how you can correct any inaccuracies in the information. To better protect your privacy, we provide this notice explaining our online information practices and the choices you can make about the way your information is collected and used. To make this notice easy to find, we make it available on our website.</p><br />
 

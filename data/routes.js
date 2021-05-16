@@ -17,6 +17,9 @@ export const paths = {
   PRICING: '/pricing',
   ABOUT_US: '/about-us',
   GET_A_QUOTE: '/get-a-quote',
+  PRIVACY_POLICY: '/privacy-policy',
+  TERMS_AND_CONDITIONS: '/terms-and-conditions',
+  ACCEPTABLE_USE_POLICY: '/acceptable-use-policy'
 }
 
 export const services = [
