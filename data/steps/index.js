@@ -165,7 +165,7 @@ const initialStep = {
       value: 'services',
       icon: servicesIcon,
       title: 'Services',
-      desc: 'Focused on Xenforo and Wordpress',
+      desc: 'Focused on XenForo and Wordpress',
       nextStep: finalForm
     },
     {

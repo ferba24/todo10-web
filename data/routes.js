@@ -42,7 +42,7 @@ export const services = [
     desc: 'Updates, themes, hardening, support. We do it all!'
   },
   {
-    label: 'Xenforo services',
+    label: 'XenForo services',
     path: paths.XENFORO,
     icon: xenforo,
     desc: 'Custom addons, styles, migrations, security and more.'

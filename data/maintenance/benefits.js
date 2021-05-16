@@ -14,13 +14,13 @@ const computer = '/icons/computer.svg'
 const benefits = [
   {
     icon: windowSettings,
-    title: 'Plugin/Site up',
+    title: 'Regular Updates',
     desc: 'We’re here to safely install or update plugins and themes to keep your site up to date.'
   },
   {
     icon: config,
-    title: 'Issue Resolution',
-    desc: 'We’ll troubleshoot all website issues. Feugiat molestie massa.'
+    title: 'Unlimited Requests',
+    desc: 'No matter how much help you need, we’ll troubleshoot all website issues.'
   },
   {
     icon: customization,
@@ -54,8 +54,8 @@ const benefits = [
   },
   {
     icon: windowConfig,
-    title: 'Plugin Help',
-    desc: ' We can provide recommendations and do the installation of the plugin for you.'
+    title: 'Issue Resolution',
+    desc: 'We’ll troubleshoot all website issues.'
   },
   {
     icon: arrows,

@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     image: '/images/testimonials/luca.jpg',
-    text: 'They have migrated my vBulletin forum to Xenforo 2.0 with a minimum downtime . A very good job for a wide community: 2M posts and several GB of data. Hope to work in the next future with this very professional Team.',
+    text: 'They have migrated my vBulletin forum to XenForo 2.0 with a minimum downtime . A very good job for a wide community: 2M posts and several GB of data. Hope to work in the next future with this very professional Team.',
     extra: 'LUCA. Punterforum.com'
   },
   {

@@ -14,7 +14,7 @@ const hostingFaqs = [
   {
     key: '3',
     title: 'Do you have an online control panel?',
-    desc: 'All of our Shared and Managed hosting services include cPanel control panel. We also offer dedicated servers with no control panels included.'
+    desc: 'All our hosting plans include cPanel control panel.'
   },
   {
     key: '4',

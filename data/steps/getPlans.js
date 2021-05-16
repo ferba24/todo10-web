@@ -11,6 +11,7 @@ const monthlyList = [
   'Fully Managed',
   '24/7 Support',
   'Hourly Backups',
+  'Website optimization',
   'All benefits included'
 ]
 

@@ -7,13 +7,13 @@ const responseTimes = [
   },
   {
     label: 'GoDaddy',
-    value: 2.9,
+    value: 1.9,
     color: '#FFBA34',
     labelPrefix: ' 😟 .'
   },
   {
     label: 'Hostgator',
-    value: 3.8,
+    value: 2.3,
     color: '#C0213C',
     labelPrefix: ' 😡 .'
   }

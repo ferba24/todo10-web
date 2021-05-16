@@ -13,14 +13,21 @@ const FirstSection = ({onCtoClicked}) => (
   <div className="section container-small">
     <FeatureHighlight
       image="/icons/laptop.svg"
-      title={<>A <span className="text-orange">one-stop-place</span> for all your <span className="text-orange">needs</span></>}
-      desc={<>We’ll do all the tech work and take care of the issues for a fixed price. <br />Many customers need help with their website because they don’t have the time or knowledge to manage it properly and that’s where we come in. <br /><br /><b>We have the expertise and experience to effectively manage your site for you.</b></>}
+      title={<>What is <span className="text-orange">Website Maintenance</span>?</>}
+      desc={<>Website maintenance is the simple act of regularly checking your website for problems and then making sure that everything is up to date and relevant.<br /><br /> We’ll do all the tech work and take care of the issues for a fixed price. </>}
       link={paths.MAINTENANCE}
       linkLabel="Get Started"
       onLinkClicked={onCtoClicked}
     />
   </div>
 )
+/*
+      title={<>A <span className="text-orange">one-stop-place</span> for all your <span className="text-orange">needs</span></>}
+      desc={<>We’ll do all the tech work and take care of the issues for a fixed price. <br />Many customers need help with their website because they don’t have the time or knowledge to manage it properly and that’s where we come in. <br /><br /><b>We have the expertise and experience to effectively manage your site for you.</b></>}
+      https://www.cloudways.com/blog/website-maintenance-services/
+
+ */
+
 
 export default function Maintenance() {
 
