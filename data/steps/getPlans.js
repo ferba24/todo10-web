@@ -1,18 +1,18 @@
 const annuallyList = [
-  'Fully Managed',
+  'All the benefits above',
   '24/7 Support',
+  'Fully Managed',
   'Hourly Backups',
-  'All benefits included',
   'Website optimization',
   'Save 20% 🔥'
 ]
 
 const monthlyList = [
-  'Fully Managed',
+  'All the benefits above',
   '24/7 Support',
+  'Fully Managed',
   'Hourly Backups',
-  'Website optimization',
-  'All benefits included'
+  'Website optimization'
 ]
 
 const getDefaultPlans = (annuallyPrice, annuallyUrl, monthlyPrice, monthlyUrl) => [
