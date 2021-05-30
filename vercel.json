@@ -1,7 +1,6 @@
 {
   "redirects": [
     { "source": "/", "destination": "/en" },
-    { "source": "/en/web-hosting", "destination": "/en/web-hosting" },
     { "source": "/en/xenforo-maintenance", "destination": "/en/xenforo-services"},
     { "source": "/en/wordpress-maintenance", "destination": "/en/wordpress-services"},
     { "source": "/en/contact-us", "destination": "/en/get-a-quote" },
