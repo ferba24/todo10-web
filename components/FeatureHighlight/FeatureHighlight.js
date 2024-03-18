@@ -10,7 +10,7 @@ export default function FeatureHighlight({
   reverse,
   leftExtra,
   imageStyle,
-  onLinkClicked = () => {}
+  onLinkClicked = () => { }
 }) {
 
   const content = (
@@ -23,12 +23,10 @@ export default function FeatureHighlight({
       </div>
       {link && (
         <div className="text-center md:text-left">
-          <Link href={link}>
-            <a onClick={onLinkClicked}>
-              <Button className="px-16">
-                {linkLabel}
-              </Button>
-            </a>
+          <Link href={link} onClick={onLinkClicked}>
+            <Button className="px-16">
+              {linkLabel}
+            </Button>
           </Link>
         </div>
       )}

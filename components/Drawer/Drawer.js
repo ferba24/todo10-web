@@ -19,8 +19,10 @@ export default function Drawer({
 }) {
 
   const vhCheckOptions = { updateOnTouch: true }
-  useEffect(() => vhCheck(vhCheckOptions), []);
-  
+  useEffect(() => {
+    vhCheck(vhCheckOptions)
+  }, [])
+
   const backdrop = (
     <motion.div
       initial="hidden"
@@ -32,7 +34,7 @@ export default function Drawer({
     />
   )
 
-  return(
+  return (
     <AnimatePresence>
       {visible && (
         <div className="fixed flex justify-end top-0 left-0 w-full z-40 h-screen">
@@ -41,7 +43,7 @@ export default function Drawer({
             animate="visible"
             exit="hidden"
             variants={drawerVariants}
-            transition={{type: 'tween', ease: 'easeInOut'}}
+            transition={{ type: 'tween', ease: 'easeInOut' }}
             className="relative h-full right-0 w-full sm:w-6/12 bg-white z-10 border-4 border-blue rounded-lg"
           >
             {children}

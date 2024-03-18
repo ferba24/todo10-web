@@ -1,17 +1,20 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js', './data/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./data/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        wordpress: 'var(--color-wordpress)',
-        blue: 'var(--color-blue)',
-        orange: 'var(--color-orange)'
-      },
-      backgroundColor: {
-        orange: 'var(--color-orange)',
-        blue: 'var(--color-blue)',
+        primary: '#04283A',
+        wordpress: '#4A50AE',
+        blue: '#37395B',
+        orange: '#FF6043'
       },
       boxShadow: {
         xl: '0 0px 25px 0px rgba(0, 0, 0, 0.1), 0 0px 10px 0px rgba(0, 0, 0, 0.06)'
@@ -21,13 +24,6 @@ module.exports = {
         'montserrat': ['Montserrat', 'arial']
       }
     }
-  },
-  variants: {
-    extend: {
-      scale: ['group-hover'],
-      opacity: ['disabled'],
-      cursor: ['disabled']
-    },
   },
   plugins: [],
 }

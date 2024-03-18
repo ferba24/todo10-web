@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const Input = props => {
-  
+
   return (
     <div className="relative flex items-center max-w-xs bg-white bg-opacity-40 py-1 px-3 rounded-xl">
       <input
@@ -9,7 +9,7 @@ const Input = props => {
         {...props}
       />
       <img
-        src="icons/arrow-right-white.svg"
+        src="/icons/arrow-right-white.svg"
         className="ml-2"
       />
     </div>
@@ -32,15 +32,11 @@ export default function Newsletter() {
         Receive news and marketing
       </div>
       <div className="mt-3 flex space-x-3">
-        <Link prefetch={false} href="https://www.facebook.com/Todo10.official">
-          <a>
-            <img src="/icons/facebook.svg"/>
-          </a>
+        <Link prefetch={false} href="https://www.facebook.com/Todo10.official" target="_blank">
+          <img src="/icons/facebook.svg" />
         </Link>
-        <Link prefetch={false} href="https://www.linkedin.com/company/todo10/">
-          <a target="_blank">
-            <img src="/icons/linkedin.svg"/>
-          </a>
+        <Link prefetch={false} href="https://www.linkedin.com/company/todo10/" target="_blank">
+          <img src="/icons/linkedin.svg" />
         </Link>
       </div>
     </div>

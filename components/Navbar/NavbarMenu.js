@@ -10,7 +10,7 @@ const activeClass = 'text-orange underline'
 const Trigger = (open, toggleOpen, label) => (
   <div
     className={`flex cursor-pointer border-3 border-transparent p-3 rounded-lg items-center ${open ? triggerOpened : ''}`}
-    style={{borderBottom: 'none', borderBottomLeftRadius: 0, borderBottomRightRadius: 0}}
+    style={{ borderBottom: 'none', borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
     onClick={() => {
       toggleOpen()
     }}
@@ -29,38 +29,36 @@ const variants = {
   visible: { y: 0, opacity: 1 }
 }
 
-const SubItems = ({items, className = '', pathname}) => (
+const SubItems = ({ items, className = '', pathname }) => (
   <motion.div
     className={`bg-white absolute max-w-xl p-3 flex flex-wrap rounded-lg border-3 border-blue mt-2 ${className}`}
     initial="hidden"
     animate="visible"
-    transition={{type: 'tween'}}
+    transition={{ type: 'tween' }}
     variants={variants}
   >
     {items.map(route => (
-      <Link key={route.path} href={route.path} prefetch={false}>
-        <a className="flex p-5 w-6/12 group">
-          <img src={route.icon} className="w-10 h-10 flex-0 mr-4 duration-100 transform group-hover:scale-110"/>
-          <div>
-            <div 
-              className={`
+      <Link key={route.path} href={route.path} prefetch={false} className="flex p-5 w-6/12 group">
+        <img src={route.icon} className="w-10 h-10 flex-0 mr-4 duration-100 transform group-hover:scale-110" />
+        <div>
+          <div
+            className={`
                 group-hover:underline
                 ${pathname == route.path ? activeClass : ''}
               `}
-            >
-              {route.label}
-            </div>
-            <div className="text-sm font-light">
-              {route.desc}
-            </div>
+          >
+            {route.label}
           </div>
-        </a>
+          <div className="text-sm font-light">
+            {route.desc}
+          </div>
+        </div>
       </Link>
     ))}
   </motion.div>
 )
 
-const NavbarMenu = ({routes = [], scrolled}) => {
+const NavbarMenu = ({ routes = [], scrolled }) => {
 
   const { pathname } = useRouter()
 
@@ -83,14 +81,16 @@ const NavbarMenu = ({routes = [], scrolled}) => {
             )}
           </Dropdown>
         ) : (
-          <Link href={route.path} key={route.path} prefetch={false}>
-            <a 
-              className={`
-                ${typeof route.label == 'string' ? 'p-3' : ''}
-                ${typeof route.label == 'string' && route.path == pathname ? activeClass : ''}
-              `}>
-              {route.label}
-            </a>
+          <Link
+            href={route.path}
+            key={route.path}
+            prefetch={false}
+            className={`
+              ${typeof route.label == 'string' ? 'p-3' : ''}
+              ${typeof route.label == 'string' && route.path == pathname ? activeClass : ''}
+            `}
+          >
+            {route.label}
           </Link>
         )
       ))}

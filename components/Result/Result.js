@@ -13,10 +13,10 @@ export default function Result({
   link = defaultLink,
   linkLabel = defaultLinkLabel
 }) {
-  
+
   return (
     <div className="text-center">
-      <Illustration/>
+      <Illustration />
       <h3 className="mt-5 mb-2">
         {title}
       </h3>
@@ -24,13 +24,11 @@ export default function Result({
         {desc}
       </div>
       <Link href={link} prefetch={false}>
-        <a>
-          <Button>
-            <div className="text-lg px-10">
-              {linkLabel}
-            </div>
-          </Button>
-        </a>
+        <Button>
+          <div className="text-lg px-10">
+            {linkLabel}
+          </div>
+        </Button>
       </Link>
     </div>
   )
