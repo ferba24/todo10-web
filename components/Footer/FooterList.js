@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-const FooterList = ({title, items}) => (
+const FooterList = ({ title, items }) => (
   <>
     <div className="font-medium text-lg">
       {title}
     </div>
-    {items.map(({label, path, style, key}) => (
+    {items.map(({ label, path, style, key }) => (
       <div
         key={key || path}
         className="my-1 text-sm"
@@ -13,12 +13,12 @@ const FooterList = ({title, items}) => (
       >
         {path ? (
           <Link href={path} prefetch={false} shallow={true}>
-            <a>{label}</a>
+            {label}
           </Link>
         ) : (
           label
         )}
-        
+
       </div>
     ))}
   </>

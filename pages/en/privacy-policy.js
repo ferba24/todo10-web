@@ -1,22 +1,13 @@
 import Layout from '../../components/Layout'
-import PageHeader from '../../components/PageHeader'
-import FeatureHighlight from '../../components/FeatureHighlight/FeatureHighlight';
-// import List from '../components/List'
-import ContactForm from '../../components/ContactForm';
-import WithSend from '../../components/ContactForm/WithSend'
-import Head from "next/head";
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-
+import Head from "next/head"
 
 export default function PrivacyPolicy() {
-
     return (
         <Layout>
             <Head>
                 <title>Todo 10 - Privacy Policy</title>
             </Head>
-            <div className="my-40"/>
+            <div className="my-40" />
 
             <div className="max-w-3xl mx-auto container-small">
                 <h3>Privacy Policy</h3>
@@ -36,7 +27,7 @@ export default function PrivacyPolicy() {
                     <p>If you have any questions about our Privacy Policy, or if you want to know what information we have collected about you, please email us at support@todo10.com. You can also correct any factual errors in that information or require us to remove your details from any list under our control.</p>
                 </div>
             </div>
-            <div className="my-40"/>
+            <div className="my-40" />
         </Layout>
     )
 }

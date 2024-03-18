@@ -1,18 +1,17 @@
 import Link from 'next/link'
 import Expand from '../Expand'
 
-export default function DrawerMenu({routes, cto}) {
+export default function DrawerMenu({ routes, cto }) {
 
-  const DrawerLink = ({path, label, className, icon}) => (
+  const DrawerLink = ({ path, label, className, icon }) => (
     <div className="my-3">
       <Link
         href={path}
         prefetch={false}
+        className={`flex items-center ${className}`}
       >
-        <a className={`flex items-center ${className}`}>
-          {icon && <img className="mr-4" src={icon}/>}
-          {label}
-        </a>
+        {icon && <img className="mr-4" src={icon} />}
+        {label}
       </Link>
     </div>
   )
@@ -30,7 +29,7 @@ export default function DrawerMenu({routes, cto}) {
           ))}
         </Expand>
       ) : (
-        <DrawerLink {...route}/>
+        <DrawerLink {...route} />
       )}
     </div>
   )
@@ -40,7 +39,7 @@ export default function DrawerMenu({routes, cto}) {
       <div>
         {routes.map(mapRoute)}
       </div>
-      {cto && <DrawerLink {...cto}/>}
+      {cto && <DrawerLink {...cto} />}
     </div>
   )
 }

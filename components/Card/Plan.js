@@ -10,7 +10,7 @@ export default function Plan({
   primary,
   url = '/'
 }) {
-  return(
+  return (
     <div className="p-5 md:p-2">
       <h4 className="text-center mb-2 text-sm font-semibold">{title}</h4>
       <h2 className="text-center text-blue text-5xl font-bold">${price}</h2>
@@ -20,14 +20,12 @@ export default function Plan({
         primary={primary}
       />
       <Link href={url}>
-        <a>
-          <Button
-            type={primary ? 'primary' : 'blue'}
-            className="w-full mt-6"
-          >
-            Get plan
-          </Button>
-        </a>
+        <Button
+          type={primary ? 'primary' : 'blue'}
+          className="w-full mt-6"
+        >
+          Get plan
+        </Button>
       </Link>
     </div>
   )

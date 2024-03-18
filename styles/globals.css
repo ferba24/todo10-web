@@ -1,13 +1,5 @@
-@import '../public/fonts/Quicksand/Quicksand.css';
-@import '../public/fonts/Montserrat/Montserrat.css';
-
-:root {
-  --color-primary:#04283A;
-  --color-wordpress: #4A50AE;
-  --color-blue: #37395B;
-  --color-orange: #FF6043;
-  /* ... */
-}
+@import "../public/fonts/Quicksand/Quicksand.css";
+@import "../public/fonts/Montserrat/Montserrat.css";
 
 @tailwind base;
 @tailwind components;
@@ -35,29 +27,24 @@
   .list-custom li {
     @apply flex items-center my-2 text-lg;
   }
-  
+
   .list-custom li::before {
-    content: '';
+    content: "";
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: var(--color-primary);
+    background-color: #04283a;
     margin-right: 10px;
   }
 
   .list-custom.primary li::before {
-    background-color: var(--color-orange);
+    background-color: #ff6043;
   }
 }
 
 @layer utilities {
   .top-13 {
     top: 3.25rem;
-  }
-
-  .h-full-screen {
-    height: 100vh;
-    height: calc(100vh - var(--vh-offset, 0px));
   }
 
   .border-3 {
@@ -93,7 +80,7 @@
   }
 
   .placeholder-shine::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 50px;
     left: 50;
@@ -108,8 +95,14 @@
   }
 
   @keyframes placeholderShine {
-    0% { left: -100%; }
-    50% { left: 100%; }
-    100% { left: 100% }
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
   }
 }
