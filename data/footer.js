@@ -16,7 +16,7 @@ export const topItems = [
   {
     key: 'phone',
     icon: '/icons/phone.svg',
-    title: '+54 9 3496525275',
+    title: '+54 9 11525237',
     desc: 'Our lines are always open for you to call us.',
   }
 ]
